@@ -1,0 +1,891 @@
+**** BEGIN LOGGING AT Wed Sep 20 14:40:38 2017
+
+Sep 20 14:40:38 *	Now talking on #nextcloud
+Sep 20 14:40:38 *	Topic for #nextcloud is: Welcome to Nextcloud! :) Join our open community at https://help.nextcloud.com - Nextcloud 12 is out! (https://nextcloud.com/blog/welcome-to-nextcloud-12/)
+Sep 20 14:40:38 *	Topic for #nextcloud set by LukasReschke!sid10067@gateway/web/irccloud.com/x-jdglpvpxawstuyuj (Mon May 22 06:55:26 2017)
+Sep 20 14:40:49 <sajattack>	Can someone help me with ssl setup?
+Sep 20 14:41:09 <sajattack>	I'm getting a 404
+Sep 20 14:41:46 <sajattack>	I'm using letsencrypt
+Sep 20 14:47:52 *	rvm has quit (Quit: Leaving.)
+Sep 20 14:48:37 *	dah85 has quit (Read error: Connection reset by peer)
+Sep 20 14:49:12 *	dah85 (~david@103.217.166.48) has joined
+Sep 20 14:49:25 *	LukasReschke (sid10067@gateway/web/irccloud.com/x-vtadzajftgrgexzl) has left
+Sep 20 14:49:30 *	stian__ (ba1f1a65@gateway/web/freenode/ip.186.31.26.101) has joined
+Sep 20 14:51:45 *	LukasReschke (sid10067@gateway/web/irccloud.com/x-vtadzajftgrgexzl) has joined
+Sep 20 14:52:06 <r3pek>	sajattack: do you have it working without ssl?
+Sep 20 14:52:23 <sajattack>	r3pek: yes
+Sep 20 14:52:44 <r3pek>	well, the config is the same
+Sep 20 14:52:49 <r3pek>	just add the ssl directives
+Sep 20 14:53:03 <r3pek>	other then that, nothing else is needed
+Sep 20 14:55:07 <ibeardslee>	check your logs for the error when you (re)start nginx/apache2
+Sep 20 14:55:45 <sajattack>	termbin.com/fude
+Sep 20 14:56:02 <sajattack>	termbin.com/3jry
+Sep 20 14:56:58 *	Crendgrim_ (~crend@wesnoth/forum-moderator/crendgrim) has joined
+Sep 20 14:57:21 *	Crendgrim has quit (Ping timeout: 240 seconds)
+Sep 20 14:57:39 <r3pek>	hummmm
+Sep 20 14:57:45 <r3pek>	are you loading mod_ssl? ;)
+Sep 20 14:57:45 *	niq84 (~niq84@3x0.eu) has joined
+Sep 20 14:58:02 <sajattack>	oh
+Sep 20 14:58:12 <sajattack>	paul@imp1:/etc/apache2/sites-available$ a2enmod mod_ssl
+Sep 20 14:58:12 <sajattack>	ERROR: Module mod_ssl does not exist!
+Sep 20 14:58:16 <sajattack>	is that the prob?
+Sep 20 14:58:26 <r3pek>	yep ;)
+Sep 20 14:58:40 <sajattack>	how do I install it?
+Sep 20 14:58:56 <r3pek>	what's your distro?
+Sep 20 14:59:02 <sajattack>	ubuntu 14.04
+Sep 20 14:59:40 <r3pek>	actually
+Sep 20 14:59:48 <r3pek>	it's jsut ssl i think
+Sep 20 14:59:52 <r3pek>	in the a2enmod
+Sep 20 15:00:03 <ibeardslee>	should be installed by default
+Sep 20 15:00:07 <sajattack>	module ssl already enabled
+Sep 20 15:00:27 <r3pek>	you need to check your logs then
+Sep 20 15:00:48 *	evade has quit (Ping timeout: 240 seconds)
+Sep 20 15:00:55 <r3pek>	oh
+Sep 20 15:01:04 <r3pek>	i think your nextcloud config may be wrong
+Sep 20 15:01:25 <r3pek>	isn't your base dir /owncloud ?
+Sep 20 15:01:48 <sajattack>	yes
+Sep 20 15:02:10 <r3pek>	https://owncloud.paulsajna.com/index.php/login <----- it's redirecting there
+Sep 20 15:02:19 <r3pek>	it's missing the /owncloud/
+Sep 20 15:02:46 <sajattack>	still 404s https://owncloud.paulsajna.com/owncloud/index.php/login
+Sep 20 15:03:28 <r3pek>	what do you have in htaccess.Rewritebase config value?
+Sep 20 15:03:37 *	bronson (~bronson@50-1-98-33.dsl.dynamic.fusionbroadband.com) has joined
+Sep 20 15:04:11 <sajattack>	in .htaccess?
+Sep 20 15:04:13 <sajattack>	or in config?
+Sep 20 15:04:14 <r3pek>	no
+Sep 20 15:04:16 <r3pek>	config
+Sep 20 15:04:37 <r3pek>	btw, your apache access_log and/or error_log should tell you what it's trying to access
+Sep 20 15:04:51 <sajattack>	don't have that value set
+Sep 20 15:05:28 <r3pek>	ok
+Sep 20 15:05:35 <r3pek>	check your access_log then
+Sep 20 15:07:34 *	Javabean has quit (Ping timeout: 264 seconds)
+Sep 20 15:07:53 <sajattack>	owncloud.paulsajna.com:80 24.68.134.236 - - [18/Sep/2017:16:19:38 -0700] "G     ET /index.php/core/preview.png?file=%2FownCloud+Manual.pdf&c=d7e8d669a9c058     71fd4e012ebb79d92a&x=32&y=32&forceIcon=0 HTTP/1.1" 404 822 "-" "Mozilla/5.0      (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.316     3.91 Safari/537.36"
+Sep 20 15:08:07 <sajattack>	oh that was 2 days ago
+Sep 20 15:08:16 <sajattack>	not seeing any recent 404s
+Sep 20 15:08:31 *	bronson has quit (Ping timeout: 248 seconds)
+Sep 20 15:08:35 <r3pek>	that's on port 80
+Sep 20 15:08:40 <r3pek>	you want 443
+Sep 20 15:08:42 *	Javabean (~Javabean@cpe-72-178-52-100.elp.res.rr.com) has joined
+Sep 20 15:08:43 <sajattack>	right
+Sep 20 15:08:49 <r3pek>	any error/access on 443
+Sep 20 15:09:12 <sajattack>	can't find the log for it
+Sep 20 15:09:14 *	vectr0n has quit (Read error: Connection reset by peer)
+Sep 20 15:09:40 *	utack has quit (Remote host closed the connection)
+Sep 20 15:09:57 <sajattack>	my access.log just has a bunch of stuff for other subdomains
+Sep 20 15:10:04 <sajattack>	that was other_vhosts_access.log
+Sep 20 15:10:10 <sajattack>	I guess I should set a log directive
+Sep 20 15:10:34 *	iwkse (~iwkse@unaffiliated/iwkse) has joined
+Sep 20 15:11:14 *	LukasReschke (sid10067@gateway/web/irccloud.com/x-vtadzajftgrgexzl) has left
+Sep 20 15:11:32 *	vectr0n (vectr0n@unaffiliated/vectr0n) has joined
+Sep 20 15:12:06 *	fkarlitschek (sid10067@gateway/web/irccloud.com/x-vtadzajftgrgexzl) has joined
+Sep 20 15:12:37 <iwkse>	hi, how can I use the db_structure.xml file to generate the db in postgresql?
+Sep 20 15:13:17 *	fkarlitschek (sid10067@gateway/web/irccloud.com/x-vtadzajftgrgexzl) has left
+Sep 20 15:14:23 *	LukasReschke (sid10067@gateway/web/irccloud.com/x-vtadzajftgrgexzl) has joined
+Sep 20 15:16:05 <sajattack>	termbin.com/tu3i
+Sep 20 15:16:11 <sajattack>	r3pek
+Sep 20 15:17:04 <sajattack>	nothing in the error log
+Sep 20 15:21:41 *	kwork has quit (Quit: No Ping reply in 180 seconds.)
+Sep 20 15:22:57 *	kwork (~quassel@bnc.ee) has joined
+Sep 20 15:30:00 <iwkse>	I thought the db was not created. Actually it is but seems to be missing something, as 'appconfig' is wrong https://pastebin.com/DRVWP51z
+Sep 20 15:30:01 <NextcloudBot>	Title: Request ID: mOBMfHfZclg3SV0c902O Type: Doctrine\DBAL\Exception\TableNotFoundExc - Pastebin.com (at pastebin.com)
+Sep 20 15:30:09 *	Tools has quit (Read error: Connection reset by peer)
+Sep 20 15:31:20 *	stian__ has quit (Ping timeout: 260 seconds)
+Sep 20 15:41:32 *	pilotauto (~quassel@27-33-187-117.static.tpgi.com.au) has joined
+Sep 20 15:42:45 *	Blizzz has quit (Ping timeout: 255 seconds)
+Sep 20 15:44:25 <iwkse>	seems like the db table prefix is ignored
+Sep 20 15:56:52 *	Rev_Illo (~revillo@unaffiliated/rev-illo/x-3122184) has joined
+Sep 20 16:03:48 *	finalbeta has quit (Ping timeout: 240 seconds)
+Sep 20 16:05:25 *	Worf has quit (Quit: Konversation terminated!)
+Sep 20 16:11:28 *	Rev_Illo has quit (Quit: You can never quit. Winners never quit, and quitters never win.)
+Sep 20 16:13:51 *	mike_ (c053e4f8@gateway/web/freenode/ip.192.83.228.248) has joined
+Sep 20 16:13:56 <mike_>	hi
+Sep 20 16:13:56 <NextcloudBot>	hi mike_, please go ahead and ask your question and be patient, most people do not actively monitor the chat and will only check the chatlog periodically
+Sep 20 16:14:11 <mike_>	I want to ask whether I should use APCu or Memcached
+Sep 20 16:14:15 *	mike_ is now known as Guest47004
+Sep 20 16:14:22 <Guest47004>	For single machine setup
+Sep 20 16:15:14 <Guest47004>	I think redis is not for me because redis works better for multi server infrastructure
+Sep 20 16:15:19 <Guest47004>	any ideas?
+Sep 20 16:16:09 <ibeardslee>	https://docs.nextcloud.com/server/12/admin_manual/configuration_server/caching_configuration.html would suggest APCu
+Sep 20 16:16:10 <NextcloudBot>	Title: Configuring Memory Caching — Nextcloud 12 Server Administration Manual 12 documentation (at docs.nextcloud.com)
+Sep 20 16:17:27 <Guest47004>	Hi @ibeardslee, but if I only have 1.5G ram for php+webserver, should I use APCu+opcache or should I just run next cloud without caching?
+Sep 20 16:17:40 <Guest47004>	I am the only user on the VPS, but I might sync a lot of small files
+Sep 20 16:18:13 *	bronson (~bronson@50-1-98-33.dsl.dynamic.fusionbroadband.com) has joined
+Sep 20 16:18:29 *	Rev_Illo (~revillo@unaffiliated/rev-illo/x-3122184) has joined
+Sep 20 16:18:33 <ibeardslee>	pass .. I had 1.5 GB and have APCu configured, I didn't experiment whether it actually made a difference or not
+Sep 20 16:23:22 *	Guest47004 has quit (Quit: Page closed)
+Sep 20 16:30:00 *	telcoguy (~telcoguy@2001:470:1f0b:553:c8a5:926c:e147:e8a3) has joined
+Sep 20 16:32:46 *	Haudegen has quit (Remote host closed the connection)
+Sep 20 16:34:45 *	r_hector (~richard@203-118-153-20.wha.wave.co.nz) has joined
+Sep 20 16:41:26 *	r_hector has quit (Quit: Leaving.)
+Sep 20 16:46:04 *	Schmetterwurm has quit (Quit: Leaving)
+Sep 20 16:52:23 *	_raven_ (~raven@p5796FF29.dip0.t-ipconnect.de) has joined
+Sep 20 16:54:40 *	Rev_Illo has quit (Ping timeout: 248 seconds)
+Sep 20 16:55:19 *	__raven__ has quit (Ping timeout: 240 seconds)
+Sep 20 16:56:42 *	Dominian (~dominian@opensuse/member/dominian) has joined
+Sep 20 16:58:06 *	evade (~davidgrah@c-67-166-104-148.hsd1.ut.comcast.net) has joined
+Sep 20 17:14:46 *	VlanX has quit (Ping timeout: 264 seconds)
+Sep 20 17:18:26 *	noobineer (~noobineer@108-197-174-33.lightspeed.gdrpmi.sbcglobal.net) has joined
+Sep 20 17:18:27 *	noobineer has quit (Max SendQ exceeded)
+Sep 20 17:45:04 *	stian__ (ba1f3041@gateway/web/freenode/ip.186.31.48.65) has joined
+Sep 20 17:45:18 <stian__>	Hi which hosting provider do you recommend, cubico.cloud is crashed
+Sep 20 18:00:30 *	stian__ has quit (Quit: Page closed)
+Sep 20 18:01:18 *	finalbeta (~finalbeta@ptr-e2rg2kw92qwkpowdiib.18120a2.ip6.access.telenet.be) has joined
+Sep 20 18:07:09 *	opticdel1sion (~opticdelu@dslb-178-008-142-176.178.008.pools.vodafone-ip.de) has joined
+Sep 20 18:10:34 *	opticdelusion has quit (Ping timeout: 264 seconds)
+Sep 20 18:10:34 *	opticdel1sion is now known as opticdelusion
+Sep 20 18:15:31 *	Soopaman has quit (Quit: Leaving.)
+Sep 20 18:20:35 <sajattack>	r3pek: still around?
+Sep 20 18:22:09 <sajattack>	I tried moving from /var/www/owncloud.paulsajna.com/owncloud to /var/www/owncloud.paulsajna.com and it still didn't work
+Sep 20 18:22:29 *	jayarcs has quit (Remote host closed the connection)
+Sep 20 18:22:48 *	jayarcs (~jayarcs@cpe-66-56-201-178.ec.res.rr.com) has joined
+Sep 20 18:24:37 <sajattack>	ah shit now it's login looping
+Sep 20 18:30:21 <sajattack>	time for another reinstall
+Sep 20 18:53:49 *	dano5 has quit (Ping timeout: 240 seconds)
+Sep 20 18:54:59 *	dano5 (~dano5@163.109-247-80.customer.lyse.net) has joined
+Sep 20 18:56:40 *	ShaRose_ (ShaRose@i.am.sharo.se) has joined
+Sep 20 18:57:19 *	dah85 has quit (Read error: Connection reset by peer)
+Sep 20 18:58:00 *	ShaRose has quit (Ping timeout: 252 seconds)
+Sep 20 18:58:15 *	ShaRose_ is now known as ShaRose
+Sep 20 18:58:17 *	dah85 (~david@103.217.166.48) has joined
+Sep 20 18:59:48 *	jayarcs has quit (Ping timeout: 240 seconds)
+Sep 20 19:03:35 *	tschan has quit (Ping timeout: 240 seconds)
+Sep 20 19:09:11 *	tschan (~tschan@p5B32DB2E.dip0.t-ipconnect.de) has joined
+Sep 20 19:20:17 *	BaW has quit (Ping timeout: 248 seconds)
+Sep 20 19:23:16 <RoyK>	sajattack: probably just a configuration error
+Sep 20 19:23:33 <sajattack>	I'm having a new problem
+Sep 20 19:23:38 <RoyK>	sajattack: I've seen that happen - don't remember exactly what did it, though
+Sep 20 19:23:52 <sajattack>	I can't upgrade owncloud 10.0.3 to nextcloud 12.0.3
+Sep 20 19:24:05 *	pbek has quit (Ping timeout: 240 seconds)
+Sep 20 19:24:35 <RoyK>	sajattack: did you follow this guide? https://nextcloud.com/migration/
+Sep 20 19:24:37 <NextcloudBot>	Title: Migration: ownCloud vs Nextcloud – Nextcloud (at nextcloud.com)
+Sep 20 19:24:38 *	pbek (~quassel@gateway/vpn/privateinternetaccess/omegaq) has joined
+Sep 20 19:25:09 <sajattack>	I did it the old manual way
+Sep 20 19:25:17 *	xXSTrikeXx has quit (Ping timeout: 246 seconds)
+Sep 20 19:25:28 <RoyK>	just follow the guide - worked well for me
+Sep 20 19:25:51 <sajattack>	this is what I've been doing https://help.nextcloud.com/t/migrating-from-owncloud-to-nextcloud/551
+Sep 20 19:26:12 <RoyK>	if you have some 1337 method you need to use, well, you're on your own, really
+Sep 20 19:26:20 <sajattack>	haha
+Sep 20 19:26:27 *	BaW (~BaW@unaffiliated/baw) has joined
+Sep 20 19:26:29 <sajattack>	it's been working the past couple days
+Sep 20 19:26:40 *	xXSTrikeXx (~STrike@unaffiliated/xxstrikexx) has joined
+Sep 20 19:27:28 <RoyK>	sorry - don't know about that
+Sep 20 19:27:44 *	RoyK is busy reading https://karlsbakk.net/bofh
+Sep 20 19:31:15 *	Doc_exe has quit (Remote host closed the connection)
+Sep 20 19:31:48 <sajattack>	RoyK it says no update available
+Sep 20 19:34:27 <RoyK>	which version are you on?
+Sep 20 19:34:50 <sajattack>	well I copied nextcloud 12.0.3 over owncloud 10.0.3
+Sep 20 19:36:01 <RoyK>	did you take a backup first?
+Sep 20 19:36:06 <sajattack>	yeah
+Sep 20 19:36:18 <sajattack>	I'm trying the proper way now
+Sep 20 19:36:26 <RoyK>	ok
+Sep 20 19:37:02 *	Doc_exe (~quassel@cpe-98-144-75-73.wi.res.rr.com) has joined
+Sep 20 19:37:20 <sajattack>	it says could not determine migration path to nextcloud
+Sep 20 19:37:33 <sajattack>	I think owncloud updated and nextcloud didn't or something
+Sep 20 19:38:13 <sajattack>	there's a few ppl having trouble in the forums
+Sep 20 19:38:20 <dah85>	just got a notification to update to 12.0.3
+Sep 20 19:38:31 <RoyK>	sorry, don't know - there are probably people that know this better awakening in a few hours - it's half past four in the morning in central europe now
+Sep 20 19:38:52 <dah85>	midday here in brisbane, australia
+Sep 20 19:39:59 *	fabricius has quit (Ping timeout: 246 seconds)
+Sep 20 19:40:06 *	RoyK is a wee bit jealous to aussies for their weather, being slightly warmer than in .no
+Sep 20 19:40:10 <dah85>	sajattack, are you willing to just set up nextcloud fresh and manually resync or do you have a lot of users, etc?
+Sep 20 19:40:22 <sajattack>	I've never been able to get that to work
+Sep 20 19:40:32 <sajattack>	for some reason I have to install owncloud first
+Sep 20 19:40:34 <dah85>	RoyK, we're in for a heat wave in the next few days
+Sep 20 19:40:45 <RoyK>	dah85: how hot?
+Sep 20 19:40:49 <dah85>	sajattack, do you have access to another machine to do a test run?
+Sep 20 19:40:59 <dah85>	RoyK, 37-40 degrees celcius
+Sep 20 19:41:02 <sajattack>	I don't really have any data to lose
+Sep 20 19:41:08 <RoyK>	shit - I don't like it over 25
+Sep 20 19:41:10 <dah85>	average temp this time of year is around 30ish
+Sep 20 19:41:23 <dah85>	RoyK, we rarely get below 5c here though in winter ;)
+Sep 20 19:41:43 <RoyK>	well, in .no, we rarely get below -50
+Sep 20 19:41:46 <dah85>	sajattack, if that's the case, could i suggest setting up a fresh nextcloud install then and just sync your files to that when it's done
+Sep 20 19:42:00 <RoyK>	in oslo, rarely below -20
+Sep 20 19:42:09 <dah85>	RoyK, you can keep that lol. My wife is from Canada and she loves the weather here but still complains about the "cold" 10 degree days haha
+Sep 20 19:42:11 <sajattack>	I've never been able to get a fresh nextcloud to work but I'll try
+Sep 20 19:42:22 <dah85>	sajattack, what errors have you had when trying that?
+Sep 20 19:42:35 <dah85>	what os are you using on your server?
+Sep 20 19:42:42 <sajattack>	ubuntu 14.04
+Sep 20 19:42:42 <RoyK>	dah85: andrew?
+Sep 20 19:42:59 <dah85>	RoyK, my name? David
+Sep 20 19:43:42 <RoyK>	ok, just know a guy from aussie-land with a wife from canada an was just wondering - if you're born in 85, he's a wee bit older, so to say ;)
+Sep 20 19:43:46 <dah85>	sajattack, which method of installing did you try? through apt, the web installer or the zip?
+Sep 20 19:43:55 <sajattack>	zip
+Sep 20 19:44:13 <dah85>	RoyK, there's a lot of Canadian chicks here with Aussie husbands.. I guess they love the accent lol
+Sep 20 19:44:28 <dah85>	sajattack, do you get as far as the setup screen?
+Sep 20 19:44:40 <RoyK>	I used the zip installer when I migrated, but I beleive that was from oc v8
+Sep 20 19:44:46 <sajattack>	is there an apt package?
+Sep 20 19:44:49 <dah85>	if you can, it will usually tell you if there is anything missing dependency-wise
+Sep 20 19:45:03 <dah85>	sajattack, i'm pretty sure there is.. try apt install nextcloud
+Sep 20 19:45:12 <sajattack>	unable to locate package nextcloud
+Sep 20 19:45:31 <dah85>	okay, so you've got apache installed?
+Sep 20 19:45:39 <RoyK>	sajattack: afaics no - I'm just using the ones from nextcloud
+Sep 20 19:45:40 <dah85>	and you unzip the files into your /var/www/html/nextcloud folder?
+Sep 20 19:46:06 <sajattack>	nah I unzip to /var/www/owncloud.paulsajna.com/owncloud
+Sep 20 19:46:08 <RoyK>	dump the db first
+Sep 20 19:46:13 <sajattack>	I think that's the problem
+Sep 20 19:46:15 <RoyK>	just to be sure
+Sep 20 19:46:32 <dah85>	sajattack, that should work as long as your vhosts are set up in apache correctly
+Sep 20 19:46:50 <RoyK>	dah85: iirc he said it worked well before the attempted upgrade
+Sep 20 19:47:06 <RoyK>	but then, unzipping may put it in a subfolder if you're not careful
+Sep 20 19:47:10 <RoyK>	might be just that
+Sep 20 19:47:20 <dah85>	RoyK, true. I'm wondering if he can install nextcloud fresh and manually sync the files again since he/she has nothing important
+Sep 20 19:47:29 <sajattack>	he
+Sep 20 19:47:35 <dah85>	depends on the error he's getting
+Sep 20 19:47:48 *	jadesoturi has quit (Ping timeout: 240 seconds)
+Sep 20 19:48:05 <dah85>	how about we try it on another folder.. if you leave the owncloud install there and unzip the nextcloud zip into a nextcloud folder
+Sep 20 19:48:25 <dah85>	so from your example, /var/www/owncloud.paulsajna.com/nextcloud
+Sep 20 19:48:53 <dah85>	and then point your browser to (i presume) owncloud.paulsajna.com/nextcloud and see what happens.. you should get the nextcloud setup screen
+Sep 20 19:49:01 <RoyK>	I ran nc and oc in parallel for a brief time to make sure things worked well
+Sep 20 19:49:11 <RoyK>	then shut down the oc shite
+Sep 20 19:49:15 <dah85>	RoyK, that's what I did too.. in my case it worked out great
+Sep 20 19:49:46 <dah85>	sajattack, is your server your own hardware or are you using a vps/etc?
+Sep 20 19:49:50 <sajattack>	vps
+Sep 20 19:49:58 <RoyK>	then snapshot it first
+Sep 20 19:50:04 <dah85>	if you can
+Sep 20 19:50:14 <sajattack>	don't think I can
+Sep 20 19:50:19 <dah85>	i use serverhub for mine and there's no snapshot/backup
+Sep 20 19:50:30 <RoyK>	sajattack: which provider?
+Sep 20 19:50:33 <dah85>	but if you install them in parallel they should still work
+Sep 20 19:50:40 <dah85>	without any data loss
+Sep 20 19:50:45 <sajattack>	one sec I gotta reset my mariadb password
+Sep 20 19:50:55 <dah85>	am i correct in presuming your files are backed up at least?
+Sep 20 19:50:55 *	RoyK has been working with computing sufficiently long to appreciate a good backup
+Sep 20 19:51:20 <dah85>	RoyK, amen to that. HDD failures are a biiiatch.
+Sep 20 19:51:21 <RoyK>	and btw, use postgres, not m*db, the latter sucks
+Sep 20 19:51:33 <dah85>	i've been using mysql with no issues
+Sep 20 19:51:34 <RoyK>	dah85: I'm using RAID systems, still, things fail
+Sep 20 19:51:45 <RoyK>	dah85: famous last words
+Sep 20 19:51:47 <dah85>	yeah RAID won't protect from user error though
+Sep 20 19:51:52 <dah85>	lol
+Sep 20 19:51:55 <RoyK>	I know
+Sep 20 19:52:02 <sajattack>	the docs I found use mariadb
+Sep 20 19:52:08 <RoyK>	so RAIDz2 on my home server and database to the cloud
+Sep 20 19:52:16 <dah85>	i find it easy to manage so i stick to it until it screws me over ;p
+Sep 20 19:52:27 <RoyK>	sajattack: I use postgresql - I find that far more stable and versatile
+Sep 20 19:52:55 <dah85>	that's the beauty of linux in general, so much choice and there is a never a right or wrong software to use (well, never say never, generally speaking..)
+Sep 20 19:52:57 <RoyK>	I'm using postgres at work with some rather big stuff
+Sep 20 19:53:59 *	rhabbachi (~rhabbachi@197.1.103.69) has joined
+Sep 20 19:54:32 <dah85>	argh my nextcloud update got stuck at the backup stage.. time to troubleshoot.. bbl ;P
+Sep 20 19:55:24 <RoyK>	- mysql is a network-attached spreadsheet used by pr0n sites and other dodgy entities across the Internet.
+Sep 20 19:56:26 <sajattack>	lol
+Sep 20 19:56:31 <dah85>	haha
+Sep 20 19:56:41 <sajattack>	ok I got a fresh nextcloud up
+Sep 20 19:56:47 <dah85>	sajattack, nice!
+Sep 20 19:57:06 <dah85>	if you're happy to set it up as new, then add a user and sync to it and you should be sweet to go ;)
+Sep 20 19:57:23 <RoyK>	as for mysql vs postgres - it isn't religion - I've been working with linux for over 20 years and I've seen mysql doing some rather nasty stuff
+Sep 20 19:57:24 <sajattack>	can someone help me get it set to https?
+Sep 20 19:57:38 <sajattack>	every time I try I get file not found
+Sep 20 19:57:39 <RoyK>	sajattack: using apache?
+Sep 20 19:57:42 <sajattack>	yeah
+Sep 20 19:57:44 <sajattack>	and letsencrypt
+Sep 20 19:57:51 <dah85>	sajattack, i have a trick to do that
+Sep 20 19:57:55 <RoyK>	should be pretty straight forward
+Sep 20 19:58:05 <dah85>	if you set up letsencrypt it will automatically set up https for you ;p
+Sep 20 19:58:07 <sajattack>	http://termbin.com/3jry
+Sep 20 19:58:29 <sajattack>	https://owncloud.paulsajna.com/index.php/apps/files/
+Sep 20 19:58:43 <sajattack>	but http:// works
+Sep 20 19:58:48 <dah85>	sorry for the shameless plug.. http://dah85.com/2017/04/setting-up-letsencrypt-free-ssl
+Sep 20 19:58:51 <NextcloudBot>	Title: Setting up LetsEncrypt free SSL - dah85.com (at dah85.com)
+Sep 20 19:59:12 <sajattack>	I've used letsencrypt before but nextcloud seems to hate it
+Sep 20 19:59:19 <dah85>	after you do that, you should be able to access via https://blah
+Sep 20 19:59:23 <sajattack>	I can't figure out why
+Sep 20 19:59:31 <dah85>	try doing it this way
+Sep 20 19:59:47 <dah85>	i found setting up https to be a pain but this is kinda like a magic bullet approach
+Sep 20 20:00:02 <sajattack>	I've done it that way already
+Sep 20 20:00:07 <dah85>	hmm
+Sep 20 20:00:18 <sajattack>	think it could be my nextcloud/owncloud thing?
+Sep 20 20:00:30 <dah85>	depends on your configuration perhaps
+Sep 20 20:00:37 <sajattack>	move it to /nextcloud and redo the apache config?
+Sep 20 20:00:46 <sajattack>	I posted my config
+Sep 20 20:01:05 <dah85>	i'd try doing the letsencrypt --apache -d yourdomain.com approach
+Sep 20 20:01:26 <sajattack>	ok
+Sep 20 20:01:38 <dah85>	wait
+Sep 20 20:01:46 <dah85>	i see your cert is good
+Sep 20 20:01:52 <dah85>	it's a 404..
+Sep 20 20:01:56 <sajattack>	yeppers
+Sep 20 20:02:01 <dah85>	is that path correct?
+Sep 20 20:02:04 <sajattack>	yep
+Sep 20 20:02:08 <sajattack>	not anymore maybe
+Sep 20 20:02:13 <sajattack>	I just moved it to /nextcloud
+Sep 20 20:02:30 <dah85>	oh that would be why
+Sep 20 20:02:38 <sajattack>	nah, it was like that before
+Sep 20 20:02:51 <dah85>	so in your config it's all set to /owncloud
+Sep 20 20:03:01 <sajattack>	yeah I'll fix that
+Sep 20 20:03:12 <dah85>	i must be honest, apache config is not my strong area
+Sep 20 20:03:37 *	jadesoturi (~jadesotur@unaffiliated/kfj) has joined
+Sep 20 20:04:35 <dah85>	plus my nextcloud isn't using a virtual host
+Sep 20 20:05:29 <dah85>	since it's an issue with setting up a vhost, maybe the folks in #apache can help?
+Sep 20 20:05:44 <sajattack>	I don't think that's the issue
+Sep 20 20:06:21 <dah85>	maybe it's a permission thing
+Sep 20 20:06:30 <sajattack>	just renamed everything to nextcloud and same error
+Sep 20 20:06:47 <sajattack>	all files are chowned to www-data
+Sep 20 20:06:47 <dah85>	have you chmod the directory to www-root?
+Sep 20 20:06:53 <dah85>	www-data sorry
+Sep 20 20:06:58 <dah85>	hmm
+Sep 20 20:07:23 <sajattack>	I posted my access.log earlier
+Sep 20 20:07:25 <dah85>	if you cant access via http:// it's probably because you've got it set to enforce https
+Sep 20 20:07:42 <sajattack>	I can access it via http:// but not https://
+Sep 20 20:07:42 <dah85>	i must have missed it, sorry
+Sep 20 20:08:25 <dah85>	that must be frustrating, i really wish i could help further :)
+Sep 20 20:08:29 <sajattack>	http://termbin.com/ipq9
+Sep 20 20:08:38 <dah85>	thanks
+Sep 20 20:11:30 <sajattack>	nothing in nextcloud.log
+Sep 20 20:11:45 <dah85>	the access log only shows the 404 but doesn't really show why
+Sep 20 20:12:26 <sajattack>	yep
+Sep 20 20:12:29 <sajattack>	not very helpful
+Sep 20 20:12:37 <sajattack>	the error log doesn't have anything recent either
+Sep 20 20:12:52 <dah85>	do you have any other https sites working on that vps?
+Sep 20 20:13:01 <sajattack>	yes, quite a few
+Sep 20 20:13:13 <dah85>	that makes it even more strange
+Sep 20 20:13:17 <sajattack>	haha
+Sep 20 20:13:26 <sajattack>	that's why I think it's a nextcloud problem
+Sep 20 20:13:31 <dah85>	have you reached out to someone at #apache anyway?
+Sep 20 20:13:38 <sajattack>	not yet
+Sep 20 20:13:44 <dah85>	i've got mine working with https but admittedly not with a vhost
+Sep 20 20:13:56 <dah85>	unless someone else in here with more apache experience can help out?
+Sep 20 20:14:48 <RoyK>	I use certbot (former let's encrypt) with nextcloud
+Sep 20 20:14:52 <RoyK>	works like a dream
+Sep 20 20:15:14 <RoyK>	after all, nextcloud isn't even part of it, it's apache doing the crypto stuff
+Sep 20 20:15:35 <sajattack>	shruggie
+Sep 20 20:16:02 <dah85>	if you can experiment on another vps perhaps it's a stale config or something else?
+Sep 20 20:16:28 <sajattack>	I only have the one
+Sep 20 20:16:38 <sajattack>	I'm seeing if #apache can help
+Sep 20 20:16:57 <RoyK>	sajattack: remove the https config and the redirects from the others and run certbot again
+Sep 20 20:17:03 <RoyK>	sajattack: #httpd, that is
+Sep 20 20:17:39 *	rhabbachi has quit (Quit: rhabbachi)
+Sep 20 20:18:03 <dah85>	RoyK, i've found that letsencrypt automagically configured https for me
+Sep 20 20:20:06 <RoyK>	it does
+Sep 20 20:20:33 <RoyK>	but perhaps something went wrong, so i just thought you could try to reverse that and try again - make sure it's the latest version
+Sep 20 20:24:01 *	pk12 has quit (Ping timeout: 240 seconds)
+Sep 20 20:27:08 <sajattack>	now that I think of it my letsencrypt version is probably pretty old
+Sep 20 20:27:35 *	cyclux has quit (Remote host closed the connection)
+Sep 20 20:28:54 <RoyK>	sajattack: clone it from git
+Sep 20 20:29:10 <RoyK>	don't use packages yet
+Sep 20 20:29:27 <sajattack>	yeah that's what I'm doing
+Sep 20 20:29:49 <RoyK>	it should update itself automatically if you run certbot-auto
+Sep 20 20:30:35 <sajattack>	oh
+Sep 20 20:32:34 <sajattack>	yeah no help
+Sep 20 20:34:36 <RoyK>	what was the url again? just want to take a look
+Sep 20 20:34:53 <sajattack>	http://owncloud.paulsajna.com
+Sep 20 20:34:54 <NextcloudBot>	Title: Nextcloud (at owncloud.paulsajna.com)
+Sep 20 20:34:55 <RoyK>	the bots will find it anyway
+Sep 20 20:36:03 <sajattack>	should I change overwrite.cli.url to https://
+Sep 20 20:36:06 <RoyK>	sajattack: I get a login from http:// but  blank screen from https:// - check the apache logs
+Sep 20 20:36:14 <sajattack>	wait really
+Sep 20 20:36:32 <sajattack>	I get login from http:// and 404 from https://
+Sep 20 20:37:03 <dah85>	same, blank page on https
+Sep 20 20:37:07 <dah85>	was getting a 404 before
+Sep 20 20:37:11 <dah85>	http shows login screen
+Sep 20 20:38:00 <dah85>	getting a different error on https now
+Sep 20 20:38:07 <dah85>	shows the nextcloud screen but "file not found"
+Sep 20 20:38:11 <dah85>	getting warmer ;)
+Sep 20 20:38:11 <sajattack>	I wonder if mine is cached
+Sep 20 20:38:15 <sajattack>	oh
+Sep 20 20:38:17 <sajattack>	dns?
+Sep 20 20:38:18 <sajattack>	lol
+Sep 20 20:38:23 <sajattack>	always blame dns
+Sep 20 20:38:27 <dah85>	did you change ip?
+Sep 20 20:38:32 <sajattack>	no
+Sep 20 20:38:33 <dah85>	if no then probably not dns
+Sep 20 20:38:38 <RoyK>	hm - 404 on https, it is
+Sep 20 20:38:43 <sajattack>	alright yeh
+Sep 20 20:38:50 <RoyK>	it's not a nextcloud thing, it's just apache
+Sep 20 20:39:01 <dah85>	yeah that's definitely an apache problem
+Sep 20 20:39:02 <sajattack>	lol the apache guys say the opposite
+Sep 20 20:39:05 *	Dominian has quit (Ping timeout: 240 seconds)
+Sep 20 20:39:19 <dah85>	they probably didnt troubleshoot to the level we have so far, i bet?
+Sep 20 20:39:40 <dah85>	we've worked out that although nextcloud is the only thing not working on https, it works on http and it's a fresh install
+Sep 20 20:39:54 <dah85>	at this stage it's pointing to an apache config issue
+Sep 20 20:40:18 <sajattack>	go fight with #httpd :P
+Sep 20 20:41:01 <dah85>	haha i used to work for applecare and the number of times we had people call up, referred by their isp who insist the issue is with their mac, for an ISP related issue like a password or something is incredible and they do no troubleshooting first
+Sep 20 20:41:16 <RoyK>	dah85: check the nextcloud config - it has a home - that should be https://something
+Sep 20 20:41:20 <dah85>	its just like "ahh you have a mac? call apple"
+Sep 20 20:41:40 <dah85>	RoyK, was that for me or sajattack ?
+Sep 20 20:41:52 <RoyK>	doh - for sajattack perhaps
+Sep 20 20:42:00 <dah85>	lol
+Sep 20 20:42:01 <sajattack>	overwrite.cli.url I just changed to https
+Sep 20 20:42:04 <sajattack>	and it did nothing
+Sep 20 20:44:13 *	cyclux (~cyclux@gateway/tor-sasl/cyclux) has joined
+Sep 20 20:44:22 <RoyK>	sajattack: check apache's errorlog
+Sep 20 20:45:40 <sajattack>	yeah there was nothing there until recently
+Sep 20 20:45:58 <sajattack>	now there's some kind of sql error
+Sep 20 20:46:17 *	Dominian (~dominian@opensuse/member/dominian) has joined
+Sep 20 20:46:57 <RoyK>	sajattack: do you have separate log files for http and https?
+Sep 20 20:46:57 <RoyK>	if not, do so
+Sep 20 20:47:00 <RoyK>	then we can just just look for the errors in the https part
+Sep 20 20:47:04 <RoyK>	a 404 will be logged
+Sep 20 20:47:34 <sajattack>	the 404s are logged but there's nothing relevant
+Sep 20 20:47:43 <sajattack>	like yeah, it tells me there's a 404 but that's it
+Sep 20 20:47:50 <RoyK>	well, the path is relevant
+Sep 20 20:48:00 <RoyK>	pastebin it
+Sep 20 20:48:01 *	jadesoturi has quit (Ping timeout: 240 seconds)
+Sep 20 20:48:12 *	bronson has quit (Remote host closed the connection)
+Sep 20 20:48:44 <sajattack>	termbin.com/qbr3
+Sep 20 20:50:04 <sajattack>	here's one 
+Sep 20 20:50:04 <sajattack>	158.36.144.162 - - [20/Sep/2017:20:44:08 -0700] "GET /index.php/login HTTP/1.1" 404 8664 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8"
+Sep 20 20:50:31 <dah85>	it finds index.php but then it redirects to index.php/index and then says not found
+Sep 20 20:50:37 <dah85>	same thing for index.php/settings/admin/serverinfo
+Sep 20 20:50:38 <sajattack>	really
+Sep 20 20:50:57 <dah85>	i'd say you're very close to getting it working
+Sep 20 20:51:03 <sajattack>	how do I fix that?
+Sep 20 20:51:10 <dah85>	that's the million dollar question
+Sep 20 20:51:16 <RoyK>	sajattack: that's me
+Sep 20 20:51:49 <dah85>	my advice would always be to test on a fresh install
+Sep 20 20:52:06 <dah85>	just to rule out any underlying issues which might be hiding away in a config somewhere
+Sep 20 20:52:22 <RoyK>	dah85: I seriously doubt it's that bad
+Sep 20 20:52:29 <sajattack>	where do you see it redirecting to index.php/index?
+Sep 20 20:52:38 <RoyK>	sajattack: which distro is this?
+Sep 20 20:52:39 <dah85>	when you go to your url
+Sep 20 20:52:47 <sajattack>	ubuntu 14.04
+Sep 20 20:53:01 <RoyK>	ok, do you have a "default" thing for https?
+Sep 20 20:53:05 <RoyK>	if so, remove it
+Sep 20 20:53:08 <sajattack>	huh?
+Sep 20 20:53:25 <dah85>	it's loading index.php when you go to https://yoururl/
+Sep 20 20:53:26 <RoyK>	just use specific virtualhosts
+Sep 20 20:53:34 <dah85>	and index.php is loading the login page, which it can't find
+Sep 20 20:53:50 <dah85>	is there anything in your nextcloud logs?
+Sep 20 20:53:52 <RoyK>	older ubuntu is rather bad on the "default" thing - sometimes it just takes over
+Sep 20 20:53:59 <RoyK>	for apache, that is
+Sep 20 20:54:07 <sajattack>	oh, my 000-default.conf
+Sep 20 20:54:25 <RoyK>	or 000-sslsomething
+Sep 20 20:54:28 <RoyK>	don't remember it
+Sep 20 20:54:35 <dah85>	there should be one that references ssl
+Sep 20 20:54:36 <RoyK>	000-default.conf is the http part
+Sep 20 20:54:40 <sajattack>	the #httpd guys are sassy
+Sep 20 20:54:41 <dah85>	in the name like RoyK suggested
+Sep 20 20:54:54 <sajattack>	ls
+Sep 20 20:54:59 <sajattack>	oops
+Sep 20 20:55:04 <RoyK>	remove it from /etc/apache2/sites-enabled
+Sep 20 20:55:52 <sajattack>	apache breaks when I do that
+Sep 20 20:56:06 <RoyK>	don't remove the dir
+Sep 20 20:56:10 <RoyK>	remove the symlink
+Sep 20 20:56:19 <RoyK>	just create a new vhost for that specific site
+Sep 20 20:56:27 <RoyK>	or whatever other sites
+Sep 20 20:56:27 *	vectr0n has quit (Ping timeout: 260 seconds)
+Sep 20 20:57:05 <sajattack>	remove the symlink from sites-enabled?
+Sep 20 20:57:07 <RoyK>	older ubuntu is notoric on redirecting everything to the default site if something is non-optimal or even optimal
+Sep 20 20:57:11 <RoyK>	yes
+Sep 20 20:58:36 <sajattack>	didn't help
+Sep 20 20:58:56 <RoyK>	did you do an apache2ctl graceful first?
+Sep 20 20:59:03 <RoyK>	or restart apache?
+Sep 20 20:59:08 <sajattack>	restarted apache
+Sep 20 20:59:47 <RoyK>	pastebin your apache config for the vhost - both http and https
+Sep 20 21:01:03 <sajattack>	termbin.com/55zf termbin.com/fqfs
+Sep 20 21:01:34 *	vectr0n (vectr0n@unaffiliated/vectr0n) has joined
+Sep 20 21:02:35 <RoyK>	sajattack: hm… did you tell certbot to forcely forward to https?
+Sep 20 21:02:40 <RoyK>	doesn't look like it
+Sep 20 21:02:45 <sajattack>	no
+Sep 20 21:02:51 <RoyK>	do that
+Sep 20 21:03:04 <sajattack>	if I do that I can't access the http:// which is the only one that works
+Sep 20 21:03:20 <RoyK>	just try, please
+Sep 20 21:03:30 <RoyK>	it's reversable
+Sep 20 21:04:05 *	jadesoturi (~jadesotur@unaffiliated/kfj) has joined
+Sep 20 21:04:26 *	bronson (~bronson@50-1-98-33.dsl.dynamic.fusionbroadband.com) has joined
+Sep 20 21:04:49 <sajattack>	ok done
+Sep 20 21:07:22 <RoyK>	hrmf
+Sep 20 21:07:51 <sajattack>	indeed
+Sep 20 21:08:36 <sajattack>	I'mma go ahead and undo that
+Sep 20 21:09:27 <RoyK>	how many other vhosts do you have on this thing?
+Sep 20 21:09:32 <sajattack>	a lot
+Sep 20 21:09:37 <RoyK>	on https
+Sep 20 21:09:47 <sajattack>	5
+Sep 20 21:10:20 <RoyK>	ok, try to move them aside or remove the symlinks or a2dissite them
+Sep 20 21:10:23 <RoyK>	just to see if it helps
+Sep 20 21:11:25 <sajattack>	done
+Sep 20 21:11:32 *	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net) has joined
+Sep 20 21:11:46 <RoyK>	restarted apache as well?
+Sep 20 21:11:57 <sajattack>	yep
+Sep 20 21:13:09 <RoyK>	I can't understand what's going on there
+Sep 20 21:13:11 <sajattack>	oh I missed one
+Sep 20 21:13:57 <sajattack>	I'm curious about what the other guy said about index.php redirecting to index.php/index
+Sep 20 21:14:44 <sajattack>	I don't see that happening anywhere
+Sep 20 21:15:02 <RoyK>	I really don't understand how this can be
+Sep 20 21:15:07 <sajattack>	lol
+Sep 20 21:15:19 <sajattack>	could you set up a fresh nextcloud to try and replicate?
+Sep 20 21:15:25 <RoyK>	I've only been using apache for a decade and a half, though
+Sep 20 21:16:30 *	noobineer has quit (Ping timeout: 246 seconds)
+Sep 20 21:19:06 <sajattack>	this guy seemed to have a similar issue https://help.nextcloud.com/t/trying-to-get-ssl-working/2281/21
+Sep 20 21:19:22 <sajattack>	but that was a year ago
+Sep 20 21:20:10 <RoyK>	try enabling more logging in apache
+Sep 20 21:20:21 <sajattack>	I have loglevel set to debug
+Sep 20 21:20:46 <RoyK>	and separate logfile for https://owncloud.paulsajna.com/  ?
+Sep 20 21:20:49 <sajattack>	no
+Sep 20 21:20:49 <RoyK>	the https
+Sep 20 21:21:00 <RoyK>	well, switch to that
+Sep 20 21:21:02 <sajattack>	ok
+Sep 20 21:21:06 <RoyK>	both access and error log
+Sep 20 21:21:33 <RoyK>	always use separate logfiles
+Sep 20 21:21:53 *	Cuare has quit ()
+Sep 20 21:22:33 *	pk12 (~pk12@199.241.146.163) has joined
+Sep 20 21:22:58 <sajattack>	termbin.com/prcl
+Sep 20 21:24:11 <sajattack>	200s on everything other than index.php/login
+Sep 20 21:24:14 <sajattack>	that's interesting
+Sep 20 21:24:43 <RoyK>	hm…
+Sep 20 21:24:48 <RoyK>	lemme check a few things
+Sep 20 21:24:54 <sajattack>	kk
+Sep 20 21:26:50 <RoyK>	I have this in my config/config.php 'overwrite.cli.url' => 'https://cloud.karlsbakk.net/'
+Sep 20 21:28:05 *	rvm (~Konrad@x4e379197.dyn.telefonica.de) has joined
+Sep 20 21:29:18 <sajattack>	yeah I did that
+Sep 20 21:29:37 <sajattack>	didn't change anything
+Sep 20 21:30:11 <sajattack>	mine doesn't have the slash on the end
+Sep 20 21:30:13 <sajattack>	I'll try that
+Sep 20 21:30:48 <sajattack>	no change
+Sep 20 21:30:54 *	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net) has joined
+Sep 20 21:31:12 <sajattack>	termbin.com/0iy8
+Sep 20 21:32:10 *	Holbrook has quit (Ping timeout: 264 seconds)
+Sep 20 21:32:30 <RoyK>	sajattack: better change that password :P
+Sep 20 21:32:48 <RoyK>	and salt
+Sep 20 21:32:56 <RoyK>	and not do that again ;)
+Sep 20 21:33:12 <sajattack>	meh, it's a local only db isn't it
+Sep 20 21:33:36 <RoyK>	still, well, let's fix this first, then change it - you really don't want to have a password lying in the open
+Sep 20 21:33:43 *	Holbrook (irc@srd.me.uk) has joined
+Sep 20 21:34:22 <RoyK>	sajattack: and the salt will help people decrypt the passwords if they can get to the db
+Sep 20 21:34:25 <RoyK>	et cetera
+Sep 20 21:35:56 <RoyK>	but anyway - can you create a test user for me and pm me the details?
+Sep 20 21:38:17 >RoyK<	RoyK N2SFeTnn8p2>gw6b
+Sep 20 21:38:35 <sajattack>	is that a PM, I'm new to irc
+Sep 20 21:39:34 <sajattack>	it better be haha
+Sep 20 21:40:22 <sajattack>	RoyK
+Sep 20 21:40:34 <RoyK>	tail the errorlog now
+Sep 20 21:40:45 <RoyK>	and compare the accesslogs
+Sep 20 21:40:56 <RoyK>	I just tried, after logging in, to switch to https
+Sep 20 21:41:00 <RoyK>	same shite
+Sep 20 21:41:02 <sajattack>	no error log
+Sep 20 21:41:16 <RoyK>	nextcloud log, then?
+Sep 20 21:41:24 <sajattack>	this is the access log
+Sep 20 21:41:30 <sajattack>	termbin.com/5ly3
+Sep 20 21:41:47 *	jadesoturi has quit (Quit: ZNC - http://znc.in)
+Sep 20 21:41:53 <RoyK>	check the nextcloud log
+Sep 20 21:42:30 <sajattack>	termbin.com/biht
+Sep 20 21:43:13 <RoyK>	perhaps time to beef up logging in nextcloud, then
+Sep 20 21:43:24 <sajattack>	how?
+Sep 20 21:44:19 <RoyK>	https://docs.nextcloud.com/server/9/admin_manual/configuration_server/logging_configuration.html
+Sep 20 21:44:20 <NextcloudBot>	Title: Logging Configuration — Nextcloud 9 Server Administration Manual 9 documentation (at docs.nextcloud.com)
+Sep 20 21:44:23 <RoyK>	loglevel = 0
+Sep 20 21:44:49 <RoyK>	it'll eat som space, but not a whole lot, and just turn it off when you don't need it anymore
+Sep 20 21:45:19 <sajattack>	mmkay
+Sep 20 21:45:20 *	jadesoturi (~jadesotur@unaffiliated/kfj) has joined
+Sep 20 21:45:29 <sajattack>	should be done
+Sep 20 21:45:56 <RoyK>	then try some more and look through the logs
+Sep 20 21:48:16 <sajattack>	termbin.com/6dq9
+Sep 20 21:48:55 <RoyK>	just check with the paths there
+Sep 20 21:49:13 <RoyK>	compare them with the paths when accessing it over http as compared to https
+Sep 20 21:49:47 <sajattack>	hmm?
+Sep 20 21:50:10 <sajattack>	it doesn't log anything when I access over https
+Sep 20 21:51:07 <RoyK>	wtf?
+Sep 20 21:51:49 <sajattack>	there's nothing to log, it 404s before it can do anything
+Sep 20 21:52:15 <RoyK>	I guess that *may* have to do with it ;)
+Sep 20 21:52:25 <RoyK>	a 404 is logged in the access log
+Sep 20 21:52:39 <sajattack>	yeah
+Sep 20 21:52:55 <RoyK>	and if nextcloud doesn't log jackshit if accessed over https, it means it's not accessed
+Sep 20 21:54:17 <RoyK>	nextcloud doesn't care about https - apache does
+Sep 20 21:54:25 <RoyK>	so it's an apache issue
+Sep 20 21:54:35 <sajattack>	lol
+Sep 20 21:54:37 <RoyK>	what and why, I don't know
+Sep 20 21:55:04 <sajattack>	fight it out with #httpd
+Sep 20 21:55:47 <Lartza>	Yeah sounds like an Apache configuration issue at a glance, just woke up and haven't read the backlog :P
+Sep 20 21:56:01 <sajattack>	could you try a fresh nextcloud RoyK?
+Sep 20 21:56:15 <RoyK>	sajattack: well, I'm using a similar setup, but upgraded from oc8
+Sep 20 21:56:17 <Lartza>	There's no way for NC to steal Apache logs, only PHP, and if you access a ssite it will log
+Sep 20 21:56:25 <RoyK>	sajattack: try that
+Sep 20 21:56:35 <sajattack>	try what?
+Sep 20 21:56:47 <sajattack>	install a fresh owncloud 8?
+Sep 20 21:56:49 <RoyK>	well, a fresh setup, but still
+Sep 20 21:56:50 <RoyK>	well
+Sep 20 21:56:52 <RoyK>	no
+Sep 20 21:57:04 <RoyK>	I don't really know
+Sep 20 21:57:07 <sajattack>	haha
+Sep 20 21:57:13 <sajattack>	thanks for your help anyways
+Sep 20 21:57:42 <RoyK>	still - does apache do php in https mode?
+Sep 20 21:57:49 <RoyK>	are the rewrite rules there?
+Sep 20 21:58:04 <RoyK>	et cetera et cetera ad infinitum
+Sep 20 21:58:30 <Lartza>	Ouch I'm reading the backlog and everything now
+Sep 20 21:58:40 <Lartza>	This is a fresh install now? Or are you on OC 10.0.3 or what
+Sep 20 21:58:44 <sajattack>	\_(tsu)_/
+Sep 20 21:58:53 <sajattack>	fresh nextcloud 12.0.3
+Sep 20 21:59:08 <RoyK>	with a somewhat broken apache install
+Sep 20 21:59:11 <sajattack>	lol
+Sep 20 21:59:18 <sajattack>	reinstall apache?
+Sep 20 21:59:21 <RoyK>	lemme try something
+Sep 20 21:59:22 <RoyK>	sajattack: no
+Sep 20 21:59:44 <dah85>	sajattack, are you able to test using a vm?
+Sep 20 21:59:50 *	ZaggeO (~quassel@p54A386BA.dip0.t-ipconnect.de) has joined
+Sep 20 22:00:06 <sajattack>	dah85, I guess
+Sep 20 22:00:19 *	rouky (~thomas@2a01:e35:2fbe:e820:64bc:72:c376:e7f4) has joined
+Sep 20 22:00:38 <dah85>	that way you can test it in a non-destructive manner
+Sep 20 22:00:56 <sajattack>	it won't be net accessible though
+Sep 20 22:01:07 <dah85>	doesnt need to be really
+Sep 20 22:01:30 <RoyK>	sajattack: http://paste.debian.net/987058/
+Sep 20 22:01:32 <NextcloudBot>	Title: debian Pastezone (at paste.debian.net)
+Sep 20 22:01:33 <dah85>	if you can access it with https (even with a self-signed cert for testing) and set up a vhost or 2
+Sep 20 22:01:47 <sajattack>	mmkay
+Sep 20 22:01:51 <Lartza>	Anything weird inside /etc/letsencrypt/options-ssl-apache.conf ?
+Sep 20 22:03:21 <sajattack>	termbin.com/4xex
+Sep 20 22:03:56 <RoyK>	or /etc/apache2/mods-enabled/ssl.*
+Sep 20 22:04:08 <Lartza>	And you have no errorlogs anywhere of apache? /var/log/apache2/error.log or ${APACHE_LOG_DIR}/owncloud-error.log ?
+Sep 20 22:04:23 <RoyK>	sajattack: boost the logging to debug
+Sep 20 22:04:38 <RoyK>	and use a separate logfile
+Sep 20 22:04:52 <RoyK>	but then, you did that in the vhost, didn't you? for both err an acc?
+Sep 20 22:05:20 <sajattack>	yeah
+Sep 20 22:05:31 <sajattack>	the ssl log should be owncloud-ssl-error.log
+Sep 20 22:05:47 <sajattack>	doesn't exist
+Sep 20 22:05:49 <Lartza>	sajattack, It's not you've not set that
+Sep 20 22:05:58 <sajattack>	it's set in the vhost
+Sep 20 22:05:58 <Lartza>	It's the same as the non-ssl log
+Sep 20 22:06:04 <sajattack>	not anymore
+Sep 20 22:06:08 <Lartza>	I see
+Sep 20 22:06:11 *	rouky (~thomas@2a01:e35:2fbe:e820:64bc:72:c376:e7f4) has left
+Sep 20 22:06:25 <Lartza>	well options-ssl-apache.conf sets it again to /var/log/apache2/error.log also
+Sep 20 22:06:40 <Lartza>	So, is that empty?
+Sep 20 22:07:52 <sajattack>	I don't see anything relevant in it
+Sep 20 22:08:45 <Lartza>	Are you using mod_php?
+Sep 20 22:08:53 <sajattack>	pretty sure
+Sep 20 22:09:24 <Lartza>	And nextcloud log is not helpful either?
+Sep 20 22:09:27 <sajattack>	module php5.6 is already enabled
+Sep 20 22:09:28 <sajattack>	not
+Sep 20 22:09:33 <sajattack>	*nope
+Sep 20 22:09:37 <sajattack>	regarding nextcloud log
+Sep 20 22:09:39 <Lartza>	I mean, it gets to the login page in a sense
+Sep 20 22:09:44 <Lartza>	But fails to load some javascript
+Sep 20 22:11:49 <Lartza>	Did you accidentally keep any files, including .htaccess when you fresh installed
+Sep 20 22:12:06 *	rouven (~rouven@i577A4575.versanet.de) has joined
+Sep 20 22:12:22 <sajattack>	I can remove .htaccess if you think it will help
+Sep 20 22:12:24 <RoyK>	I really doubt this is related to javascript
+Sep 20 22:12:34 <RoyK>	Lartza: check the HEAD test above - I pasted it
+Sep 20 22:12:43 <Lartza>	It 404's /index.php/js/core/merged-template-prepend.js?v=4f338c672887d8e5db41042fa433eb5e-0
+Sep 20 22:12:45 <RoyK>	it's apache misconiguration
+Sep 20 22:12:56 <Lartza>	and /index.php/login
+Sep 20 22:13:05 <Lartza>	svg files and other javascript files load just fine
+Sep 20 22:13:20 *	BeS (~BeS@fsfe/schiessle) has joined
+Sep 20 22:14:22 <Lartza>	RoyK, Not sure what one should interpret from that header :P
+Sep 20 22:14:24 <Lartza>	It looks fine
+Sep 20 22:14:35 <Lartza>	Apart from 404 of course ;)
+Sep 20 22:14:53 <Lartza>	sajattack, NC needs htacccess files
+Sep 20 22:14:59 <Lartza>	but they need to be correct
+Sep 20 22:15:09 <RoyK>	apachectl -S should show the running config
+Sep 20 22:16:34 <Lartza>	There's a maintenance:update:htaccess occ command but not sure if that would help
+Sep 20 22:16:48 <Lartza>	It might if you have an invalid htaccess file laying around
+Sep 20 22:18:05 <Lartza>	Actually, is the integrity check passing?
+Sep 20 22:20:17 *	Mottengrotte (~Mottengro@ip1f11c3f3.dynamic.kabel-deutschland.de) has joined
+Sep 20 22:21:25 *	rvm has quit (Quit: Leaving.)
+Sep 20 22:26:54 <sajattack>	paul@imp1:/var/www/owncloud.paulsajna.com/nextcloud$ sudo -u www-data ./occ integrity:check-core
+Sep 20 22:26:58 <sajattack>	no output
+Sep 20 22:28:49 <Lartza>	http://owncloud.paulsajna.com/index.php/settings/integrity/failed
+Sep 20 22:29:07 <sajattack>	no errors have been found
+Sep 20 22:29:30 <Lartza>	That should detect any invalid htaccess files too afaik
+Sep 20 22:29:32 <Lartza>	:/
+Sep 20 22:29:39 <Lartza>	invalid, extra or missing
+Sep 20 22:31:14 <sajattack>	yeah and I did the htaccess thingamajig in occ as well
+Sep 20 22:31:19 *	Guest16810 is now known as CyanoTex
+Sep 20 22:31:30 *	CyanoTex has quit (Changing host)
+Sep 20 22:31:30 *	CyanoTex (cyanotexma@wikipedia/cyanotex) has joined
+Sep 20 22:32:27 *	tarator (~Thunderbi@84-113-5-52.cable.dynamic.surfer.at) has joined
+Sep 20 22:32:37 *	lss8_ (~lss8@unaffiliated/lss8) has joined
+Sep 20 22:33:31 *	llucenic (~Thunderbi@rev-185-22-215-103.radiolan.sk) has joined
+Sep 20 22:34:51 *	BeS has quit (Quit: BeS)
+Sep 20 22:36:22 *	lss8 has quit (Ping timeout: 264 seconds)
+Sep 20 22:40:07 *	krzyzaq (d5c7d922@gateway/web/freenode/ip.213.199.217.34) has joined
+Sep 20 22:40:35 <krzyzaq>	hi all
+Sep 20 22:40:35 <NextcloudBot>	hi krzyzaq, please go ahead and ask your question and be patient, most people do not actively monitor the chat and will only check the chatlog periodically
+Sep 20 22:42:10 <krzyzaq>	just migrated to nextcloud 11.0.5 from owncloud but can't access the server with my user from desktop client (the web works fine)
+Sep 20 22:42:16 <krzyzaq>	Access forbidden by server
+Sep 20 22:42:24 <krzyzaq>	what can be the issue?
+Sep 20 22:42:34 <Lartza>	What do the NC logs say
+Sep 20 22:42:48 <Lartza>	Also why NC11 and from what OC version?
+Sep 20 22:44:27 <dah85>	krzyzaq, have you tried removing the account and re-adding it in the client?
+Sep 20 22:44:40 <dah85>	did up also update to the nextcloud client? (even though the owncloud client should work)
+Sep 20 22:45:52 <krzyzaq>	@Lartza: previous ver was (9,1,0,15) so the 11 was the highest stable available
+Sep 20 22:47:29 <krzyzaq>	log says: https://pastebin.com/pujKVLUH
+Sep 20 22:47:30 <NextcloudBot>	Title: Error no app in context OCP\AppFramework\QueryException: Could not resolve OCA\O - Pastebin.com (at pastebin.com)
+Sep 20 22:48:05 <krzyzaq>	@dah85: dunno, I've installed the nc agent
+Sep 20 22:48:44 <dah85>	did you download that from the Nextcloud website, krzyzaq?
+Sep 20 22:49:18 <krzyzaq>	@dah85: sure, the old oc client doesn't work neither
+Sep 20 22:50:08 <dah85>	did you try removing the account from the client and adding it again?
+Sep 20 22:50:29 <Lartza>	Please don't use pastebin.com. Also NC12 is available but yes you had to update to NC11 first :) We are fine let's troubleshoot
+Sep 20 22:50:40 <Lartza>	How did you migrate?
+Sep 20 22:51:00 <Lartza>	Did you follow https://nextcloud.com/migration/
+Sep 20 22:51:01 <NextcloudBot>	Title: Migration: ownCloud vs Nextcloud – Nextcloud (at nextcloud.com)
+Sep 20 22:51:26 *	AtAM1 has quit (Ping timeout: 246 seconds)
+Sep 20 22:52:49 <krzyzaq>	@Lartza: yes I've followed th official instructions of nc.com. What to use instead of pb?
+Sep 20 22:53:18 <Lartza>	Anything, gist, https://ptpb.pw/f
+Sep 20 22:53:20 <NextcloudBot>	Title: pb - Hello phrik (at ptpb.pw)
+Sep 20 22:53:50 <Lartza>	even bad ones like hastebin are better than pastebin.com, literally anything is
+Sep 20 22:54:11 <krzyzaq>	why is that?
+Sep 20 22:54:39 <Lartza>	advertisements, captchas, CRLF line endings, malware
+Sep 20 22:56:06 <Lartza>	krzyzaq, Disable the JavaScript XMPP Chat app
+Sep 20 23:01:18 <krzyzaq>	@Lartza: the chat was disabled, I've uninstalled it completly
+Sep 20 23:01:28 <Lartza>	So, other errors? :D
+Sep 20 23:06:10 *	dah85 has quit (Read error: Connection reset by peer)
+Sep 20 23:06:44 *	dah85 (~david@103.217.166.48) has joined
+Sep 20 23:07:41 <krzyzaq>	@Lartza: https://gist.github.com/krzyzaq/3269d82c6ce4799f005a6fadb17f2e67
+Sep 20 23:07:43 <NextcloudBot>	Title: oc_log.log · GitHub (at gist.github.com)
+Sep 20 23:07:48 <krzyzaq>	sure some
+Sep 20 23:08:21 <Lartza>	Well the upper one is still about javascript xmpp
+Sep 20 23:08:28 *	Mottengrotte has quit (Ping timeout: 240 seconds)
+Sep 20 23:08:44 <Lartza>	but the lower one is your sync error
+Sep 20 23:09:22 *	AtAM1 (~AtAM1@pdpc/supporter/professional/wiss) has joined
+Sep 20 23:10:08 <Lartza>	at least maybe...
+Sep 20 23:11:26 <krzyzaq>	I thought so also...
+Sep 20 23:11:35 <krzyzaq>	but what can be the cause?
+Sep 20 23:11:52 <Lartza>	Do you have anything else syncing
+Sep 20 23:12:00 <Lartza>	caldav or
+Sep 20 23:12:02 <Lartza>	davdroid
+Sep 20 23:13:36 <Lartza>	Because apparently that error might not matter
+Sep 20 23:14:34 <Lartza>	Do you have two-factor auth enabled and would it be possible to try and re-add the user to the NC client?
+Sep 20 23:14:45 <Lartza>	If there are no other errors then there's really not much to go on
+Sep 20 23:15:44 *	rouven has quit (Quit: rouven)
+Sep 20 23:16:23 *	VlanX (~sysadmin@host101-192-dynamic.50-79-r.retail.telecomitalia.it) has joined
+Sep 20 23:16:32 *	dano5 has quit (Ping timeout: 240 seconds)
+Sep 20 23:16:57 <krzyzaq>	no I don't have two factor as well as caldav or droid
+Sep 20 23:17:52 *	dano5 (~dano5@163.109-247-80.customer.lyse.net) has joined
+Sep 20 23:17:56 <Lartza>	So no syncing your calendar or files to anything else than nextcloud clients?
+Sep 20 23:18:06 <krzyzaq>	yeap
+Sep 20 23:18:24 <Lartza>	Not sure WHY that error pops up then but still it's just a debug message
+Sep 20 23:24:12 <dah85>	Lartza, do you have another computer you can try the nc client on?
+Sep 20 23:24:30 <Lartza>	Um?
+Sep 20 23:24:32 <dah85>	or create a new user account on your computer and try it in there, just in case?
+Sep 20 23:24:42 <dah85>	sorry, that was for krzyzaq
+Sep 20 23:24:46 <Lartza>	:P
+Sep 20 23:25:46 <dah85>	i suggested it about 40 minutes back and i'm not sure if you've tried it yet, krzyzaq
+Sep 20 23:26:37 <krzyzaq>	@dah85: don't find a reason for a new user, since I can login to web interface
+Sep 20 23:26:49 <krzyzaq>	I'm thinking about updating to 12
+Sep 20 23:26:49 *	Ivansss (~ivansss@x4db132f7.dyn.telefonica.de) has joined
+Sep 20 23:27:06 <dah85>	the web interface is one part of it, that works, but the client is where the issue is
+Sep 20 23:27:22 <dah85>	so if we try it in another user account we can eliminate potential issues within the client
+Sep 20 23:27:34 <dah85>	at the very least, remove the account from the client and add it again
+Sep 20 23:28:54 <krzyzaq>	@dah85: nope, it also doesn't work
+Sep 20 23:29:06 <dah85>	thanks
+Sep 20 23:29:15 <dah85>	i wonder if it's a webdav issue then
+Sep 20 23:29:26 *	rouven (~rouven@i577A4575.versanet.de) has joined
+Sep 20 23:31:26 *	saiyan has quit (Quit: BYE)
+Sep 20 23:32:33 <krzyzaq>	I've checked also php 5.6 and 7
+Sep 20 23:32:38 <krzyzaq>	neither works
+Sep 20 23:33:13 *	saiyan (~saiyan@mx0.chrstn.eu) has joined
+Sep 20 23:33:31 <krzyzaq>	I think the last thing will be new/fresh install (loosing all shared files) or updating to 12?
+Sep 20 23:33:37 <dah85>	could you try in another user account on your computer, or on another computer?
+Sep 20 23:33:56 <dah85>	that would be easier and less destructive than wiping and starting fresh
+Sep 20 23:35:11 <krzyzaq>	no can do now
+Sep 20 23:35:21 <krzyzaq>	maybe in the afternoon
+Sep 20 23:35:42 <dah85>	alternatively, try another nextcloud user account
+Sep 20 23:35:46 <krzyzaq>	I would try first the most recent version of server
+Sep 20 23:35:52 <dah85>	or that
+Sep 20 23:36:02 *	fordfrog (~fordfrog@gentoo/developer/fordfrog) has joined
+Sep 20 23:36:13 <krzyzaq>	since I would liked to update as well to the most recen one
+Sep 20 23:39:58 *	Haudegen (~quassel@178.115.237.87) has joined
+Sep 20 23:45:35 *	martinus__ (~martin@111.239.24.109.rev.sfr.net) has joined
+Sep 20 23:50:23 *	ph0b0s has quit (Remote host closed the connection)
+Sep 20 23:56:49 *	Mottengrotte (~Mottengro@195.50.176.6) has joined
+Sep 20 23:57:24 *	ph0b0s (~ph0b0s@81.92.56.189) has joined
+Sep 20 23:59:48 *	Tools (~Casper@casper.at.lunarbnc.net) has joined
+Sep 21 00:01:00 *	rouven has quit (Quit: rouven)
+Sep 21 00:01:15 *	rouven (~rouven@i577A4575.versanet.de) has joined
+Sep 21 00:01:42 *	utack (~utack@2a02:810a:83c0:5e10:428d:5cff:fee4:be71) has joined
+Sep 21 00:05:33 *	VlanX has quit (Ping timeout: 246 seconds)
+Sep 21 00:08:38 *	TC` (~justas@gilvonauskas.lt) has joined
+Sep 21 00:08:55 <TC`>	hi, updater won't start. Doesn't like "nextcloud.log" file. What to do ?
+Sep 21 00:09:12 <TC`>	Check for expected files
+Sep 21 00:09:12 <TC`>	The following extra files have been found:
+Sep 21 00:09:13 <TC`>	nextcloud.log
+Sep 21 00:10:39 *	BernhardPosselt (~Adium@2a02:8388:6a82:3580:8180:2257:75f6:aa59) has joined
+Sep 21 00:11:54 *	jazz (~jazz@graf.univ-tlse3.fr) has joined
+**** BEGIN LOGGING AT Thu Sep 21 14:43:09 2017
+
+Sep 21 14:43:09 *	Now talking on #nextcloud
+Sep 21 14:43:09 *	Topic for #nextcloud is: Welcome to Nextcloud! :) Join our open community at https://help.nextcloud.com - Nextcloud 12 is out! (https://nextcloud.com/blog/welcome-to-nextcloud-12/)
+Sep 21 14:43:09 *	Topic for #nextcloud set by LukasReschke!sid10067@gateway/web/irccloud.com/x-jdglpvpxawstuyuj (Mon May 22 06:55:26 2017)
+Sep 21 14:45:16 *	fux_ (~michi@piratenpartei/bw/fux) has joined
+Sep 21 14:45:27 *	jhass has quit (Ping timeout: 252 seconds)
+Sep 21 14:45:27 *	cosenal has quit (Ping timeout: 252 seconds)
+Sep 21 14:45:27 *	zsmithnyc has quit (Ping timeout: 252 seconds)
+Sep 21 14:45:40 *	NextcloudBot` (~limnoria@mail.posselt.at) has joined
+Sep 21 14:45:47 *	cosenal (sid10872@gateway/web/irccloud.com/x-daocypwytmzrewiu) has joined
+Sep 21 14:46:00 *	NextcloudBot has quit (Ping timeout: 252 seconds)
+Sep 21 14:46:00 *	MorrisJobke has quit (Ping timeout: 252 seconds)
+Sep 21 14:46:03 *	zsmithnyc (sid53306@gateway/web/irccloud.com/x-doqmhfxidccqsvor) has joined
+Sep 21 14:46:33 *	georgehrke has quit (Ping timeout: 252 seconds)
+Sep 21 14:46:33 *	mikedlr has quit (Ping timeout: 252 seconds)
+Sep 21 14:46:33 *	ToeSnacks has quit (Ping timeout: 252 seconds)
+Sep 21 14:46:33 *	`z has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:06 *	ksx4system has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:06 *	netrace has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:06 *	koalalorenzo has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	xXSTrikeXx has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	SOO7 has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	Guest89346 has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	twouters has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	dupondje has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	fjmorazan has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	xaver has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	fux has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	TheAssassin has quit (Ping timeout: 252 seconds)
+Sep 21 14:47:39 *	cromag has quit (Ping timeout: 252 seconds)
+Sep 21 14:48:02 *	saiyan has quit (Ping timeout: 260 seconds)
+Sep 21 14:48:02 *	Chais has quit (Ping timeout: 260 seconds)
+Sep 21 14:48:04 *	xaver (~client@xaver.xyz) has joined
+Sep 21 14:48:12 *	friedrich has quit (Ping timeout: 252 seconds)
+Sep 21 14:48:12 *	diddledan has quit (Ping timeout: 252 seconds)
+Sep 21 14:48:15 *	fjmorazan (~f_morazan@2604:180:3:76c::2da5) has joined
+Sep 21 14:48:20 *	mikedlr (sid170860@gateway/web/irccloud.com/x-ahatjhgfvrojmhko) has joined
+Sep 21 14:48:21 *	ToeSnacks (sid84043@gateway/web/irccloud.com/x-mrlxardykrhzaunp) has joined
+Sep 21 14:48:41 *	`z (sid68223@wikipedia/Zhaofeng-Li) has joined
+Sep 21 14:48:46 *	ksx4system (~ksx4syste@2a02:7b40:5eb0:ed18::1) has joined
+Sep 21 14:48:48 *	vladimiroff has quit (Ping timeout: 240 seconds)
+Sep 21 14:49:00 *	TheAssassin (~TheAssass@appimage/theassassin) has joined
+Sep 21 14:49:04 *	friedrich (~friedrich@aextron.de) has joined
+Sep 21 14:49:12 *	Asterisk has quit (Ping timeout: 260 seconds)
+Sep 21 14:49:12 *	ink0gnito has quit (Ping timeout: 260 seconds)
+Sep 21 14:49:29 *	dupondje (~dupondje@artemis.dupie.be) has joined
+Sep 21 14:49:49 *	diddledan (sid34680@gateway/web/irccloud.com/x-oofnetksoikwlmtm) has joined
+Sep 21 14:49:55 *	koalalorenzo (uid241694@gateway/web/irccloud.com/x-qrouzxzzijyyfvua) has joined
+Sep 21 14:50:21 *	Chais (~Chais@unaffiliated/chais) has joined
+Sep 21 14:51:09 *	Asterisk (~asterisk@unaffiliated/asterisk) has joined
+Sep 21 14:51:09 *	ink0gnito (~ink0gnito@5.79.74.141) has joined
+Sep 21 14:51:20 *	xXSTrikeXx (~STrike@unaffiliated/xxstrikexx) has joined
+Sep 21 14:51:38 *	vladimiroff (~vladimiro@93.123.90.13) has joined
+Sep 21 14:52:34 *	SOO7 (spydar007@unaffiliated/spydar007) has joined
+Sep 21 14:52:59 *	jhass (znc@ruby/staff/jhass) has joined
+Sep 21 14:53:02 *	twouters (~twouters@ip6.midgard.tcpdump.be) has joined
+Sep 21 14:53:02 *	twouters has quit (Changing host)
+Sep 21 14:53:02 *	twouters (~twouters@unaffiliated/twouters) has joined
+Sep 21 14:54:19 *	cromag (~cromag@2a02:4de0:b00b:b00b:b00b:b00b:b00b:b00b) has joined
+Sep 21 14:54:19 *	cromag has quit (Changing host)
+Sep 21 14:54:19 *	cromag (~cromag@irssi/user/cromag) has joined
+Sep 21 14:55:10 *	saiyan (~saiyan@2a01:4f8:d16:7286::2) has joined
+Sep 21 14:55:25 *	netrace (~netrace@you-will-be-in-my.ignorelist.com) has joined
+Sep 21 14:56:27 *	overbythere has quit (Read error: Connection reset by peer)
+Sep 21 15:00:41 *	penguinguru has quit (Ping timeout: 240 seconds)
+Sep 21 15:01:17 *	_Crash_ has quit (Read error: Connection reset by peer)
+Sep 21 15:01:32 *	MorrisJobke (sid11216@gateway/web/irccloud.com/x-ctrsulricygupzkb) has joined
+Sep 21 15:03:38 *	penguinguru (~penguingu@110.150.197.245) has joined
+Sep 21 15:05:44 *	PierreC (~Pierre-C@f93124.upc-f.chello.nl) has joined
+Sep 21 15:06:02 *	penguinguru has quit (Read error: Connection reset by peer)
+Sep 21 15:08:23 *	jayarcs (~jayarcs@cpe-66-56-201-178.ec.res.rr.com) has joined
+Sep 21 15:09:37 *	Guest51953 (Elite19141@gateway/shell/elitebnc/x-yhmqeynnptyzcqdu) has joined
+Sep 21 15:11:50 *	penguinguru (~penguingu@110.150.197.245) has joined
+Sep 21 15:14:23 *	_KaszpiR_ has quit (Ping timeout: 248 seconds)
+Sep 21 15:14:46 *	Freejack has quit (Ping timeout: 264 seconds)
+Sep 21 15:15:31 *	_KaszpiR_ (quasselcor@unaffiliated/kaszpir/x-3157048) has joined
+Sep 21 15:18:03 *	Freejack (~quassel@unaffiliated/freejack) has joined
+Sep 21 15:24:48 *	noteness has quit (Ping timeout: 240 seconds)
+Sep 21 15:26:43 *	PierreC has quit (Remote host closed the connection)
+Sep 21 15:26:49 <MagicFab>	Hi all - just noticed the SSL cert at https://nextcloud.org expired a few *months* ago. Should I file a bug report / write somewhere else? It also redirects to www.nextcloud.org which doesn't work (should it?)
+Sep 21 15:33:04 *	noteness (~noteness@unaffiliated/nessessary129) has joined
+Sep 21 15:35:30 *	_KaszpiR_ has quit (Ping timeout: 252 seconds)
+Sep 21 15:35:44 *	Ivansss has quit ()
+Sep 21 15:36:09 *	_KaszpiR_ (quasselcor@unaffiliated/kaszpir/x-3157048) has joined
+Sep 21 15:36:53 *	FlibberTGibbet has quit (Quit: Leaving)
+Sep 21 15:37:13 *	noteness has quit (Client Quit)
+Sep 21 15:41:05 *	Pierre-O has quit (Ping timeout: 240 seconds)
+Sep 21 15:42:08 *	Blizzz has quit (Ping timeout: 240 seconds)
+Sep 21 15:44:24 *	pilotauto (~quassel@27-33-187-117.static.tpgi.com.au) has joined
+Sep 21 15:45:08 *	noteness (~noteness@unaffiliated/nessessary129) has joined
+Sep 21 15:57:13 *	noteness has quit (Quit: co'o)
+Sep 21 15:57:43 *	FlibberTGibbet (~David@cust241-dsl93-89-129.idnet.net) has joined
+Sep 21 15:59:55 *	Haudegen has quit (Remote host closed the connection)
+Sep 21 16:03:52 *	FlibberTGibbet has quit (Quit: Leaving)
+Sep 21 16:04:25 *	finalbeta has quit (Ping timeout: 255 seconds)
+Sep 21 16:06:14 *	noteness (~noteness@unaffiliated/nessessary129) has joined
+Sep 21 16:29:09 *	evade (~davidgrah@c-67-166-104-148.hsd1.ut.comcast.net) has joined
+Sep 21 16:29:26 *	Schmetterwurm has quit (Quit: Leaving)
+Sep 21 16:34:37 *	Simounet has quit (Ping timeout: 276 seconds)
+Sep 21 16:35:06 *	Simounet (~Simounet@unaffiliated/simounet) has joined

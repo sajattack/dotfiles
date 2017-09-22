@@ -1,0 +1,243 @@
+**** BEGIN LOGGING AT Sun Sep 10 18:46:48 2017
+
+Sep 10 18:46:48 *	Looking up irc.mozilla.org
+**** BEGIN LOGGING AT Sun Sep 10 20:23:48 2017
+
+Sep 10 20:23:48 *	Looking up irc.mozilla.org
+Sep 10 20:23:48 *	Connecting to irc.mozilla.org (54.85.60.193:6697)
+Sep 10 20:23:49 *	* Certification info:
+Sep 10 20:23:49 *	  Subject:
+Sep 10 20:23:49 *	    C=US
+Sep 10 20:23:49 *	    ST=California
+Sep 10 20:23:49 *	    L=Mountain View
+Sep 10 20:23:49 *	    O=Mozilla Foundation
+Sep 10 20:23:49 *	    OU=IT
+Sep 10 20:23:49 *	    CN=irc.mozilla.org
+Sep 10 20:23:49 *	  Issuer:
+Sep 10 20:23:49 *	    C=US
+Sep 10 20:23:49 *	    O=DigiCert Inc
+Sep 10 20:23:49 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 10 20:23:49 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 10 20:23:49 *	  Sign algorithm sha256WithRSAEncryption
+Sep 10 20:23:49 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 10 20:23:49 *	* Cipher info:
+Sep 10 20:23:49 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 10 20:23:49 *	Connected. Now logging in.
+Sep 10 20:23:49 *	*** Looking up your hostname...
+Sep 10 20:23:49 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 10 20:23:49 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 10 20:23:49 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 10 20:23:49 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 10 20:23:50 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Sun Sep 10 20:23:50 2017
+
+**** BEGIN LOGGING AT Thu Sep 14 14:45:31 2017
+
+Sep 14 14:45:31 *	Looking up irc.mozilla.org
+Sep 14 14:45:31 *	Connecting to irc.mozilla.org (54.219.165.167:6697)
+Sep 14 14:45:32 *	* Certification info:
+Sep 14 14:45:32 *	  Subject:
+Sep 14 14:45:32 *	    C=US
+Sep 14 14:45:32 *	    ST=California
+Sep 14 14:45:32 *	    L=Mountain View
+Sep 14 14:45:32 *	    O=Mozilla Foundation
+Sep 14 14:45:32 *	    OU=IT
+Sep 14 14:45:32 *	    CN=irc.mozilla.org
+Sep 14 14:45:32 *	  Issuer:
+Sep 14 14:45:32 *	    C=US
+Sep 14 14:45:32 *	    O=DigiCert Inc
+Sep 14 14:45:32 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 14 14:45:32 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 14 14:45:32 *	  Sign algorithm sha256WithRSAEncryption
+Sep 14 14:45:32 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 14 14:45:32 *	* Cipher info:
+Sep 14 14:45:32 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 14 14:45:32 *	Connected. Now logging in.
+Sep 14 14:45:32 *	*** Looking up your hostname...
+Sep 14 14:45:32 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 14 14:45:32 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 14 14:45:32 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 14 14:45:32 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 14 14:45:33 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Thu Sep 14 14:45:33 2017
+
+**** BEGIN LOGGING AT Sun Sep 17 10:41:42 2017
+
+Sep 17 10:41:42 *	Looking up irc.mozilla.org
+Sep 17 10:41:42 *	Connecting to irc.mozilla.org (54.85.60.193:6697)
+Sep 17 10:41:43 *	* Certification info:
+Sep 17 10:41:43 *	  Subject:
+Sep 17 10:41:43 *	    C=US
+Sep 17 10:41:43 *	    ST=California
+Sep 17 10:41:43 *	    L=Mountain View
+Sep 17 10:41:43 *	    O=Mozilla Foundation
+Sep 17 10:41:43 *	    OU=IT
+Sep 17 10:41:43 *	    CN=irc.mozilla.org
+Sep 17 10:41:43 *	  Issuer:
+Sep 17 10:41:43 *	    C=US
+Sep 17 10:41:43 *	    O=DigiCert Inc
+Sep 17 10:41:43 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 17 10:41:43 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 17 10:41:43 *	  Sign algorithm sha256WithRSAEncryption
+Sep 17 10:41:43 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 17 10:41:43 *	* Cipher info:
+Sep 17 10:41:43 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 17 10:41:43 *	Connected. Now logging in.
+Sep 17 10:41:43 *	*** Looking up your hostname...
+Sep 17 10:41:43 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 17 10:41:43 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 17 10:41:43 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 17 10:41:43 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 17 10:41:44 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Sun Sep 17 10:41:44 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 18:21:57 2017
+
+Sep 18 18:21:57 *	Looking up irc.mozilla.org
+Sep 18 18:21:57 *	Connecting to irc.mozilla.org (54.219.165.167:6697)
+Sep 18 18:21:58 *	* Certification info:
+Sep 18 18:21:58 *	  Subject:
+Sep 18 18:21:58 *	    C=US
+Sep 18 18:21:58 *	    ST=California
+Sep 18 18:21:58 *	    L=Mountain View
+Sep 18 18:21:58 *	    O=Mozilla Foundation
+Sep 18 18:21:58 *	    OU=IT
+Sep 18 18:21:58 *	    CN=irc.mozilla.org
+Sep 18 18:21:58 *	  Issuer:
+Sep 18 18:21:58 *	    C=US
+Sep 18 18:21:58 *	    O=DigiCert Inc
+Sep 18 18:21:58 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 18 18:21:58 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 18 18:21:58 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 18:21:58 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 18 18:21:58 *	* Cipher info:
+Sep 18 18:21:58 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 18 18:21:58 *	Connected. Now logging in.
+Sep 18 18:21:58 *	*** Looking up your hostname...
+Sep 18 18:21:58 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 18 18:21:58 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 18 18:21:58 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 18 18:21:58 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 18 18:21:58 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Mon Sep 18 18:21:58 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 20:44:55 2017
+
+Sep 18 20:44:55 *	Looking up irc.mozilla.org
+Sep 18 20:44:55 *	Connecting to irc.mozilla.org (54.219.165.167:6697)
+Sep 18 20:44:56 *	* Certification info:
+Sep 18 20:44:56 *	  Subject:
+Sep 18 20:44:56 *	    C=US
+Sep 18 20:44:56 *	    ST=California
+Sep 18 20:44:56 *	    L=Mountain View
+Sep 18 20:44:56 *	    O=Mozilla Foundation
+Sep 18 20:44:56 *	    OU=IT
+Sep 18 20:44:56 *	    CN=irc.mozilla.org
+Sep 18 20:44:56 *	  Issuer:
+Sep 18 20:44:56 *	    C=US
+Sep 18 20:44:56 *	    O=DigiCert Inc
+Sep 18 20:44:56 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 18 20:44:56 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 18 20:44:56 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 20:44:56 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 18 20:44:56 *	* Cipher info:
+Sep 18 20:44:56 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 18 20:44:56 *	Connected. Now logging in.
+Sep 18 20:44:56 *	*** Looking up your hostname...
+Sep 18 20:44:56 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 18 20:44:56 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 18 20:44:56 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 18 20:44:56 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 18 20:44:57 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Mon Sep 18 20:44:57 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 21:02:33 2017
+
+Sep 18 21:02:33 *	Looking up irc.mozilla.org
+Sep 18 21:02:33 *	Connecting to irc.mozilla.org (54.85.60.193:6697)
+Sep 18 21:02:34 *	* Certification info:
+Sep 18 21:02:34 *	  Subject:
+Sep 18 21:02:34 *	    C=US
+Sep 18 21:02:34 *	    ST=California
+Sep 18 21:02:34 *	    L=Mountain View
+Sep 18 21:02:34 *	    O=Mozilla Foundation
+Sep 18 21:02:34 *	    OU=IT
+Sep 18 21:02:34 *	    CN=irc.mozilla.org
+Sep 18 21:02:34 *	  Issuer:
+Sep 18 21:02:34 *	    C=US
+Sep 18 21:02:34 *	    O=DigiCert Inc
+Sep 18 21:02:34 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 18 21:02:34 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 18 21:02:34 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 21:02:34 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 18 21:02:34 *	* Cipher info:
+Sep 18 21:02:34 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 18 21:02:34 *	Connected. Now logging in.
+Sep 18 21:02:34 *	*** Looking up your hostname...
+Sep 18 21:02:34 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 18 21:02:34 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 18 21:02:34 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 18 21:02:34 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 18 21:02:35 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Mon Sep 18 21:02:35 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 21:50:57 2017
+
+Sep 18 21:50:57 *	Looking up irc.mozilla.org
+Sep 18 21:50:57 *	Connecting to irc.mozilla.org (54.219.165.167:6697)
+Sep 18 21:50:58 *	* Certification info:
+Sep 18 21:50:58 *	  Subject:
+Sep 18 21:50:58 *	    C=US
+Sep 18 21:50:58 *	    ST=California
+Sep 18 21:50:58 *	    L=Mountain View
+Sep 18 21:50:58 *	    O=Mozilla Foundation
+Sep 18 21:50:58 *	    OU=IT
+Sep 18 21:50:58 *	    CN=irc.mozilla.org
+Sep 18 21:50:58 *	  Issuer:
+Sep 18 21:50:58 *	    C=US
+Sep 18 21:50:58 *	    O=DigiCert Inc
+Sep 18 21:50:58 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 18 21:50:58 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 18 21:50:58 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 21:50:58 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 18 21:50:58 *	* Cipher info:
+Sep 18 21:50:58 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 18 21:50:58 *	Connected. Now logging in.
+Sep 18 21:50:58 *	*** Looking up your hostname...
+Sep 18 21:50:58 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 18 21:50:58 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 18 21:50:58 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 18 21:50:58 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 18 21:50:59 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Mon Sep 18 21:50:59 2017
+
+**** BEGIN LOGGING AT Tue Sep 19 20:22:38 2017
+
+Sep 19 20:22:38 *	Looking up irc.mozilla.org
+Sep 19 20:22:38 *	Connecting to irc.mozilla.org (54.219.165.167:6697)
+Sep 19 20:22:39 *	* Certification info:
+Sep 19 20:22:39 *	  Subject:
+Sep 19 20:22:39 *	    C=US
+Sep 19 20:22:39 *	    ST=California
+Sep 19 20:22:39 *	    L=Mountain View
+Sep 19 20:22:39 *	    O=Mozilla Foundation
+Sep 19 20:22:39 *	    OU=IT
+Sep 19 20:22:39 *	    CN=irc.mozilla.org
+Sep 19 20:22:39 *	  Issuer:
+Sep 19 20:22:39 *	    C=US
+Sep 19 20:22:39 *	    O=DigiCert Inc
+Sep 19 20:22:39 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 19 20:22:39 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 19 20:22:39 *	  Sign algorithm sha256WithRSAEncryption
+Sep 19 20:22:39 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 19 20:22:39 *	* Cipher info:
+Sep 19 20:22:39 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 19 20:22:39 *	Connected. Now logging in.
+Sep 19 20:22:39 *	*** Looking up your hostname...
+Sep 19 20:22:39 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 19 20:22:39 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 19 20:22:39 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 19 20:22:39 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 19 20:22:40 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Tue Sep 19 20:22:40 2017
+

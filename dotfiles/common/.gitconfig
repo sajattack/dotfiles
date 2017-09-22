@@ -1,0 +1,15 @@
+[user]
+	email = paulsajna@gmail.com
+	name = Paul Sajna
+[cinnabar]
+	helper = /home/paul/.git-cinnabar/git-cinnabar-helper
+[http]
+	cookiefile = /home/paul/.gitcookies
+
+[alias]
+	change = codereview change
+	gofmt = codereview gofmt
+	mail = codereview mail
+	pending = codereview pending
+	submit = codereview submit
+	sync = codereview sync

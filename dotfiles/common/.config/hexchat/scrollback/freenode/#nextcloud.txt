@@ -1,0 +1,598 @@
+T 1505962771 18<dah8518>	try doing it this way
+T 1505962787 18<dah8518>	i found setting up https to be a pain but this is kinda like a magic bullet approach
+T 1505962802 20<sajattack>30	I've done it that way already
+T 1505962807 18<dah8518>	hmm
+T 1505962818 20<sajattack>30	think it could be my nextcloud/owncloud thing?
+T 1505962830 18<dah8518>	depends on your configuration perhaps
+T 1505962837 20<sajattack>30	move it to /nextcloud and redo the apache config?
+T 1505962846 20<sajattack>30	I posted my config
+T 1505962865 18<dah8518>	i'd try doing the letsencrypt --apache -d yourdomain.com approach
+T 1505962886 20<sajattack>30	ok
+T 1505962898 18<dah8518>	wait
+T 1505962906 18<dah8518>	i see your cert is good
+T 1505962912 18<dah8518>	it's a 404..
+T 1505962916 20<sajattack>30	yeppers
+T 1505962921 18<dah8518>	is that path correct?
+T 1505962924 20<sajattack>30	yep
+T 1505962928 20<sajattack>30	not anymore maybe
+T 1505962933 20<sajattack>30	I just moved it to /nextcloud
+T 1505962950 18<dah8518>	oh that would be why
+T 1505962958 20<sajattack>30	nah, it was like that before
+T 1505962971 18<dah8518>	so in your config it's all set to /owncloud
+T 1505962981 20<sajattack>30	yeah I'll fix that
+T 1505962992 18<dah8518>	i must be honest, apache config is not my strong area
+T 1505963017 23*	jadesoturi (~jadesotur@unaffiliated/kfj23) has joined
+T 1505963075 18<dah8518>	plus my nextcloud isn't using a virtual host
+T 1505963129 18<dah8518>	since it's an issue with setting up a vhost, maybe the folks in #apache can help?
+T 1505963144 20<sajattack>30	I don't think that's the issue
+T 1505963181 18<dah8518>	maybe it's a permission thing
+T 1505963190 20<sajattack>30	just renamed everything to nextcloud and same error
+T 1505963207 20<sajattack>30	all files are chowned to www-data
+T 1505963207 18<dah8518>	have you chmod the directory to www-root?
+T 1505963213 18<dah8518>	www-data sorry
+T 1505963218 18<dah8518>	hmm
+T 1505963243 20<sajattack>30	I posted my access.log earlier
+T 1505963245 18<dah8518>	if you cant access via http:// it's probably because you've got it set to enforce https
+T 1505963262 20<sajattack>30	I can access it via http:// but not https://
+T 1505963262 18<dah8518>	i must have missed it, sorry
+T 1505963305 18<dah8518>	that must be frustrating, i really wish i could help further :)
+T 1505963309 20<sajattack>30	http://termbin.com/ipq9
+T 1505963318 18<dah8518>	thanks
+T 1505963490 20<sajattack>30	nothing in nextcloud.log
+T 1505963505 18<dah8518>	the access log only shows the 404 but doesn't really show why
+T 1505963546 20<sajattack>30	yep
+T 1505963549 20<sajattack>30	not very helpful
+T 1505963557 20<sajattack>30	the error log doesn't have anything recent either
+T 1505963572 18<dah8518>	do you have any other https sites working on that vps?
+T 1505963581 20<sajattack>30	yes, quite a few
+T 1505963593 18<dah8518>	that makes it even more strange
+T 1505963597 20<sajattack>30	haha
+T 1505963606 20<sajattack>30	that's why I think it's a nextcloud problem
+T 1505963611 18<dah8518>	have you reached out to someone at #apache anyway?
+T 1505963618 20<sajattack>30	not yet
+T 1505963624 18<dah8518>	i've got mine working with https but admittedly not with a vhost
+T 1505963636 18<dah8518>	unless someone else in here with more apache experience can help out?
+T 1505963688 18<RoyK18>	I use certbot (former let's encrypt) with nextcloud
+T 1505963692 18<RoyK18>	works like a dream
+T 1505963714 18<RoyK18>	after all, nextcloud isn't even part of it, it's apache doing the crypto stuff
+T 1505963735 20<sajattack>30	shruggie
+T 1505963762 18<dah8518>	if you can experiment on another vps perhaps it's a stale config or something else?
+T 1505963788 20<sajattack>30	I only have the one
+T 1505963798 20<sajattack>30	I'm seeing if #apache can help
+T 1505963817 19<RoyK>	sajattack: remove the https config and the redirects from the others and run certbot again
+T 1505963823 19<RoyK>	sajattack: #httpd, that is
+T 1505963859 24*	rhabbachi has quit (Quit: rhabbachi)
+T 1505963883 18<dah8518>	RoyK, i've found that letsencrypt automagically configured https for me
+T 1505964006 18<RoyK18>	it does
+T 1505964033 18<RoyK18>	but perhaps something went wrong, so i just thought you could try to reverse that and try again - make sure it's the latest version
+T 1505964241 24*	pk12 has quit (Ping timeout: 240 seconds)
+T 1505964428 20<sajattack>30	now that I think of it my letsencrypt version is probably pretty old
+T 1505964455 24*	cyclux has quit (Remote host closed the connection)
+T 1505964534 19<RoyK>	sajattack: clone it from git
+T 1505964550 18<RoyK18>	don't use packages yet
+T 1505964567 20<sajattack>30	yeah that's what I'm doing
+T 1505964589 18<RoyK18>	it should update itself automatically if you run certbot-auto
+T 1505964635 20<sajattack>30	oh
+T 1505964754 20<sajattack>30	yeah no help
+T 1505964876 18<RoyK18>	what was the url again? just want to take a look
+T 1505964893 20<sajattack>30	http://owncloud.paulsajna.com
+T 1505964894 18<NextcloudBot18>	Title: Nextcloud (at owncloud.paulsajna.com)
+T 1505964895 18<RoyK18>	the bots will find it anyway
+T 1505964963 20<sajattack>30	should I change overwrite.cli.url to https://
+T 1505964966 19<RoyK>	sajattack: I get a login from http:// but  blank screen from https:// - check the apache logs
+T 1505964974 20<sajattack>30	wait really
+T 1505964992 20<sajattack>30	I get login from http:// and 404 from https://
+T 1505965023 18<dah8518>	same, blank page on https
+T 1505965027 18<dah8518>	was getting a 404 before
+T 1505965031 18<dah8518>	http shows login screen
+T 1505965080 18<dah8518>	getting a different error on https now
+T 1505965087 18<dah8518>	shows the nextcloud screen but "file not found"
+T 1505965091 18<dah8518>	getting warmer ;)
+T 1505965091 20<sajattack>30	I wonder if mine is cached
+T 1505965095 20<sajattack>30	oh
+T 1505965097 20<sajattack>30	dns?
+T 1505965098 20<sajattack>30	lol
+T 1505965103 20<sajattack>30	always blame dns
+T 1505965107 18<dah8518>	did you change ip?
+T 1505965112 20<sajattack>30	no
+T 1505965113 18<dah8518>	if no then probably not dns
+T 1505965118 18<RoyK18>	hm - 404 on https, it is
+T 1505965123 20<sajattack>30	alright yeh
+T 1505965130 18<RoyK18>	it's not a nextcloud thing, it's just apache
+T 1505965141 18<dah8518>	yeah that's definitely an apache problem
+T 1505965142 20<sajattack>30	lol the apache guys say the opposite
+T 1505965145 24*	Dominian has quit (Ping timeout: 240 seconds)
+T 1505965159 18<dah8518>	they probably didnt troubleshoot to the level we have so far, i bet?
+T 1505965180 18<dah8518>	we've worked out that although nextcloud is the only thing not working on https, it works on http and it's a fresh install
+T 1505965194 18<dah8518>	at this stage it's pointing to an apache config issue
+T 1505965218 20<sajattack>30	go fight with #httpd :P
+T 1505965261 18<dah8518>	haha i used to work for applecare and the number of times we had people call up, referred by their isp who insist the issue is with their mac, for an ISP related issue like a password or something is incredible and they do no troubleshooting first
+T 1505965276 18<RoyK18>	dah85: check the nextcloud config - it has a home - that should be https://something
+T 1505965280 18<dah8518>	its just like "ahh you have a mac? call apple"
+T 1505965300 19<dah85>	RoyK, was that for me or sajattack ?
+T 1505965312 19<RoyK>	doh - for sajattack perhaps
+T 1505965320 18<dah8518>	lol
+T 1505965321 20<sajattack>30	overwrite.cli.url I just changed to https
+T 1505965324 20<sajattack>30	and it did nothing
+T 1505965453 23*	cyclux (~cyclux@gateway/tor-sasl/cyclux23) has joined
+T 1505965462 19<RoyK>	sajattack: check apache's errorlog
+T 1505965540 20<sajattack>30	yeah there was nothing there until recently
+T 1505965558 20<sajattack>30	now there's some kind of sql error
+T 1505965577 23*	Dominian (~dominian@opensuse/member/dominian23) has joined
+T 1505965617 19<RoyK>	sajattack: do you have separate log files for http and https?
+T 1505965617 18<RoyK18>	if not, do so
+T 1505965620 18<RoyK18>	then we can just just look for the errors in the https part
+T 1505965624 18<RoyK18>	a 404 will be logged
+T 1505965654 20<sajattack>30	the 404s are logged but there's nothing relevant
+T 1505965663 20<sajattack>30	like yeah, it tells me there's a 404 but that's it
+T 1505965670 18<RoyK18>	well, the path is relevant
+T 1505965680 18<RoyK18>	pastebin it
+T 1505965681 24*	jadesoturi has quit (Ping timeout: 240 seconds)
+T 1505965692 24*	bronson has quit (Remote host closed the connection)
+T 1505965724 20<sajattack>30	termbin.com/qbr3
+T 1505965804 20<sajattack>30	here's one 
+T 1505965804 20<sajattack>30	158.36.144.162 - - [20/Sep/2017:20:44:08 -0700] "GET /index.php/login HTTP/1.1" 404 8664 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/603.3.8 (KHTML, like Gecko) Version/10.1.2 Safari/603.3.8"
+T 1505965831 18<dah8518>	it finds index.php but then it redirects to index.php/index and then says not found
+T 1505965837 18<dah8518>	same thing for index.php/settings/admin/serverinfo
+T 1505965838 20<sajattack>30	really
+T 1505965857 18<dah8518>	i'd say you're very close to getting it working
+T 1505965863 20<sajattack>30	how do I fix that?
+T 1505965870 18<dah8518>	that's the million dollar question
+T 1505965876 19<RoyK>	sajattack: that's me
+T 1505965909 18<dah8518>	my advice would always be to test on a fresh install
+T 1505965926 18<dah8518>	just to rule out any underlying issues which might be hiding away in a config somewhere
+T 1505965942 18<RoyK18>	dah85: I seriously doubt it's that bad
+T 1505965949 20<sajattack>30	where do you see it redirecting to index.php/index?
+T 1505965958 19<RoyK>	sajattack: which distro is this?
+T 1505965959 18<dah8518>	when you go to your url
+T 1505965967 20<sajattack>30	ubuntu 14.04
+T 1505965981 18<RoyK18>	ok, do you have a "default" thing for https?
+T 1505965985 18<RoyK18>	if so, remove it
+T 1505965988 20<sajattack>30	huh?
+T 1505966005 18<dah8518>	it's loading index.php when you go to https://yoururl/
+T 1505966006 18<RoyK18>	just use specific virtualhosts
+T 1505966014 18<dah8518>	and index.php is loading the login page, which it can't find
+T 1505966030 18<dah8518>	is there anything in your nextcloud logs?
+T 1505966032 18<RoyK18>	older ubuntu is rather bad on the "default" thing - sometimes it just takes over
+T 1505966039 18<RoyK18>	for apache, that is
+T 1505966047 20<sajattack>30	oh, my 000-default.conf
+T 1505966065 18<RoyK18>	or 000-sslsomething
+T 1505966068 18<RoyK18>	don't remember it
+T 1505966075 18<dah8518>	there should be one that references ssl
+T 1505966076 18<RoyK18>	000-default.conf is the http part
+T 1505966080 20<sajattack>30	the #httpd guys are sassy
+T 1505966081 18<dah8518>	in the name like RoyK suggested
+T 1505966094 20<sajattack>30	ls
+T 1505966099 20<sajattack>30	oops
+T 1505966104 18<RoyK18>	remove it from /etc/apache2/sites-enabled
+T 1505966152 20<sajattack>30	apache breaks when I do that
+T 1505966166 18<RoyK18>	don't remove the dir
+T 1505966170 18<RoyK18>	remove the symlink
+T 1505966179 18<RoyK18>	just create a new vhost for that specific site
+T 1505966187 18<RoyK18>	or whatever other sites
+T 1505966187 24*	vectr0n has quit (Ping timeout: 260 seconds)
+T 1505966225 20<sajattack>30	remove the symlink from sites-enabled?
+T 1505966227 18<RoyK18>	older ubuntu is notoric on redirecting everything to the default site if something is non-optimal or even optimal
+T 1505966231 18<RoyK18>	yes
+T 1505966316 20<sajattack>30	didn't help
+T 1505966336 18<RoyK18>	did you do an apache2ctl graceful first?
+T 1505966343 18<RoyK18>	or restart apache?
+T 1505966348 20<sajattack>30	restarted apache
+T 1505966387 18<RoyK18>	pastebin your apache config for the vhost - both http and https
+T 1505966463 20<sajattack>30	termbin.com/55zf termbin.com/fqfs
+T 1505966494 23*	vectr0n (vectr0n@unaffiliated/vectr0n23) has joined
+T 1505966555 19<RoyK>	sajattack: hm… did you tell certbot to forcely forward to https?
+T 1505966560 18<RoyK18>	doesn't look like it
+T 1505966565 20<sajattack>30	no
+T 1505966571 18<RoyK18>	do that
+T 1505966584 20<sajattack>30	if I do that I can't access the http:// which is the only one that works
+T 1505966600 18<RoyK18>	just try, please
+T 1505966610 18<RoyK18>	it's reversable
+T 1505966645 23*	jadesoturi (~jadesotur@unaffiliated/kfj23) has joined
+T 1505966666 23*	bronson (~bronson@50-1-98-33.dsl.dynamic.fusionbroadband.com23) has joined
+T 1505966689 20<sajattack>30	ok done
+T 1505966842 18<RoyK18>	hrmf
+T 1505966871 20<sajattack>30	indeed
+T 1505966916 20<sajattack>30	I'mma go ahead and undo that
+T 1505966967 18<RoyK18>	how many other vhosts do you have on this thing?
+T 1505966972 20<sajattack>30	a lot
+T 1505966977 18<RoyK18>	on https
+T 1505966987 20<sajattack>30	5
+T 1505967020 18<RoyK18>	ok, try to move them aside or remove the symlinks or a2dissite them
+T 1505967023 18<RoyK18>	just to see if it helps
+T 1505967085 20<sajattack>30	done
+T 1505967092 23*	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net23) has joined
+T 1505967106 18<RoyK18>	restarted apache as well?
+T 1505967117 20<sajattack>30	yep
+T 1505967189 18<RoyK18>	I can't understand what's going on there
+T 1505967191 20<sajattack>30	oh I missed one
+T 1505967237 20<sajattack>30	I'm curious about what the other guy said about index.php redirecting to index.php/index
+T 1505967284 20<sajattack>30	I don't see that happening anywhere
+T 1505967302 18<RoyK18>	I really don't understand how this can be
+T 1505967307 20<sajattack>30	lol
+T 1505967319 20<sajattack>30	could you set up a fresh nextcloud to try and replicate?
+T 1505967325 18<RoyK18>	I've only been using apache for a decade and a half, though
+T 1505967390 24*	noobineer has quit (Ping timeout: 246 seconds)
+T 1505967546 20<sajattack>30	this guy seemed to have a similar issue https://help.nextcloud.com/t/trying-to-get-ssl-working/2281/21
+T 1505967562 20<sajattack>30	but that was a year ago
+T 1505967610 18<RoyK18>	try enabling more logging in apache
+T 1505967621 20<sajattack>30	I have loglevel set to debug
+T 1505967646 18<RoyK18>	and separate logfile for https://owncloud.paulsajna.com/  ?
+T 1505967649 20<sajattack>30	no
+T 1505967649 18<RoyK18>	the https
+T 1505967660 18<RoyK18>	well, switch to that
+T 1505967662 20<sajattack>30	ok
+T 1505967666 18<RoyK18>	both access and error log
+T 1505967693 18<RoyK18>	always use separate logfiles
+T 1505967713 24*	Cuare has quit ()
+T 1505967753 23*	pk12 (~pk12@199.241.146.16323) has joined
+T 1505967778 20<sajattack>30	termbin.com/prcl
+T 1505967851 20<sajattack>30	200s on everything other than index.php/login
+T 1505967854 20<sajattack>30	that's interesting
+T 1505967883 18<RoyK18>	hm…
+T 1505967888 18<RoyK18>	lemme check a few things
+T 1505967894 20<sajattack>30	kk
+T 1505968010 18<RoyK18>	I have this in my config/config.php 'overwrite.cli.url' => 'https://cloud.karlsbakk.net/'
+T 1505968085 23*	rvm (~Konrad@x4e379197.dyn.telefonica.de23) has joined
+T 1505968158 20<sajattack>30	yeah I did that
+T 1505968177 20<sajattack>30	didn't change anything
+T 1505968211 20<sajattack>30	mine doesn't have the slash on the end
+T 1505968213 20<sajattack>30	I'll try that
+T 1505968248 20<sajattack>30	no change
+T 1505968254 23*	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net23) has joined
+T 1505968272 20<sajattack>30	termbin.com/0iy8
+T 1505968330 24*	Holbrook has quit (Ping timeout: 264 seconds)
+T 1505968350 19<RoyK>	sajattack: better change that password :P
+T 1505968368 18<RoyK18>	and salt
+T 1505968376 18<RoyK18>	and not do that again ;)
+T 1505968392 20<sajattack>30	meh, it's a local only db isn't it
+T 1505968416 18<RoyK18>	still, well, let's fix this first, then change it - you really don't want to have a password lying in the open
+T 1505968423 23*	Holbrook (irc@srd.me.uk23) has joined
+T 1505968462 19<RoyK>	sajattack: and the salt will help people decrypt the passwords if they can get to the db
+T 1505968465 18<RoyK18>	et cetera
+T 1505968556 18<RoyK18>	but anyway - can you create a test user for me and pm me the details?
+T 1505968697 >18RoyK<	RoyK N2SFeTnn8p2>gw6b
+T 1505968715 20<sajattack>30	is that a PM, I'm new to irc
+T 1505968774 20<sajattack>30	it better be haha
+T 1505968822 20<sajattack>30	RoyK
+T 1505968834 18<RoyK18>	tail the errorlog now
+T 1505968845 18<RoyK18>	and compare the accesslogs
+T 1505968856 18<RoyK18>	I just tried, after logging in, to switch to https
+T 1505968860 18<RoyK18>	same shite
+T 1505968862 20<sajattack>30	no error log
+T 1505968876 18<RoyK18>	nextcloud log, then?
+T 1505968884 20<sajattack>30	this is the access log
+T 1505968890 20<sajattack>30	termbin.com/5ly3
+T 1505968907 24*	jadesoturi has quit (Quit: ZNC - http://znc.in)
+T 1505968913 18<RoyK18>	check the nextcloud log
+T 1505968950 20<sajattack>30	termbin.com/biht
+T 1505968993 18<RoyK18>	perhaps time to beef up logging in nextcloud, then
+T 1505969004 20<sajattack>30	how?
+T 1505969059 18<RoyK18>	https://docs.nextcloud.com/server/9/admin_manual/configuration_server/logging_configuration.html
+T 1505969060 18<NextcloudBot18>	Title: Logging Configuration — Nextcloud 9 Server Administration Manual 9 documentation (at docs.nextcloud.com)
+T 1505969063 18<RoyK18>	loglevel = 0
+T 1505969089 18<RoyK18>	it'll eat som space, but not a whole lot, and just turn it off when you don't need it anymore
+T 1505969119 20<sajattack>30	mmkay
+T 1505969120 23*	jadesoturi (~jadesotur@unaffiliated/kfj23) has joined
+T 1505969129 20<sajattack>30	should be done
+T 1505969156 18<RoyK18>	then try some more and look through the logs
+T 1505969296 20<sajattack>30	termbin.com/6dq9
+T 1505969335 18<RoyK18>	just check with the paths there
+T 1505969353 18<RoyK18>	compare them with the paths when accessing it over http as compared to https
+T 1505969387 20<sajattack>30	hmm?
+T 1505969410 20<sajattack>30	it doesn't log anything when I access over https
+T 1505969467 18<RoyK18>	wtf?
+T 1505969509 20<sajattack>30	there's nothing to log, it 404s before it can do anything
+T 1505969535 18<RoyK18>	I guess that *may* have to do with it ;)
+T 1505969545 18<RoyK18>	a 404 is logged in the access log
+T 1505969559 20<sajattack>30	yeah
+T 1505969575 18<RoyK18>	and if nextcloud doesn't log jackshit if accessed over https, it means it's not accessed
+T 1505969657 18<RoyK18>	nextcloud doesn't care about https - apache does
+T 1505969665 18<RoyK18>	so it's an apache issue
+T 1505969675 20<sajattack>30	lol
+T 1505969677 18<RoyK18>	what and why, I don't know
+T 1505969704 20<sajattack>30	fight it out with #httpd
+T 1505969747 18<Lartza18>	Yeah sounds like an Apache configuration issue at a glance, just woke up and haven't read the backlog :P
+T 1505969761 20<sajattack>30	could you try a fresh nextcloud RoyK?
+T 1505969775 19<RoyK>	sajattack: well, I'm using a similar setup, but upgraded from oc8
+T 1505969777 18<Lartza18>	There's no way for NC to steal Apache logs, only PHP, and if you access a ssite it will log
+T 1505969785 19<RoyK>	sajattack: try that
+T 1505969795 20<sajattack>30	try what?
+T 1505969807 20<sajattack>30	install a fresh owncloud 8?
+T 1505969809 18<RoyK18>	well, a fresh setup, but still
+T 1505969810 18<RoyK18>	well
+T 1505969812 18<RoyK18>	no
+T 1505969824 18<RoyK18>	I don't really know
+T 1505969827 20<sajattack>30	haha
+T 1505969833 20<sajattack>30	thanks for your help anyways
+T 1505969862 18<RoyK18>	still - does apache do php in https mode?
+T 1505969869 18<RoyK18>	are the rewrite rules there?
+T 1505969884 18<RoyK18>	et cetera et cetera ad infinitum
+T 1505969910 18<Lartza18>	Ouch I'm reading the backlog and everything now
+T 1505969920 18<Lartza18>	This is a fresh install now? Or are you on OC 10.0.3 or what
+T 1505969924 20<sajattack>30	\_(tsu)_/
+T 1505969933 20<sajattack>30	fresh nextcloud 12.0.3
+T 1505969948 18<RoyK18>	with a somewhat broken apache install
+T 1505969951 20<sajattack>30	lol
+T 1505969958 20<sajattack>30	reinstall apache?
+T 1505969961 18<RoyK18>	lemme try something
+T 1505969962 19<RoyK>	sajattack: no
+T 1505969984 19<dah85>	sajattack, are you able to test using a vm?
+T 1505969990 23*	ZaggeO (~quassel@p54A386BA.dip0.t-ipconnect.de23) has joined
+T 1505970006 20<sajattack>30	dah85, I guess
+T 1505970019 23*	rouky (~thomas@2a01:e35:2fbe:e820:64bc:72:c376:e7f423) has joined
+T 1505970038 18<dah8518>	that way you can test it in a non-destructive manner
+T 1505970056 20<sajattack>30	it won't be net accessible though
+T 1505970067 18<dah8518>	doesnt need to be really
+T 1505970090 19<RoyK>	sajattack: http://paste.debian.net/987058/
+T 1505970092 18<NextcloudBot18>	Title: debian Pastezone (at paste.debian.net)
+T 1505970093 18<dah8518>	if you can access it with https (even with a self-signed cert for testing) and set up a vhost or 2
+T 1505970107 20<sajattack>30	mmkay
+T 1505970111 18<Lartza18>	Anything weird inside /etc/letsencrypt/options-ssl-apache.conf ?
+T 1505970201 20<sajattack>30	termbin.com/4xex
+T 1505970236 18<RoyK18>	or /etc/apache2/mods-enabled/ssl.*
+T 1505970248 18<Lartza18>	And you have no errorlogs anywhere of apache? /var/log/apache2/error.log or ${APACHE_LOG_DIR}/owncloud-error.log ?
+T 1505970263 19<RoyK>	sajattack: boost the logging to debug
+T 1505970278 18<RoyK18>	and use a separate logfile
+T 1505970292 18<RoyK18>	but then, you did that in the vhost, didn't you? for both err an acc?
+T 1505970320 20<sajattack>30	yeah
+T 1505970331 20<sajattack>30	the ssl log should be owncloud-ssl-error.log
+T 1505970347 20<sajattack>30	doesn't exist
+T 1505970349 19<Lartza>	sajattack, It's not you've not set that
+T 1505970358 20<sajattack>30	it's set in the vhost
+T 1505970358 18<Lartza18>	It's the same as the non-ssl log
+T 1505970364 20<sajattack>30	not anymore
+T 1505970368 18<Lartza18>	I see
+T 1505970371 24*	rouky (~thomas@2a01:e35:2fbe:e820:64bc:72:c376:e7f424) has left
+T 1505970385 18<Lartza18>	well options-ssl-apache.conf sets it again to /var/log/apache2/error.log also
+T 1505970400 18<Lartza18>	So, is that empty?
+T 1505970472 20<sajattack>30	I don't see anything relevant in it
+T 1505970525 18<Lartza18>	Are you using mod_php?
+T 1505970533 20<sajattack>30	pretty sure
+T 1505970564 18<Lartza18>	And nextcloud log is not helpful either?
+T 1505970567 20<sajattack>30	module php5.6 is already enabled
+T 1505970568 20<sajattack>30	not
+T 1505970573 20<sajattack>30	*nope
+T 1505970577 20<sajattack>30	regarding nextcloud log
+T 1505970579 18<Lartza18>	I mean, it gets to the login page in a sense
+T 1505970584 18<Lartza18>	But fails to load some javascript
+T 1505970709 18<Lartza18>	Did you accidentally keep any files, including .htaccess when you fresh installed
+T 1505970726 23*	rouven (~rouven@i577A4575.versanet.de23) has joined
+T 1505970742 20<sajattack>30	I can remove .htaccess if you think it will help
+T 1505970744 18<RoyK18>	I really doubt this is related to javascript
+T 1505970754 18<RoyK18>	Lartza: check the HEAD test above - I pasted it
+T 1505970763 18<Lartza18>	It 404's /index.php/js/core/merged-template-prepend.js?v=4f338c672887d8e5db41042fa433eb5e-0
+T 1505970765 18<RoyK18>	it's apache misconiguration
+T 1505970776 18<Lartza18>	and /index.php/login
+T 1505970785 18<Lartza18>	svg files and other javascript files load just fine
+T 1505970800 23*	BeS (~BeS@fsfe/schiessle23) has joined
+T 1505970862 18<Lartza18>	RoyK, Not sure what one should interpret from that header :P
+T 1505970864 18<Lartza18>	It looks fine
+T 1505970875 18<Lartza18>	Apart from 404 of course ;)
+T 1505970893 19<Lartza>	sajattack, NC needs htacccess files
+T 1505970899 18<Lartza18>	but they need to be correct
+T 1505970909 18<RoyK18>	apachectl -S should show the running config
+T 1505970994 18<Lartza18>	There's a maintenance:update:htaccess occ command but not sure if that would help
+T 1505971008 18<Lartza18>	It might if you have an invalid htaccess file laying around
+T 1505971085 18<Lartza18>	Actually, is the integrity check passing?
+T 1505971217 23*	Mottengrotte (~Mottengro@ip1f11c3f3.dynamic.kabel-deutschland.de23) has joined
+T 1505971285 24*	rvm has quit (Quit: Leaving.)
+T 1505971614 20<sajattack>30	paul@imp1:/var/www/owncloud.paulsajna.com/nextcloud$ sudo -u www-data ./occ integrity:check-core
+T 1505971618 20<sajattack>30	no output
+T 1505971729 18<Lartza18>	http://owncloud.paulsajna.com/index.php/settings/integrity/failed
+T 1505971747 20<sajattack>30	no errors have been found
+T 1505971770 18<Lartza18>	That should detect any invalid htaccess files too afaik
+T 1505971772 18<Lartza18>	:/
+T 1505971779 18<Lartza18>	invalid, extra or missing
+T 1505971874 20<sajattack>30	yeah and I did the htaccess thingamajig in occ as well
+T 1505971879 24*	28Guest16810 is now known as 18CyanoTex
+T 1505971890 24*	CyanoTex has quit (Changing host)
+T 1505971890 23*	CyanoTex (cyanotexma@wikipedia/cyanotex23) has joined
+T 1505971947 23*	tarator (~Thunderbi@84-113-5-52.cable.dynamic.surfer.at23) has joined
+T 1505971957 23*	lss8_ (~lss8@unaffiliated/lss823) has joined
+T 1505972011 23*	llucenic (~Thunderbi@rev-185-22-215-103.radiolan.sk23) has joined
+T 1505972091 24*	BeS has quit (Quit: BeS)
+T 1505972182 24*	lss8 has quit (Ping timeout: 264 seconds)
+T 1505972407 23*	krzyzaq (d5c7d922@gateway/web/freenode/ip.213.199.217.3423) has joined
+T 1505972435 18<krzyzaq18>	hi all
+T 1505972435 18<NextcloudBot18>	hi krzyzaq, please go ahead and ask your question and be patient, most people do not actively monitor the chat and will only check the chatlog periodically
+T 1505972530 18<krzyzaq18>	just migrated to nextcloud 11.0.5 from owncloud but can't access the server with my user from desktop client (the web works fine)
+T 1505972536 18<krzyzaq18>	Access forbidden by server
+T 1505972544 18<krzyzaq18>	what can be the issue?
+T 1505972554 18<Lartza18>	What do the NC logs say
+T 1505972568 18<Lartza18>	Also why NC11 and from what OC version?
+T 1505972667 18<dah8518>	krzyzaq, have you tried removing the account and re-adding it in the client?
+T 1505972680 18<dah8518>	did up also update to the nextcloud client? (even though the owncloud client should work)
+T 1505972752 18<krzyzaq18>	@Lartza: previous ver was (9,1,0,15) so the 11 was the highest stable available
+T 1505972849 18<krzyzaq18>	log says: https://pastebin.com/pujKVLUH
+T 1505972850 18<NextcloudBot18>	Title: Error no app in context OCP\AppFramework\QueryException: Could not resolve OCA\O - Pastebin.com (at pastebin.com)
+T 1505972885 18<krzyzaq18>	@dah85: dunno, I've installed the nc agent
+T 1505972924 18<dah8518>	did you download that from the Nextcloud website, krzyzaq?
+T 1505972958 18<krzyzaq18>	@dah85: sure, the old oc client doesn't work neither
+T 1505973008 18<dah8518>	did you try removing the account from the client and adding it again?
+T 1505973029 18<Lartza18>	Please don't use pastebin.com. Also NC12 is available but yes you had to update to NC11 first :) We are fine let's troubleshoot
+T 1505973040 18<Lartza18>	How did you migrate?
+T 1505973060 18<Lartza18>	Did you follow https://nextcloud.com/migration/
+T 1505973061 18<NextcloudBot18>	Title: Migration: ownCloud vs Nextcloud – Nextcloud (at nextcloud.com)
+T 1505973086 24*	AtAM1 has quit (Ping timeout: 246 seconds)
+T 1505973169 18<krzyzaq18>	@Lartza: yes I've followed th official instructions of nc.com. What to use instead of pb?
+T 1505973198 18<Lartza18>	Anything, gist, https://ptpb.pw/f
+T 1505973200 18<NextcloudBot18>	Title: pb - Hello phrik (at ptpb.pw)
+T 1505973230 18<Lartza18>	even bad ones like hastebin are better than pastebin.com, literally anything is
+T 1505973251 18<krzyzaq18>	why is that?
+T 1505973279 18<Lartza18>	advertisements, captchas, CRLF line endings, malware
+T 1505973366 18<Lartza18>	krzyzaq, Disable the JavaScript XMPP Chat app
+T 1505973678 18<krzyzaq18>	@Lartza: the chat was disabled, I've uninstalled it completly
+T 1505973688 18<Lartza18>	So, other errors? :D
+T 1505973970 24*	dah85 has quit (Read error: Connection reset by peer)
+T 1505974004 23*	dah85 (~david@103.217.166.4823) has joined
+T 1505974061 18<krzyzaq18>	@Lartza: https://gist.github.com/krzyzaq/3269d82c6ce4799f005a6fadb17f2e67
+T 1505974063 18<NextcloudBot18>	Title: oc_log.log · GitHub (at gist.github.com)
+T 1505974068 18<krzyzaq18>	sure some
+T 1505974101 18<Lartza18>	Well the upper one is still about javascript xmpp
+T 1505974108 24*	Mottengrotte has quit (Ping timeout: 240 seconds)
+T 1505974124 18<Lartza18>	but the lower one is your sync error
+T 1505974162 23*	AtAM1 (~AtAM1@pdpc/supporter/professional/wiss23) has joined
+T 1505974208 18<Lartza18>	at least maybe...
+T 1505974286 18<krzyzaq18>	I thought so also...
+T 1505974295 18<krzyzaq18>	but what can be the cause?
+T 1505974312 18<Lartza18>	Do you have anything else syncing
+T 1505974320 18<Lartza18>	caldav or
+T 1505974322 18<Lartza18>	davdroid
+T 1505974416 18<Lartza18>	Because apparently that error might not matter
+T 1505974474 18<Lartza18>	Do you have two-factor auth enabled and would it be possible to try and re-add the user to the NC client?
+T 1505974485 18<Lartza18>	If there are no other errors then there's really not much to go on
+T 1505974544 24*	rouven has quit (Quit: rouven)
+T 1505974583 23*	VlanX (~sysadmin@host101-192-dynamic.50-79-r.retail.telecomitalia.it23) has joined
+T 1505974592 24*	dano5 has quit (Ping timeout: 240 seconds)
+T 1505974617 18<krzyzaq18>	no I don't have two factor as well as caldav or droid
+T 1505974672 23*	dano5 (~dano5@163.109-247-80.customer.lyse.net23) has joined
+T 1505974676 18<Lartza18>	So no syncing your calendar or files to anything else than nextcloud clients?
+T 1505974686 18<krzyzaq18>	yeap
+T 1505974704 18<Lartza18>	Not sure WHY that error pops up then but still it's just a debug message
+T 1505975052 18<dah8518>	Lartza, do you have another computer you can try the nc client on?
+T 1505975070 18<Lartza18>	Um?
+T 1505975072 18<dah8518>	or create a new user account on your computer and try it in there, just in case?
+T 1505975082 18<dah8518>	sorry, that was for krzyzaq
+T 1505975086 18<Lartza18>	:P
+T 1505975146 18<dah8518>	i suggested it about 40 minutes back and i'm not sure if you've tried it yet, krzyzaq
+T 1505975197 18<krzyzaq18>	@dah85: don't find a reason for a new user, since I can login to web interface
+T 1505975209 18<krzyzaq18>	I'm thinking about updating to 12
+T 1505975209 23*	Ivansss (~ivansss@x4db132f7.dyn.telefonica.de23) has joined
+T 1505975226 18<dah8518>	the web interface is one part of it, that works, but the client is where the issue is
+T 1505975242 18<dah8518>	so if we try it in another user account we can eliminate potential issues within the client
+T 1505975254 18<dah8518>	at the very least, remove the account from the client and add it again
+T 1505975334 18<krzyzaq18>	@dah85: nope, it also doesn't work
+T 1505975346 18<dah8518>	thanks
+T 1505975355 18<dah8518>	i wonder if it's a webdav issue then
+T 1505975366 23*	rouven (~rouven@i577A4575.versanet.de23) has joined
+T 1505975486 24*	saiyan has quit (Quit: BYE)
+T 1505975553 18<krzyzaq18>	I've checked also php 5.6 and 7
+T 1505975558 18<krzyzaq18>	neither works
+T 1505975593 23*	saiyan (~saiyan@mx0.chrstn.eu23) has joined
+T 1505975611 18<krzyzaq18>	I think the last thing will be new/fresh install (loosing all shared files) or updating to 12?
+T 1505975617 18<dah8518>	could you try in another user account on your computer, or on another computer?
+T 1505975636 18<dah8518>	that would be easier and less destructive than wiping and starting fresh
+T 1505975711 18<krzyzaq18>	no can do now
+T 1505975721 18<krzyzaq18>	maybe in the afternoon
+T 1505975742 18<dah8518>	alternatively, try another nextcloud user account
+T 1505975746 18<krzyzaq18>	I would try first the most recent version of server
+T 1505975752 18<dah8518>	or that
+T 1505975762 23*	fordfrog (~fordfrog@gentoo/developer/fordfrog23) has joined
+T 1505975773 18<krzyzaq18>	since I would liked to update as well to the most recen one
+T 1505975998 23*	Haudegen (~quassel@178.115.237.8723) has joined
+T 1505976335 23*	martinus__ (~martin@111.239.24.109.rev.sfr.net23) has joined
+T 1505976623 24*	ph0b0s has quit (Remote host closed the connection)
+T 1505977009 23*	Mottengrotte (~Mottengro@195.50.176.623) has joined
+T 1505977044 23*	ph0b0s (~ph0b0s@81.92.56.18923) has joined
+T 1505977188 23*	Tools (~Casper@casper.at.lunarbnc.net23) has joined
+T 1505977260 24*	rouven has quit (Quit: rouven)
+T 1505977275 23*	rouven (~rouven@i577A4575.versanet.de23) has joined
+T 1505977302 23*	utack (~utack@2a02:810a:83c0:5e10:428d:5cff:fee4:be7123) has joined
+T 1505977533 24*	VlanX has quit (Ping timeout: 246 seconds)
+T 1505977718 23*	TC` (~justas@gilvonauskas.lt23) has joined
+T 1505977735 18<TC`18>	hi, updater won't start. Doesn't like "nextcloud.log" file. What to do ?
+T 1505977752 18<TC`18>	Check for expected files
+T 1505977752 18<TC`18>	The following extra files have been found:
+T 1505977753 18<TC`18>	nextcloud.log
+T 1505977839 23*	BernhardPosselt (~Adium@2a02:8388:6a82:3580:8180:2257:75f6:aa5923) has joined
+T 1505977914 23*	jazz (~jazz@graf.univ-tlse3.fr23) has joined
+T 1506030189 19*	Now talking on 22#nextcloud
+T 1506030189 22*	Topic for 22#nextcloud is: Welcome to Nextcloud! :) Join our open community at https://help.nextcloud.com - Nextcloud 12 is out! (https://nextcloud.com/blog/welcome-to-nextcloud-12/)
+T 1506030189 22*	Topic for 22#nextcloud set by 26LukasReschke!sid10067@gateway/web/irccloud.com/x-jdglpvpxawstuyuj (24Mon May 22 06:55:26 2017)
+T 1506030316 23*	fux_ (~michi@piratenpartei/bw/fux23) has joined
+T 1506030327 24*	jhass has quit (Ping timeout: 252 seconds)
+T 1506030327 24*	cosenal has quit (Ping timeout: 252 seconds)
+T 1506030327 24*	zsmithnyc has quit (Ping timeout: 252 seconds)
+T 1506030340 23*	NextcloudBot` (~limnoria@mail.posselt.at23) has joined
+T 1506030347 23*	cosenal (sid10872@gateway/web/irccloud.com/x-daocypwytmzrewiu23) has joined
+T 1506030360 24*	NextcloudBot has quit (Ping timeout: 252 seconds)
+T 1506030360 24*	MorrisJobke has quit (Ping timeout: 252 seconds)
+T 1506030363 23*	zsmithnyc (sid53306@gateway/web/irccloud.com/x-doqmhfxidccqsvor23) has joined
+T 1506030393 24*	georgehrke has quit (Ping timeout: 252 seconds)
+T 1506030393 24*	mikedlr has quit (Ping timeout: 252 seconds)
+T 1506030393 24*	ToeSnacks has quit (Ping timeout: 252 seconds)
+T 1506030393 24*	`z has quit (Ping timeout: 252 seconds)
+T 1506030426 24*	ksx4system has quit (Ping timeout: 252 seconds)
+T 1506030426 24*	netrace has quit (Ping timeout: 252 seconds)
+T 1506030426 24*	koalalorenzo has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	xXSTrikeXx has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	SOO7 has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	Guest89346 has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	twouters has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	dupondje has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	fjmorazan has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	xaver has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	fux has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	TheAssassin has quit (Ping timeout: 252 seconds)
+T 1506030459 24*	cromag has quit (Ping timeout: 252 seconds)
+T 1506030482 24*	saiyan has quit (Ping timeout: 260 seconds)
+T 1506030482 24*	Chais has quit (Ping timeout: 260 seconds)
+T 1506030484 23*	xaver (~client@xaver.xyz23) has joined
+T 1506030492 24*	friedrich has quit (Ping timeout: 252 seconds)
+T 1506030492 24*	diddledan has quit (Ping timeout: 252 seconds)
+T 1506030495 23*	fjmorazan (~f_morazan@2604:180:3:76c::2da523) has joined
+T 1506030500 23*	mikedlr (sid170860@gateway/web/irccloud.com/x-ahatjhgfvrojmhko23) has joined
+T 1506030501 23*	ToeSnacks (sid84043@gateway/web/irccloud.com/x-mrlxardykrhzaunp23) has joined
+T 1506030521 23*	`z (sid68223@wikipedia/Zhaofeng-Li23) has joined
+T 1506030526 23*	ksx4system (~ksx4syste@2a02:7b40:5eb0:ed18::123) has joined
+T 1506030528 24*	vladimiroff has quit (Ping timeout: 240 seconds)
+T 1506030540 23*	TheAssassin (~TheAssass@appimage/theassassin23) has joined
+T 1506030544 23*	friedrich (~friedrich@aextron.de23) has joined
+T 1506030552 24*	Asterisk has quit (Ping timeout: 260 seconds)
+T 1506030552 24*	ink0gnito has quit (Ping timeout: 260 seconds)
+T 1506030569 23*	dupondje (~dupondje@artemis.dupie.be23) has joined
+T 1506030589 23*	diddledan (sid34680@gateway/web/irccloud.com/x-oofnetksoikwlmtm23) has joined
+T 1506030595 23*	koalalorenzo (uid241694@gateway/web/irccloud.com/x-qrouzxzzijyyfvua23) has joined
+T 1506030621 23*	Chais (~Chais@unaffiliated/chais23) has joined
+T 1506030669 23*	Asterisk (~asterisk@unaffiliated/asterisk23) has joined
+T 1506030669 23*	ink0gnito (~ink0gnito@5.79.74.14123) has joined
+T 1506030680 23*	xXSTrikeXx (~STrike@unaffiliated/xxstrikexx23) has joined
+T 1506030698 23*	vladimiroff (~vladimiro@93.123.90.1323) has joined
+T 1506030754 23*	SOO7 (spydar007@unaffiliated/spydar00723) has joined
+T 1506030779 23*	jhass (znc@ruby/staff/jhass23) has joined
+T 1506030782 23*	twouters (~twouters@ip6.midgard.tcpdump.be23) has joined
+T 1506030782 24*	twouters has quit (Changing host)
+T 1506030782 23*	twouters (~twouters@unaffiliated/twouters23) has joined
+T 1506030859 23*	cromag (~cromag@2a02:4de0:b00b:b00b:b00b:b00b:b00b:b00b23) has joined
+T 1506030859 24*	cromag has quit (Changing host)
+T 1506030859 23*	cromag (~cromag@irssi/user/cromag23) has joined
+T 1506030910 23*	saiyan (~saiyan@2a01:4f8:d16:7286::223) has joined
+T 1506030925 23*	netrace (~netrace@you-will-be-in-my.ignorelist.com23) has joined
+T 1506030987 24*	overbythere has quit (Read error: Connection reset by peer)
+T 1506031241 24*	penguinguru has quit (Ping timeout: 240 seconds)
+T 1506031277 24*	_Crash_ has quit (Read error: Connection reset by peer)
+T 1506031292 23*	MorrisJobke (sid11216@gateway/web/irccloud.com/x-ctrsulricygupzkb23) has joined
+T 1506031418 23*	penguinguru (~penguingu@110.150.197.24523) has joined
+T 1506031544 23*	PierreC (~Pierre-C@f93124.upc-f.chello.nl23) has joined
+T 1506031562 24*	penguinguru has quit (Read error: Connection reset by peer)
+T 1506031703 23*	jayarcs (~jayarcs@cpe-66-56-201-178.ec.res.rr.com23) has joined
+T 1506031777 23*	Guest51953 (Elite19141@gateway/shell/elitebnc/x-yhmqeynnptyzcqdu23) has joined
+T 1506031910 23*	penguinguru (~penguingu@110.150.197.24523) has joined
+T 1506032063 24*	_KaszpiR_ has quit (Ping timeout: 248 seconds)
+T 1506032086 24*	Freejack has quit (Ping timeout: 264 seconds)
+T 1506032131 23*	_KaszpiR_ (quasselcor@unaffiliated/kaszpir/x-315704823) has joined
+T 1506032283 23*	Freejack (~quassel@unaffiliated/freejack23) has joined
+T 1506032688 24*	noteness has quit (Ping timeout: 240 seconds)
+T 1506032803 24*	PierreC has quit (Remote host closed the connection)
+T 1506032809 18<MagicFab18>	Hi all - just noticed the SSL cert at https://nextcloud.org expired a few *months* ago. Should I file a bug report / write somewhere else? It also redirects to www.nextcloud.org which doesn't work (should it?)
+T 1506033184 23*	noteness (~noteness@unaffiliated/nessessary12923) has joined
+T 1506033330 24*	_KaszpiR_ has quit (Ping timeout: 252 seconds)
+T 1506033344 24*	Ivansss has quit ()
+T 1506033369 23*	_KaszpiR_ (quasselcor@unaffiliated/kaszpir/x-315704823) has joined
+T 1506033413 24*	FlibberTGibbet has quit (Quit: Leaving)
+T 1506033433 24*	noteness has quit (Client Quit)
+T 1506033665 24*	Pierre-O has quit (Ping timeout: 240 seconds)
+T 1506033728 24*	Blizzz has quit (Ping timeout: 240 seconds)
+T 1506033864 23*	pilotauto (~quassel@27-33-187-117.static.tpgi.com.au23) has joined
+T 1506033908 23*	noteness (~noteness@unaffiliated/nessessary12923) has joined
+T 1506034633 24*	noteness has quit (Quit: co'o)
+T 1506034663 23*	FlibberTGibbet (~David@cust241-dsl93-89-129.idnet.net23) has joined
+T 1506034795 24*	Haudegen has quit (Remote host closed the connection)
+T 1506035032 24*	FlibberTGibbet has quit (Quit: Leaving)
+T 1506035065 24*	finalbeta has quit (Ping timeout: 255 seconds)
+T 1506035174 23*	noteness (~noteness@unaffiliated/nessessary12923) has joined
+T 1506036549 23*	evade (~davidgrah@c-67-166-104-148.hsd1.ut.comcast.net23) has joined
+T 1506036566 24*	Schmetterwurm has quit (Quit: Leaving)
+T 1506036877 24*	Simounet has quit (Ping timeout: 276 seconds)
+T 1506036906 23*	Simounet (~Simounet@unaffiliated/simounet23) has joined
