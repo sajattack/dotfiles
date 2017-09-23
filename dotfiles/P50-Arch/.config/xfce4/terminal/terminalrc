@@ -1,9 +1,5 @@
 [Configuration]
-<<<<<<< HEAD
-ColorPalette=rgb(0,0,0);rgb(170,0,0);rgb(0,170,0);rgb(170,85,0);rgb(0,0,170);rgb(170,0,170);rgb(0,170,170);rgb(170,170,170);rgb(85,85,85);rgb(255,85,85);rgb(85,255,85);rgb(255,255,85);rgb(85,85,255);rgb(255,85,255);rgb(85,255,255);rgb(255,255,255)
-=======
 ColorForeground=#0000ffff0000
->>>>>>> 07296701795cced60c561e62ce6a73f4c1d71643
 MiscAlwaysShowTabs=FALSE
 MiscBell=FALSE
 MiscBellUrgent=FALSE
@@ -28,9 +24,4 @@ MiscDefaultWorkingDir=
 MiscRewrapOnResize=TRUE
 MiscUseShiftArrowsToScroll=FALSE
 MiscSlimTabs=FALSE
-<<<<<<< HEAD
-TabActivityColor=#a4a400000000
-ColorForeground=#0000ffff0000
-=======
->>>>>>> 07296701795cced60c561e62ce6a73f4c1d71643
 

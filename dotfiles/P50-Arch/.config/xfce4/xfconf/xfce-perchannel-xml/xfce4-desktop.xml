@@ -7,8 +7,8 @@
         <property name="workspace0" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
-          <property name="last-image" type="string" value="/home/paul/Downloads/archlinux_arm_raspberrypi_grey_textured_fade_o_by_remstux-d6m3xcl.png"/>
-      </property>
+          <property name="last-image" type="string" value="/home/paul/desktop.jpg"/>
+        </property>
         <property name="workspace1" type="empty">
           <property name="color-style" type="int" value="0"/>
           <property name="image-style" type="int" value="5"/>
@@ -24,11 +24,11 @@
           <property name="image-style" type="int" value="5"/>
           <property name="last-image" type="string" value="/usr/share/backgrounds/xfce/xfce-teal.jpg"/>
         </property>
-        <property name="image-path" type="string" value="/home/paul/Downloads/archlinux_arm_raspberrypi_grey_textured_fade_o_by_remstux-d6m3xcl.png"/>
-        <property name="image-show" type="bool" value="true"/>
-        <property name="image-style" type="int" value="0"/>
         <property name="brightness" type="int" value="63"/>
         <property name="saturation" type="double" value="0.000000"/>
+        <property name="image-path" type="string" value="/home/paul/desktop.jpg"/>
+        <property name="image-show" type="bool" value="true"/>
+        <property name="image-style" type="int" value="0"/>
       </property>
     </property>
   </property>
