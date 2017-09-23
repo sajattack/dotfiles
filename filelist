@@ -1,7 +1,7 @@
 .bashrc
 .bash_profile
 .gitconfig
-.conkycolors
+.conkycolors:P50-Arch,alarmpi
 .irssi
 .zshrc
 .vimrc

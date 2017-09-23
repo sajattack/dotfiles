@@ -1,19 +1,15 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[Filesystem root]
+[boot]
 row=0
 col=0
 
-[boot]
+[/]
 row=1
 col=0
 
-[/]
-row=2
-col=0
-
 [/home/paul]
-row=3
+row=2
 col=0
 
