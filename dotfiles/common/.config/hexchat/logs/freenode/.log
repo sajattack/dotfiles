@@ -1,0 +1,27 @@
+**** BEGIN LOGGING AT Tue Mar 14 13:29:54 2017
+
+Mar 14 13:29:54 *	Connecting to chat.freenode.net (162.213.39.42:6697)
+Mar 14 13:29:55 *	* Certification info:
+Mar 14 13:29:55 *	  Subject:
+Mar 14 13:29:55 *	    CN=weber.freenode.net
+Mar 14 13:29:55 *	  Issuer:
+Mar 14 13:29:55 *	    C=US
+Mar 14 13:29:55 *	    O=Let's Encrypt
+Mar 14 13:29:55 *	    CN=Let's Encrypt Authority X3
+Mar 14 13:29:55 *	  Public key algorithm: rsaEncryption (4096 bits)
+Mar 14 13:29:55 *	  Sign algorithm sha256WithRSAEncryption
+Mar 14 13:29:55 *	  Valid since Jan 26 19:15:00 2017 GM to Apr 26 19:15:00 2017 GM
+Mar 14 13:29:55 *	* Cipher info:
+Mar 14 13:29:55 *	  Version: TLSv1/SSLv3, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Mar 14 13:29:55 *	Connected. Now logging in.
+**** BEGIN LOGGING AT Sun Sep 17 13:56:39 2017
+
+Sep 17 13:56:39 *	sajattack sets mode +Z on sajattack
+Sep 17 13:56:39 *	sajattack sets mode +i on sajattack
+**** ENDING LOGGING AT Sun Sep 17 13:56:44 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 20:53:25 2017
+
+Sep 18 20:53:25 No channel joined. Try /join #<channel>
+**** ENDING LOGGING AT Mon Sep 18 20:53:31 2017
+

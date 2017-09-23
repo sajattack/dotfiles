@@ -1,0 +1,26 @@
+**** BEGIN LOGGING AT Sun Sep 10 18:46:48 2017
+
+Sep 10 18:46:48 *	Connecting to irc.mozilla.org (54.85.60.193:6697)
+Sep 10 18:46:49 *	* Certification info:
+Sep 10 18:46:49 *	  Subject:
+Sep 10 18:46:49 *	    C=US
+Sep 10 18:46:49 *	    ST=California
+Sep 10 18:46:49 *	    L=Mountain View
+Sep 10 18:46:49 *	    O=Mozilla Foundation
+Sep 10 18:46:49 *	    OU=IT
+Sep 10 18:46:49 *	    CN=irc.mozilla.org
+Sep 10 18:46:49 *	  Issuer:
+Sep 10 18:46:49 *	    C=US
+Sep 10 18:46:49 *	    O=DigiCert Inc
+Sep 10 18:46:49 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 10 18:46:49 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 10 18:46:49 *	  Sign algorithm sha256WithRSAEncryption
+Sep 10 18:46:49 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 10 18:46:49 *	* Cipher info:
+Sep 10 18:46:49 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 10 18:46:49 *	Connected. Now logging in.
+**** BEGIN LOGGING AT Sun Sep 17 13:56:26 2017
+
+Sep 17 13:56:26 *	sajattack sets mode +x on sajattack
+**** ENDING LOGGING AT Sun Sep 17 13:56:26 2017
+

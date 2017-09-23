@@ -1,0 +1,1355 @@
+**** BEGIN LOGGING AT Sun Sep 10 18:46:49 2017
+
+Sep 10 18:46:49 *	*** Looking up your hostname...
+Sep 10 18:46:49 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 10 18:46:49 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 10 18:46:49 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 10 18:46:49 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 10 18:46:50 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Sun Sep 10 18:46:50 2017
+
+**** BEGIN LOGGING AT Sun Sep 10 18:46:50 2017
+
+Sep 10 18:46:50 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 10 18:46:50 *	Your host is levin.mozilla.org, running version InspIRCd-2.0
+Sep 10 18:46:50 *	This server was created 11:39:26 Sep  3 2016
+Sep 10 18:46:50 *	levin.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 10 18:46:50 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+**** BEGIN LOGGING AT Sun Sep 10 19:24:48 2017
+
+Sep 10 19:24:48 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 10 19:24:48 *	Your host is levin.mozilla.org, running version InspIRCd-2.0
+Sep 10 19:24:48 *	This server was created 11:39:26 Sep  3 2016
+Sep 10 19:24:48 *	levin.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 10 19:24:48 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 10 19:24:48 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 10 19:24:48 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 10 19:24:48 *	557A8J0JN :your unique ID
+Sep 10 19:24:48 *	levin.mozilla.org message of the day
+Sep 10 19:24:48 *	-                      __          _
+Sep 10 19:24:48 *	-                     / /__ _   __(_)___
+Sep 10 19:24:48 *	-                    / / _ \ | / / / __ \
+Sep 10 19:24:48 *	-                   / /  __/ |/ / / / / /
+Sep 10 19:24:48 *	-                  /_/\___/|___/_/_/ /_/
+Sep 10 19:24:48 *	- 
+Sep 10 19:24:48 *	-               M O Z I L L A   D O T   O R G
+Sep 10 19:24:48 *	-                 https://www.mozilla.org/
+Sep 10 19:24:48 *	- 
+Sep 10 19:24:48 *	- =================================================================
+Sep 10 19:24:48 *	-  This server is for use by Mozilla developers, testers, and
+Sep 10 19:24:48 *	-  users. If you are not one, please find another server.
+Sep 10 19:24:48 *	- 
+Sep 10 19:24:48 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 10 19:24:48 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 10 19:24:48 *	- 
+Sep 10 19:24:48 *	- =================================================================
+Sep 10 19:24:48 *	-  Project information:
+Sep 10 19:24:48 *	-   Firefox                https://support.mozilla.org/
+Sep 10 19:24:48 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 10 19:24:48 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 10 19:24:48 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 10 19:24:48 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 10 19:24:48 *	-  
+Sep 10 19:24:48 *	-  Help for new contributors:
+Sep 10 19:24:48 *	-   https://developer.mozilla.org/Introduction
+Sep 10 19:24:48 *	-  
+Sep 10 19:24:48 *	- =================================================================
+Sep 10 19:24:48 *	-  Ports:
+Sep 10 19:24:48 *	-   Non-SSL: 6665 - 6669
+Sep 10 19:24:48 *	-       SSL: 6697, 8443
+Sep 10 19:24:48 *	- =================================================================
+Sep 10 19:24:48 *	- 
+Sep 10 19:24:48 *	-  For a list of other helpful channels please visit
+Sep 10 19:24:48 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 10 19:24:48 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 10 19:24:48 *	- 
+Sep 10 19:24:48 *	End of message of the day.
+Sep 10 19:24:48 *	There are 4532 users and 761 invisible on 4 servers
+Sep 10 19:24:48 *	12 :operator(s) online
+Sep 10 19:24:48 *	1985 :channels formed
+Sep 10 19:24:48 *	I have 1402 clients and 1 servers
+Sep 10 19:24:48 *	Current Local Users: 1402  Max: 2213
+Sep 10 19:24:48 *	Current Global Users: 5293  Max: 6121
+Sep 10 19:24:48 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 10 19:24:48 *	sajattack sets mode +x on sajattack
+Sep 10 19:24:48 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 10 19:24:48 *	JOIN :Not enough parameters.
+Sep 10 19:24:48 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+Sep 10 19:28:19 *	No ping reply for 103 seconds, disconnecting.
+Sep 10 19:28:20 *	Disconnected ()
+Sep 10 19:28:30 *	Looking up irc.mozilla.org
+Sep 10 19:28:30 *	Connecting to irc.mozilla.org (54.219.165.167:6697)
+Sep 10 19:28:30 *	* Subject: /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Global Root CA
+Sep 10 19:28:30 *	* Issuer: /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Global Root CA
+Sep 10 19:28:30 *	* Subject: /C=US/O=DigiCert Inc/CN=DigiCert SHA2 Secure Server CA
+Sep 10 19:28:30 *	* Issuer: /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Global Root CA
+Sep 10 19:28:30 *	* Subject: /C=US/ST=California/L=Mountain View/O=Mozilla Foundation/OU=IT/CN=irc.mozilla.org
+Sep 10 19:28:30 *	* Issuer: /C=US/O=DigiCert Inc/CN=DigiCert SHA2 Secure Server CA
+Sep 10 19:28:31 *	* Certification info:
+Sep 10 19:28:31 *	  Subject:
+Sep 10 19:28:31 *	    C=US
+Sep 10 19:28:31 *	    ST=California
+Sep 10 19:28:31 *	    L=Mountain View
+Sep 10 19:28:31 *	    O=Mozilla Foundation
+Sep 10 19:28:31 *	    OU=IT
+Sep 10 19:28:31 *	    CN=irc.mozilla.org
+Sep 10 19:28:31 *	  Issuer:
+Sep 10 19:28:31 *	    C=US
+Sep 10 19:28:31 *	    O=DigiCert Inc
+Sep 10 19:28:31 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 10 19:28:31 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 10 19:28:31 *	  Sign algorithm sha256WithRSAEncryption
+Sep 10 19:28:31 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 10 19:28:31 *	* Cipher info:
+Sep 10 19:28:31 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 10 19:28:31 *	Connected. Now logging in.
+Sep 10 19:28:31 *	*** Looking up your hostname...
+Sep 10 19:28:31 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 10 19:28:31 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 10 19:28:31 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 10 19:28:31 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 10 19:28:32 *	Welcome to Mozilla!
+**** ENDING LOGGING AT Sun Sep 10 19:28:32 2017
+
+**** BEGIN LOGGING AT Sun Sep 10 19:28:32 2017
+
+Sep 10 19:28:32 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 10 19:28:32 *	Your host is belew.mozilla.org, running version InspIRCd-2.0
+Sep 10 19:28:32 *	This server was created 11:39:26 Sep  3 2016
+Sep 10 19:28:32 *	belew.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 10 19:28:32 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 10 19:28:32 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 10 19:28:32 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 10 19:28:32 *	203BABCDI :your unique ID
+Sep 10 19:28:32 *	belew.mozilla.org message of the day
+Sep 10 19:28:32 *	-                      __         __
+Sep 10 19:28:32 *	-                     / /_  ___  / /__ _      __
+Sep 10 19:28:32 *	-                    / __ \/ _ \/ / _ \ | /| / /
+Sep 10 19:28:32 *	-                   / /_/ /  __/ /  __/ |/ |/ /
+Sep 10 19:28:32 *	-                  /_.___/\___/_/\___/|__/|__/
+Sep 10 19:28:32 *	- 
+Sep 10 19:28:32 *	- 
+Sep 10 19:28:32 *	-                  M O Z I L L A   D O T   O R G
+Sep 10 19:28:32 *	-                    https://www.mozilla.org/
+Sep 10 19:28:32 *	- 
+Sep 10 19:28:32 *	- =================================================================
+Sep 10 19:28:32 *	-  This server is for use by Mozilla developers, testers, and
+Sep 10 19:28:32 *	-  users. If you are not one, please find another server.
+Sep 10 19:28:32 *	- 
+Sep 10 19:28:32 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 10 19:28:32 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 10 19:28:32 *	- 
+Sep 10 19:28:32 *	- =================================================================
+Sep 10 19:28:32 *	-  Project information:
+Sep 10 19:28:32 *	-   Firefox                https://support.mozilla.org/
+Sep 10 19:28:32 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 10 19:28:32 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 10 19:28:32 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 10 19:28:32 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 10 19:28:32 *	-  
+Sep 10 19:28:32 *	-  Help for new contributors:
+Sep 10 19:28:32 *	-   https://developer.mozilla.org/Introduction
+Sep 10 19:28:32 *	-  
+Sep 10 19:28:32 *	- =================================================================
+Sep 10 19:28:32 *	-  Ports:
+Sep 10 19:28:32 *	-   Non-SSL: 6665 - 6669
+Sep 10 19:28:32 *	-       SSL: 6697, 8443
+Sep 10 19:28:32 *	- =================================================================
+Sep 10 19:28:32 *	- 
+Sep 10 19:28:32 *	-  For a list of other helpful channels please visit
+Sep 10 19:28:32 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 10 19:28:32 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 10 19:28:32 *	- 
+Sep 10 19:28:32 *	End of message of the day.
+Sep 10 19:28:32 *	There are 4522 users and 760 invisible on 4 servers
+Sep 10 19:28:32 *	12 :operator(s) online
+Sep 10 19:28:32 *	1984 :channels formed
+Sep 10 19:28:32 *	I have 1889 clients and 2 servers
+Sep 10 19:28:32 *	Current Local Users: 1889  Max: 2377
+Sep 10 19:28:32 *	Current Global Users: 5282  Max: 6121
+Sep 10 19:28:32 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 10 19:28:32 *	sajattack sets mode +x on sajattack
+Sep 10 19:28:32 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 10 19:54:54 *	No ping reply for 111 seconds, disconnecting.
+**** BEGIN LOGGING AT Sun Sep 10 20:23:50 2017
+
+Sep 10 20:23:50 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 10 20:23:50 *	Your host is levin.mozilla.org, running version InspIRCd-2.0
+Sep 10 20:23:50 *	This server was created 11:39:26 Sep  3 2016
+Sep 10 20:23:50 *	levin.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 10 20:23:50 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 10 20:23:50 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 10 20:23:50 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 10 20:23:50 *	557A8J0UU :your unique ID
+Sep 10 20:23:50 *	levin.mozilla.org message of the day
+Sep 10 20:23:50 *	-                      __          _
+Sep 10 20:23:50 *	-                     / /__ _   __(_)___
+Sep 10 20:23:50 *	-                    / / _ \ | / / / __ \
+Sep 10 20:23:50 *	-                   / /  __/ |/ / / / / /
+Sep 10 20:23:50 *	-                  /_/\___/|___/_/_/ /_/
+Sep 10 20:23:50 *	- 
+Sep 10 20:23:50 *	-               M O Z I L L A   D O T   O R G
+Sep 10 20:23:50 *	-                 https://www.mozilla.org/
+Sep 10 20:23:50 *	- 
+Sep 10 20:23:50 *	- =================================================================
+Sep 10 20:23:50 *	-  This server is for use by Mozilla developers, testers, and
+Sep 10 20:23:50 *	-  users. If you are not one, please find another server.
+Sep 10 20:23:50 *	- 
+Sep 10 20:23:50 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 10 20:23:50 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 10 20:23:50 *	- 
+Sep 10 20:23:50 *	- =================================================================
+Sep 10 20:23:50 *	-  Project information:
+Sep 10 20:23:50 *	-   Firefox                https://support.mozilla.org/
+Sep 10 20:23:50 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 10 20:23:50 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 10 20:23:50 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 10 20:23:50 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 10 20:23:50 *	-  
+Sep 10 20:23:50 *	-  Help for new contributors:
+Sep 10 20:23:50 *	-   https://developer.mozilla.org/Introduction
+Sep 10 20:23:50 *	-  
+Sep 10 20:23:50 *	- =================================================================
+Sep 10 20:23:50 *	-  Ports:
+Sep 10 20:23:50 *	-   Non-SSL: 6665 - 6669
+Sep 10 20:23:50 *	-       SSL: 6697, 8443
+Sep 10 20:23:50 *	- =================================================================
+Sep 10 20:23:50 *	- 
+Sep 10 20:23:50 *	-  For a list of other helpful channels please visit
+Sep 10 20:23:50 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 10 20:23:50 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 10 20:23:50 *	- 
+Sep 10 20:23:50 *	End of message of the day.
+Sep 10 20:23:50 *	There are 4515 users and 762 invisible on 4 servers
+Sep 10 20:23:50 *	12 :operator(s) online
+Sep 10 20:23:50 *	1985 :channels formed
+Sep 10 20:23:50 *	I have 1395 clients and 1 servers
+Sep 10 20:23:50 *	Current Local Users: 1395  Max: 2213
+Sep 10 20:23:50 *	Current Global Users: 5277  Max: 6121
+Sep 10 20:23:50 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 10 20:23:50 *	sajattack sets mode +x on sajattack
+Sep 10 20:23:50 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 10 20:23:50 *	JOIN :Not enough parameters.
+Sep 10 20:23:50 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+**** ENDING LOGGING AT Mon Sep 11 08:03:23 2017
+
+**** BEGIN LOGGING AT Thu Sep 14 14:45:33 2017
+
+Sep 14 14:45:33 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 14 14:45:33 *	Your host is belew.mozilla.org, running version InspIRCd-2.0
+Sep 14 14:45:33 *	This server was created 11:39:26 Sep  3 2016
+Sep 14 14:45:33 *	belew.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 14 14:45:33 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 14 14:45:33 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 14 14:45:33 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 14 14:45:33 *	203BACR3D :your unique ID
+Sep 14 14:45:33 *	belew.mozilla.org message of the day
+Sep 14 14:45:33 *	-                      __         __
+Sep 14 14:45:33 *	-                     / /_  ___  / /__ _      __
+Sep 14 14:45:33 *	-                    / __ \/ _ \/ / _ \ | /| / /
+Sep 14 14:45:33 *	-                   / /_/ /  __/ /  __/ |/ |/ /
+Sep 14 14:45:33 *	-                  /_.___/\___/_/\___/|__/|__/
+Sep 14 14:45:33 *	- 
+Sep 14 14:45:33 *	- 
+Sep 14 14:45:33 *	-                  M O Z I L L A   D O T   O R G
+Sep 14 14:45:33 *	-                    https://www.mozilla.org/
+Sep 14 14:45:33 *	- 
+Sep 14 14:45:33 *	- =================================================================
+Sep 14 14:45:33 *	-  This server is for use by Mozilla developers, testers, and
+Sep 14 14:45:33 *	-  users. If you are not one, please find another server.
+Sep 14 14:45:33 *	- 
+Sep 14 14:45:33 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 14 14:45:33 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 14 14:45:33 *	- 
+Sep 14 14:45:33 *	- =================================================================
+Sep 14 14:45:33 *	-  Project information:
+Sep 14 14:45:33 *	-   Firefox                https://support.mozilla.org/
+Sep 14 14:45:33 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 14 14:45:33 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 14 14:45:33 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 14 14:45:33 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 14 14:45:33 *	-  
+Sep 14 14:45:33 *	-  Help for new contributors:
+Sep 14 14:45:33 *	-   https://developer.mozilla.org/Introduction
+Sep 14 14:45:33 *	-  
+Sep 14 14:45:33 *	- =================================================================
+Sep 14 14:45:33 *	-  Ports:
+Sep 14 14:45:33 *	-   Non-SSL: 6665 - 6669
+Sep 14 14:45:33 *	-       SSL: 6697, 8443
+Sep 14 14:45:33 *	- =================================================================
+Sep 14 14:45:33 *	- 
+Sep 14 14:45:33 *	-  For a list of other helpful channels please visit
+Sep 14 14:45:33 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 14 14:45:33 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 14 14:45:33 *	- 
+Sep 14 14:45:33 *	End of message of the day.
+Sep 14 14:45:33 *	There are 4778 users and 794 invisible on 4 servers
+Sep 14 14:45:33 *	13 :operator(s) online
+Sep 14 14:45:33 *	2008 :channels formed
+Sep 14 14:45:33 *	I have 1961 clients and 2 servers
+Sep 14 14:45:33 *	Current Local Users: 1961  Max: 2377
+Sep 14 14:45:33 *	Current Global Users: 5572  Max: 6121
+Sep 14 14:45:33 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 14 14:45:33 *	sajattack sets mode +x on sajattack
+Sep 14 14:45:33 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 14 14:45:33 *	JOIN :Not enough parameters.
+Sep 14 14:45:33 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+**** ENDING LOGGING AT Thu Sep 14 15:50:49 2017
+
+**** BEGIN LOGGING AT Sun Sep 17 10:41:44 2017
+
+Sep 17 10:41:44 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 17 10:41:44 *	Your host is levin.mozilla.org, running version InspIRCd-2.0
+Sep 17 10:41:44 *	This server was created 11:39:26 Sep  3 2016
+Sep 17 10:41:44 *	levin.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 17 10:41:44 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 17 10:41:44 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 17 10:41:44 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 17 10:41:44 *	557A8L65O :your unique ID
+Sep 17 10:41:44 *	levin.mozilla.org message of the day
+Sep 17 10:41:44 *	-                      __          _
+Sep 17 10:41:44 *	-                     / /__ _   __(_)___
+Sep 17 10:41:44 *	-                    / / _ \ | / / / __ \
+Sep 17 10:41:44 *	-                   / /  __/ |/ / / / / /
+Sep 17 10:41:44 *	-                  /_/\___/|___/_/_/ /_/
+Sep 17 10:41:44 *	- 
+Sep 17 10:41:44 *	-               M O Z I L L A   D O T   O R G
+Sep 17 10:41:44 *	-                 https://www.mozilla.org/
+Sep 17 10:41:44 *	- 
+Sep 17 10:41:44 *	- =================================================================
+Sep 17 10:41:44 *	-  This server is for use by Mozilla developers, testers, and
+Sep 17 10:41:44 *	-  users. If you are not one, please find another server.
+Sep 17 10:41:44 *	- 
+Sep 17 10:41:44 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 17 10:41:44 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 17 10:41:44 *	- 
+Sep 17 10:41:44 *	- =================================================================
+Sep 17 10:41:44 *	-  Project information:
+Sep 17 10:41:44 *	-   Firefox                https://support.mozilla.org/
+Sep 17 10:41:44 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 17 10:41:44 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 17 10:41:44 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 17 10:41:44 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 17 10:41:44 *	-  
+Sep 17 10:41:44 *	-  Help for new contributors:
+Sep 17 10:41:44 *	-   https://developer.mozilla.org/Introduction
+Sep 17 10:41:44 *	-  
+Sep 17 10:41:44 *	- =================================================================
+Sep 17 10:41:44 *	-  Ports:
+Sep 17 10:41:44 *	-   Non-SSL: 6665 - 6669
+Sep 17 10:41:44 *	-       SSL: 6697, 8443
+Sep 17 10:41:44 *	- =================================================================
+Sep 17 10:41:44 *	- 
+Sep 17 10:41:44 *	-  For a list of other helpful channels please visit
+Sep 17 10:41:44 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 17 10:41:44 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 17 10:41:44 *	- 
+Sep 17 10:41:44 *	End of message of the day.
+Sep 17 10:41:44 *	There are 4650 users and 779 invisible on 4 servers
+Sep 17 10:41:44 *	13 :operator(s) online
+Sep 17 10:41:44 *	1 :unknown connections
+Sep 17 10:41:44 *	2006 :channels formed
+Sep 17 10:41:44 *	I have 1476 clients and 1 servers
+Sep 17 10:41:44 *	Current Local Users: 1476  Max: 2213
+Sep 17 10:41:44 *	Current Global Users: 5429  Max: 6121
+Sep 17 10:41:44 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 17 10:41:44 *	sajattack sets mode +x on sajattack
+Sep 17 10:41:44 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 17 10:41:44 *	JOIN :Not enough parameters.
+Sep 17 10:41:44 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+Sep 17 13:24:08 *	No ping reply for 90 seconds, disconnecting.
+Sep 17 13:24:08 *	Disconnected ()
+Sep 17 13:24:18 *	Looking up irc.mozilla.org
+Sep 17 13:24:58 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:25:08 Cycling to next server in Moznet...
+Sep 17 13:25:08 *	Disconnected ()
+Sep 17 13:25:08 *	Looking up irc.mozilla.org
+Sep 17 13:25:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:25:23 Cycling to next server in Moznet...
+Sep 17 13:25:23 *	Disconnected ()
+Sep 17 13:25:23 *	Looking up irc.mozilla.org
+Sep 17 13:26:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:26:13 Cycling to next server in Moznet...
+Sep 17 13:26:13 *	Disconnected ()
+Sep 17 13:26:13 *	Looking up irc.mozilla.org
+Sep 17 13:26:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:26:53 Cycling to next server in Moznet...
+Sep 17 13:26:53 *	Disconnected ()
+Sep 17 13:26:53 *	Looking up irc.mozilla.org
+Sep 17 13:27:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:27:43 Cycling to next server in Moznet...
+Sep 17 13:27:43 *	Disconnected ()
+Sep 17 13:27:43 *	Looking up irc.mozilla.org
+Sep 17 13:28:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:28:33 Cycling to next server in Moznet...
+Sep 17 13:28:33 *	Disconnected ()
+Sep 17 13:28:33 *	Looking up irc.mozilla.org
+Sep 17 13:29:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:29:23 Cycling to next server in Moznet...
+Sep 17 13:29:23 *	Disconnected ()
+Sep 17 13:29:23 *	Looking up irc.mozilla.org
+Sep 17 13:30:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:30:13 Cycling to next server in Moznet...
+Sep 17 13:30:13 *	Disconnected ()
+Sep 17 13:30:13 *	Looking up irc.mozilla.org
+Sep 17 13:30:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:31:03 Cycling to next server in Moznet...
+Sep 17 13:31:03 *	Disconnected ()
+Sep 17 13:31:03 *	Looking up irc.mozilla.org
+Sep 17 13:31:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:31:53 Cycling to next server in Moznet...
+Sep 17 13:31:53 *	Disconnected ()
+Sep 17 13:31:53 *	Looking up irc.mozilla.org
+Sep 17 13:32:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:32:43 Cycling to next server in Moznet...
+Sep 17 13:32:43 *	Disconnected ()
+Sep 17 13:32:43 *	Looking up irc.mozilla.org
+Sep 17 13:32:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:32:53 Cycling to next server in Moznet...
+Sep 17 13:32:53 *	Disconnected ()
+Sep 17 13:32:53 *	Looking up irc.mozilla.org
+Sep 17 13:32:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:33:03 Cycling to next server in Moznet...
+Sep 17 13:33:03 *	Disconnected ()
+Sep 17 13:33:03 *	Looking up irc.mozilla.org
+Sep 17 13:33:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:33:13 Cycling to next server in Moznet...
+Sep 17 13:33:13 *	Disconnected ()
+Sep 17 13:33:13 *	Looking up irc.mozilla.org
+Sep 17 13:33:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:33:23 Cycling to next server in Moznet...
+Sep 17 13:33:23 *	Disconnected ()
+Sep 17 13:33:23 *	Looking up irc.mozilla.org
+Sep 17 13:33:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:33:33 Cycling to next server in Moznet...
+Sep 17 13:33:33 *	Disconnected ()
+Sep 17 13:33:33 *	Looking up irc.mozilla.org
+Sep 17 13:33:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:33:43 Cycling to next server in Moznet...
+Sep 17 13:33:43 *	Disconnected ()
+Sep 17 13:33:43 *	Looking up irc.mozilla.org
+Sep 17 13:33:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:33:53 Cycling to next server in Moznet...
+Sep 17 13:33:53 *	Disconnected ()
+Sep 17 13:33:53 *	Looking up irc.mozilla.org
+Sep 17 13:33:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:34:03 Cycling to next server in Moznet...
+Sep 17 13:34:03 *	Disconnected ()
+Sep 17 13:34:03 *	Looking up irc.mozilla.org
+Sep 17 13:34:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:34:13 Cycling to next server in Moznet...
+Sep 17 13:34:13 *	Disconnected ()
+Sep 17 13:34:13 *	Looking up irc.mozilla.org
+Sep 17 13:34:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:34:23 Cycling to next server in Moznet...
+Sep 17 13:34:23 *	Disconnected ()
+Sep 17 13:34:23 *	Looking up irc.mozilla.org
+Sep 17 13:34:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:34:33 Cycling to next server in Moznet...
+Sep 17 13:34:33 *	Disconnected ()
+Sep 17 13:34:33 *	Looking up irc.mozilla.org
+Sep 17 13:34:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:34:43 Cycling to next server in Moznet...
+Sep 17 13:34:43 *	Disconnected ()
+Sep 17 13:34:43 *	Looking up irc.mozilla.org
+Sep 17 13:34:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:34:53 Cycling to next server in Moznet...
+Sep 17 13:34:53 *	Disconnected ()
+Sep 17 13:34:53 *	Looking up irc.mozilla.org
+Sep 17 13:34:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:35:03 Cycling to next server in Moznet...
+Sep 17 13:35:03 *	Disconnected ()
+Sep 17 13:35:03 *	Looking up irc.mozilla.org
+Sep 17 13:35:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:35:13 Cycling to next server in Moznet...
+Sep 17 13:35:13 *	Disconnected ()
+Sep 17 13:35:13 *	Looking up irc.mozilla.org
+Sep 17 13:35:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:35:23 Cycling to next server in Moznet...
+Sep 17 13:35:23 *	Disconnected ()
+Sep 17 13:35:23 *	Looking up irc.mozilla.org
+Sep 17 13:35:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:35:33 Cycling to next server in Moznet...
+Sep 17 13:35:33 *	Disconnected ()
+Sep 17 13:35:33 *	Looking up irc.mozilla.org
+Sep 17 13:35:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:35:43 Cycling to next server in Moznet...
+Sep 17 13:35:43 *	Disconnected ()
+Sep 17 13:35:43 *	Looking up irc.mozilla.org
+Sep 17 13:35:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:35:53 Cycling to next server in Moznet...
+Sep 17 13:35:53 *	Disconnected ()
+Sep 17 13:35:53 *	Looking up irc.mozilla.org
+Sep 17 13:35:58 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:36:08 Cycling to next server in Moznet...
+Sep 17 13:36:08 *	Disconnected ()
+Sep 17 13:36:08 *	Looking up irc.mozilla.org
+Sep 17 13:36:08 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:36:18 Cycling to next server in Moznet...
+Sep 17 13:36:18 *	Disconnected ()
+Sep 17 13:36:18 *	Looking up irc.mozilla.org
+Sep 17 13:36:19 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:36:29 Cycling to next server in Moznet...
+Sep 17 13:36:29 *	Disconnected ()
+Sep 17 13:36:29 *	Looking up irc.mozilla.org
+Sep 17 13:36:29 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:36:39 Cycling to next server in Moznet...
+Sep 17 13:36:39 *	Disconnected ()
+Sep 17 13:36:39 *	Looking up irc.mozilla.org
+Sep 17 13:36:39 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:36:49 Cycling to next server in Moznet...
+Sep 17 13:36:49 *	Disconnected ()
+Sep 17 13:36:49 *	Looking up irc.mozilla.org
+Sep 17 13:36:49 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:36:59 Cycling to next server in Moznet...
+Sep 17 13:36:59 *	Disconnected ()
+Sep 17 13:36:59 *	Looking up irc.mozilla.org
+Sep 17 13:36:59 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:37:09 Cycling to next server in Moznet...
+Sep 17 13:37:09 *	Disconnected ()
+Sep 17 13:37:09 *	Looking up irc.mozilla.org
+Sep 17 13:37:09 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:37:19 Cycling to next server in Moznet...
+Sep 17 13:37:19 *	Disconnected ()
+Sep 17 13:37:19 *	Looking up irc.mozilla.org
+Sep 17 13:37:19 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:37:29 Cycling to next server in Moznet...
+Sep 17 13:37:29 *	Disconnected ()
+Sep 17 13:37:29 *	Looking up irc.mozilla.org
+Sep 17 13:37:29 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:37:39 Cycling to next server in Moznet...
+Sep 17 13:37:39 *	Disconnected ()
+Sep 17 13:37:39 *	Looking up irc.mozilla.org
+Sep 17 13:37:39 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:37:49 Cycling to next server in Moznet...
+Sep 17 13:37:49 *	Disconnected ()
+Sep 17 13:37:49 *	Looking up irc.mozilla.org
+Sep 17 13:37:49 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:37:59 Cycling to next server in Moznet...
+Sep 17 13:37:59 *	Disconnected ()
+Sep 17 13:37:59 *	Looking up irc.mozilla.org
+Sep 17 13:37:59 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:38:09 Cycling to next server in Moznet...
+Sep 17 13:38:09 *	Disconnected ()
+Sep 17 13:38:09 *	Looking up irc.mozilla.org
+Sep 17 13:38:09 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:38:19 Cycling to next server in Moznet...
+Sep 17 13:38:19 *	Disconnected ()
+Sep 17 13:38:19 *	Looking up irc.mozilla.org
+Sep 17 13:38:19 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:38:29 Cycling to next server in Moznet...
+Sep 17 13:38:29 *	Disconnected ()
+Sep 17 13:38:29 *	Looking up irc.mozilla.org
+Sep 17 13:38:29 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:38:39 Cycling to next server in Moznet...
+Sep 17 13:38:39 *	Disconnected ()
+Sep 17 13:38:39 *	Looking up irc.mozilla.org
+Sep 17 13:38:39 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:38:49 Cycling to next server in Moznet...
+Sep 17 13:38:49 *	Disconnected ()
+Sep 17 13:38:49 *	Looking up irc.mozilla.org
+Sep 17 13:38:49 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:38:59 Cycling to next server in Moznet...
+Sep 17 13:38:59 *	Disconnected ()
+Sep 17 13:38:59 *	Looking up irc.mozilla.org
+Sep 17 13:38:59 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:39:09 Cycling to next server in Moznet...
+Sep 17 13:39:09 *	Disconnected ()
+Sep 17 13:39:09 *	Looking up irc.mozilla.org
+Sep 17 13:39:09 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:39:19 Cycling to next server in Moznet...
+Sep 17 13:39:19 *	Disconnected ()
+Sep 17 13:39:19 *	Looking up irc.mozilla.org
+Sep 17 13:39:19 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:39:29 Cycling to next server in Moznet...
+Sep 17 13:39:29 *	Disconnected ()
+Sep 17 13:39:29 *	Looking up irc.mozilla.org
+Sep 17 13:39:29 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:39:39 Cycling to next server in Moznet...
+Sep 17 13:39:39 *	Disconnected ()
+Sep 17 13:39:39 *	Looking up irc.mozilla.org
+Sep 17 13:39:39 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:39:49 Cycling to next server in Moznet...
+Sep 17 13:39:49 *	Disconnected ()
+Sep 17 13:39:49 *	Looking up irc.mozilla.org
+Sep 17 13:39:50 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:40:00 Cycling to next server in Moznet...
+Sep 17 13:40:00 *	Disconnected ()
+Sep 17 13:40:00 *	Looking up irc.mozilla.org
+Sep 17 13:40:00 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:40:10 Cycling to next server in Moznet...
+Sep 17 13:40:10 *	Disconnected ()
+Sep 17 13:40:10 *	Looking up irc.mozilla.org
+Sep 17 13:40:10 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:40:20 Cycling to next server in Moznet...
+Sep 17 13:40:20 *	Disconnected ()
+Sep 17 13:40:20 *	Looking up irc.mozilla.org
+Sep 17 13:40:20 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:40:30 Cycling to next server in Moznet...
+Sep 17 13:40:30 *	Disconnected ()
+Sep 17 13:40:30 *	Looking up irc.mozilla.org
+Sep 17 13:40:30 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:40:40 Cycling to next server in Moznet...
+Sep 17 13:40:40 *	Disconnected ()
+Sep 17 13:40:40 *	Looking up irc.mozilla.org
+Sep 17 13:40:40 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:40:50 Cycling to next server in Moznet...
+Sep 17 13:40:50 *	Disconnected ()
+Sep 17 13:40:50 *	Looking up irc.mozilla.org
+Sep 17 13:40:50 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:41:00 Cycling to next server in Moznet...
+Sep 17 13:41:00 *	Disconnected ()
+Sep 17 13:41:00 *	Looking up irc.mozilla.org
+Sep 17 13:41:00 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:41:10 Cycling to next server in Moznet...
+Sep 17 13:41:10 *	Disconnected ()
+Sep 17 13:41:10 *	Looking up irc.mozilla.org
+Sep 17 13:41:10 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:41:20 Cycling to next server in Moznet...
+Sep 17 13:41:20 *	Disconnected ()
+Sep 17 13:41:20 *	Looking up irc.mozilla.org
+Sep 17 13:41:20 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:41:30 Cycling to next server in Moznet...
+Sep 17 13:41:30 *	Disconnected ()
+Sep 17 13:41:30 *	Looking up irc.mozilla.org
+Sep 17 13:41:30 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:41:40 Cycling to next server in Moznet...
+Sep 17 13:41:40 *	Disconnected ()
+Sep 17 13:41:40 *	Looking up irc.mozilla.org
+Sep 17 13:41:40 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:41:50 Cycling to next server in Moznet...
+Sep 17 13:41:50 *	Disconnected ()
+Sep 17 13:41:50 *	Looking up irc.mozilla.org
+Sep 17 13:41:50 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:42:00 Cycling to next server in Moznet...
+Sep 17 13:42:00 *	Disconnected ()
+Sep 17 13:42:00 *	Looking up irc.mozilla.org
+Sep 17 13:42:00 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:42:10 Cycling to next server in Moznet...
+Sep 17 13:42:10 *	Disconnected ()
+Sep 17 13:42:10 *	Looking up irc.mozilla.org
+Sep 17 13:42:10 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:42:20 Cycling to next server in Moznet...
+Sep 17 13:42:20 *	Disconnected ()
+Sep 17 13:42:20 *	Looking up irc.mozilla.org
+Sep 17 13:42:20 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:42:30 Cycling to next server in Moznet...
+Sep 17 13:42:30 *	Disconnected ()
+Sep 17 13:42:30 *	Looking up irc.mozilla.org
+Sep 17 13:42:30 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:42:40 Cycling to next server in Moznet...
+Sep 17 13:42:40 *	Disconnected ()
+Sep 17 13:42:40 *	Looking up irc.mozilla.org
+Sep 17 13:42:40 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:42:50 Cycling to next server in Moznet...
+Sep 17 13:42:50 *	Disconnected ()
+Sep 17 13:42:50 *	Looking up irc.mozilla.org
+Sep 17 13:42:50 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:43:00 Cycling to next server in Moznet...
+Sep 17 13:43:00 *	Disconnected ()
+Sep 17 13:43:00 *	Looking up irc.mozilla.org
+Sep 17 13:43:00 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:43:10 Cycling to next server in Moznet...
+Sep 17 13:43:10 *	Disconnected ()
+Sep 17 13:43:10 *	Looking up irc.mozilla.org
+Sep 17 13:43:10 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:43:20 Cycling to next server in Moznet...
+Sep 17 13:43:20 *	Disconnected ()
+Sep 17 13:43:20 *	Looking up irc.mozilla.org
+Sep 17 13:43:20 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:43:30 Cycling to next server in Moznet...
+Sep 17 13:43:30 *	Disconnected ()
+Sep 17 13:43:30 *	Looking up irc.mozilla.org
+Sep 17 13:43:30 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:43:40 Cycling to next server in Moznet...
+Sep 17 13:43:40 *	Disconnected ()
+Sep 17 13:43:40 *	Looking up irc.mozilla.org
+Sep 17 13:43:41 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:43:51 Cycling to next server in Moznet...
+Sep 17 13:43:51 *	Disconnected ()
+Sep 17 13:43:51 *	Looking up irc.mozilla.org
+Sep 17 13:43:51 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:44:01 Cycling to next server in Moznet...
+Sep 17 13:44:01 *	Disconnected ()
+Sep 17 13:44:01 *	Looking up irc.mozilla.org
+Sep 17 13:44:01 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:44:11 Cycling to next server in Moznet...
+Sep 17 13:44:11 *	Disconnected ()
+Sep 17 13:44:11 *	Looking up irc.mozilla.org
+Sep 17 13:44:11 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:44:21 Cycling to next server in Moznet...
+Sep 17 13:44:21 *	Disconnected ()
+Sep 17 13:44:21 *	Looking up irc.mozilla.org
+Sep 17 13:44:21 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:44:31 Cycling to next server in Moznet...
+Sep 17 13:44:31 *	Disconnected ()
+Sep 17 13:44:31 *	Looking up irc.mozilla.org
+Sep 17 13:44:31 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:44:41 Cycling to next server in Moznet...
+Sep 17 13:44:41 *	Disconnected ()
+Sep 17 13:44:41 *	Looking up irc.mozilla.org
+Sep 17 13:44:41 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:44:51 Cycling to next server in Moznet...
+Sep 17 13:44:51 *	Disconnected ()
+Sep 17 13:44:51 *	Looking up irc.mozilla.org
+Sep 17 13:44:51 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:45:01 Cycling to next server in Moznet...
+Sep 17 13:45:01 *	Disconnected ()
+Sep 17 13:45:01 *	Looking up irc.mozilla.org
+Sep 17 13:45:01 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:45:11 Cycling to next server in Moznet...
+Sep 17 13:45:11 *	Disconnected ()
+Sep 17 13:45:11 *	Looking up irc.mozilla.org
+Sep 17 13:45:11 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:45:21 Cycling to next server in Moznet...
+Sep 17 13:45:21 *	Disconnected ()
+Sep 17 13:45:21 *	Looking up irc.mozilla.org
+Sep 17 13:45:21 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:45:31 Cycling to next server in Moznet...
+Sep 17 13:45:31 *	Disconnected ()
+Sep 17 13:45:31 *	Looking up irc.mozilla.org
+Sep 17 13:45:31 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:45:41 Cycling to next server in Moznet...
+Sep 17 13:45:41 *	Disconnected ()
+Sep 17 13:45:41 *	Looking up irc.mozilla.org
+Sep 17 13:45:41 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:45:51 Cycling to next server in Moznet...
+Sep 17 13:45:51 *	Disconnected ()
+Sep 17 13:45:51 *	Looking up irc.mozilla.org
+Sep 17 13:45:51 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:46:01 Cycling to next server in Moznet...
+Sep 17 13:46:01 *	Disconnected ()
+Sep 17 13:46:01 *	Looking up irc.mozilla.org
+Sep 17 13:46:01 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:46:11 Cycling to next server in Moznet...
+Sep 17 13:46:11 *	Disconnected ()
+Sep 17 13:46:11 *	Looking up irc.mozilla.org
+Sep 17 13:46:11 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:46:21 Cycling to next server in Moznet...
+Sep 17 13:46:21 *	Disconnected ()
+Sep 17 13:46:21 *	Looking up irc.mozilla.org
+Sep 17 13:46:21 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:46:31 Cycling to next server in Moznet...
+Sep 17 13:46:31 *	Disconnected ()
+Sep 17 13:46:31 *	Looking up irc.mozilla.org
+Sep 17 13:46:31 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:46:41 Cycling to next server in Moznet...
+Sep 17 13:46:41 *	Disconnected ()
+Sep 17 13:46:41 *	Looking up irc.mozilla.org
+Sep 17 13:46:41 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:46:51 Cycling to next server in Moznet...
+Sep 17 13:46:51 *	Disconnected ()
+Sep 17 13:46:51 *	Looking up irc.mozilla.org
+Sep 17 13:46:52 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:47:02 Cycling to next server in Moznet...
+Sep 17 13:47:02 *	Disconnected ()
+Sep 17 13:47:02 *	Looking up irc.mozilla.org
+Sep 17 13:47:02 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:47:12 Cycling to next server in Moznet...
+Sep 17 13:47:12 *	Disconnected ()
+Sep 17 13:47:12 *	Looking up irc.mozilla.org
+Sep 17 13:47:12 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:47:22 Cycling to next server in Moznet...
+Sep 17 13:47:22 *	Disconnected ()
+Sep 17 13:47:22 *	Looking up irc.mozilla.org
+Sep 17 13:47:22 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:47:32 Cycling to next server in Moznet...
+Sep 17 13:47:32 *	Disconnected ()
+Sep 17 13:47:32 *	Looking up irc.mozilla.org
+Sep 17 13:47:32 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:47:42 Cycling to next server in Moznet...
+Sep 17 13:47:42 *	Disconnected ()
+Sep 17 13:47:42 *	Looking up irc.mozilla.org
+Sep 17 13:47:42 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:47:52 Cycling to next server in Moznet...
+Sep 17 13:47:52 *	Disconnected ()
+Sep 17 13:47:52 *	Looking up irc.mozilla.org
+Sep 17 13:47:52 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:48:02 Cycling to next server in Moznet...
+Sep 17 13:48:02 *	Disconnected ()
+Sep 17 13:48:02 *	Looking up irc.mozilla.org
+Sep 17 13:48:02 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:48:12 Cycling to next server in Moznet...
+Sep 17 13:48:12 *	Disconnected ()
+Sep 17 13:48:12 *	Looking up irc.mozilla.org
+Sep 17 13:48:12 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:48:22 Cycling to next server in Moznet...
+Sep 17 13:48:22 *	Disconnected ()
+Sep 17 13:48:22 *	Looking up irc.mozilla.org
+Sep 17 13:48:22 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:48:32 Cycling to next server in Moznet...
+Sep 17 13:48:32 *	Disconnected ()
+Sep 17 13:48:32 *	Looking up irc.mozilla.org
+Sep 17 13:48:32 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:48:42 Cycling to next server in Moznet...
+Sep 17 13:48:42 *	Disconnected ()
+Sep 17 13:48:42 *	Looking up irc.mozilla.org
+Sep 17 13:48:42 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:48:52 Cycling to next server in Moznet...
+Sep 17 13:48:52 *	Disconnected ()
+Sep 17 13:48:52 *	Looking up irc.mozilla.org
+Sep 17 13:48:52 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:49:02 Cycling to next server in Moznet...
+Sep 17 13:49:02 *	Disconnected ()
+Sep 17 13:49:02 *	Looking up irc.mozilla.org
+Sep 17 13:49:02 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:49:12 Cycling to next server in Moznet...
+Sep 17 13:49:12 *	Disconnected ()
+Sep 17 13:49:12 *	Looking up irc.mozilla.org
+Sep 17 13:49:12 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:49:22 Cycling to next server in Moznet...
+Sep 17 13:49:22 *	Disconnected ()
+Sep 17 13:49:22 *	Looking up irc.mozilla.org
+Sep 17 13:49:22 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:49:32 Cycling to next server in Moznet...
+Sep 17 13:49:32 *	Disconnected ()
+Sep 17 13:49:32 *	Looking up irc.mozilla.org
+Sep 17 13:49:32 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:49:42 Cycling to next server in Moznet...
+Sep 17 13:49:42 *	Disconnected ()
+Sep 17 13:49:42 *	Looking up irc.mozilla.org
+Sep 17 13:49:42 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:49:52 Cycling to next server in Moznet...
+Sep 17 13:49:52 *	Disconnected ()
+Sep 17 13:49:52 *	Looking up irc.mozilla.org
+Sep 17 13:49:52 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:50:02 Cycling to next server in Moznet...
+Sep 17 13:50:02 *	Disconnected ()
+Sep 17 13:50:02 *	Looking up irc.mozilla.org
+Sep 17 13:50:02 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:50:12 Cycling to next server in Moznet...
+Sep 17 13:50:12 *	Disconnected ()
+Sep 17 13:50:12 *	Looking up irc.mozilla.org
+Sep 17 13:50:12 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:50:22 Cycling to next server in Moznet...
+Sep 17 13:50:22 *	Disconnected ()
+Sep 17 13:50:22 *	Looking up irc.mozilla.org
+Sep 17 13:50:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:50:33 Cycling to next server in Moznet...
+Sep 17 13:50:33 *	Disconnected ()
+Sep 17 13:50:33 *	Looking up irc.mozilla.org
+Sep 17 13:50:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:50:43 Cycling to next server in Moznet...
+Sep 17 13:50:43 *	Disconnected ()
+Sep 17 13:50:43 *	Looking up irc.mozilla.org
+Sep 17 13:50:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:50:53 Cycling to next server in Moznet...
+Sep 17 13:50:53 *	Disconnected ()
+Sep 17 13:50:53 *	Looking up irc.mozilla.org
+Sep 17 13:50:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:51:03 Cycling to next server in Moznet...
+Sep 17 13:51:03 *	Disconnected ()
+Sep 17 13:51:03 *	Looking up irc.mozilla.org
+Sep 17 13:51:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:51:13 Cycling to next server in Moznet...
+Sep 17 13:51:13 *	Disconnected ()
+Sep 17 13:51:13 *	Looking up irc.mozilla.org
+Sep 17 13:51:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:51:23 Cycling to next server in Moznet...
+Sep 17 13:51:23 *	Disconnected ()
+Sep 17 13:51:23 *	Looking up irc.mozilla.org
+Sep 17 13:51:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:51:33 Cycling to next server in Moznet...
+Sep 17 13:51:33 *	Disconnected ()
+Sep 17 13:51:33 *	Looking up irc.mozilla.org
+Sep 17 13:51:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:51:43 Cycling to next server in Moznet...
+Sep 17 13:51:43 *	Disconnected ()
+Sep 17 13:51:43 *	Looking up irc.mozilla.org
+Sep 17 13:51:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:51:53 Cycling to next server in Moznet...
+Sep 17 13:51:53 *	Disconnected ()
+Sep 17 13:51:53 *	Looking up irc.mozilla.org
+Sep 17 13:51:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:52:03 Cycling to next server in Moznet...
+Sep 17 13:52:03 *	Disconnected ()
+Sep 17 13:52:03 *	Looking up irc.mozilla.org
+Sep 17 13:52:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:52:13 Cycling to next server in Moznet...
+Sep 17 13:52:13 *	Disconnected ()
+Sep 17 13:52:13 *	Looking up irc.mozilla.org
+Sep 17 13:52:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:52:23 Cycling to next server in Moznet...
+Sep 17 13:52:23 *	Disconnected ()
+Sep 17 13:52:23 *	Looking up irc.mozilla.org
+Sep 17 13:52:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:52:33 Cycling to next server in Moznet...
+Sep 17 13:52:33 *	Disconnected ()
+Sep 17 13:52:33 *	Looking up irc.mozilla.org
+Sep 17 13:52:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:52:43 Cycling to next server in Moznet...
+Sep 17 13:52:43 *	Disconnected ()
+Sep 17 13:52:43 *	Looking up irc.mozilla.org
+Sep 17 13:52:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:52:53 Cycling to next server in Moznet...
+Sep 17 13:52:53 *	Disconnected ()
+Sep 17 13:52:53 *	Looking up irc.mozilla.org
+Sep 17 13:52:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:53:03 Cycling to next server in Moznet...
+Sep 17 13:53:03 *	Disconnected ()
+Sep 17 13:53:03 *	Looking up irc.mozilla.org
+Sep 17 13:53:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:53:13 Cycling to next server in Moznet...
+Sep 17 13:53:13 *	Disconnected ()
+Sep 17 13:53:13 *	Looking up irc.mozilla.org
+Sep 17 13:53:13 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:53:23 Cycling to next server in Moznet...
+Sep 17 13:53:23 *	Disconnected ()
+Sep 17 13:53:23 *	Looking up irc.mozilla.org
+Sep 17 13:53:23 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:53:33 Cycling to next server in Moznet...
+Sep 17 13:53:33 *	Disconnected ()
+Sep 17 13:53:33 *	Looking up irc.mozilla.org
+Sep 17 13:53:33 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:53:43 Cycling to next server in Moznet...
+Sep 17 13:53:43 *	Disconnected ()
+Sep 17 13:53:43 *	Looking up irc.mozilla.org
+Sep 17 13:53:43 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:53:53 Cycling to next server in Moznet...
+Sep 17 13:53:53 *	Disconnected ()
+Sep 17 13:53:53 *	Looking up irc.mozilla.org
+Sep 17 13:53:53 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:54:03 Cycling to next server in Moznet...
+Sep 17 13:54:03 *	Disconnected ()
+Sep 17 13:54:03 *	Looking up irc.mozilla.org
+Sep 17 13:54:03 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:54:13 Cycling to next server in Moznet...
+Sep 17 13:54:13 *	Disconnected ()
+Sep 17 13:54:13 *	Looking up irc.mozilla.org
+Sep 17 13:54:14 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:54:24 Cycling to next server in Moznet...
+Sep 17 13:54:24 *	Disconnected ()
+Sep 17 13:54:24 *	Looking up irc.mozilla.org
+Sep 17 13:54:24 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:54:34 Cycling to next server in Moznet...
+Sep 17 13:54:34 *	Disconnected ()
+Sep 17 13:54:34 *	Looking up irc.mozilla.org
+Sep 17 13:54:54 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:55:04 Cycling to next server in Moznet...
+Sep 17 13:55:04 *	Disconnected ()
+Sep 17 13:55:04 *	Looking up irc.mozilla.org
+Sep 17 13:55:04 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:55:14 Cycling to next server in Moznet...
+Sep 17 13:55:14 *	Disconnected ()
+Sep 17 13:55:14 *	Looking up irc.mozilla.org
+Sep 17 13:55:14 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:55:24 Cycling to next server in Moznet...
+Sep 17 13:55:24 *	Disconnected ()
+Sep 17 13:55:24 *	Looking up irc.mozilla.org
+Sep 17 13:55:24 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:55:34 Cycling to next server in Moznet...
+Sep 17 13:55:34 *	Disconnected ()
+Sep 17 13:55:34 *	Looking up irc.mozilla.org
+Sep 17 13:55:34 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:55:44 Cycling to next server in Moznet...
+Sep 17 13:55:44 *	Disconnected ()
+Sep 17 13:55:44 *	Looking up irc.mozilla.org
+Sep 17 13:55:44 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:55:54 Cycling to next server in Moznet...
+Sep 17 13:55:54 *	Disconnected ()
+Sep 17 13:55:54 *	Looking up irc.mozilla.org
+Sep 17 13:55:54 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:56:04 Cycling to next server in Moznet...
+Sep 17 13:56:04 *	Disconnected ()
+Sep 17 13:56:04 *	Looking up irc.mozilla.org
+Sep 17 13:56:14 *	Unknown host. Maybe you misspelled it?
+Sep 17 13:56:24 Cycling to next server in Moznet...
+Sep 17 13:56:24 *	Disconnected ()
+Sep 17 13:56:24 *	Looking up irc.mozilla.org
+Sep 17 13:56:24 *	Connecting to irc.mozilla.org (54.219.165.167:6697)
+Sep 17 13:56:25 *	* Subject: /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Global Root CA
+Sep 17 13:56:25 *	* Issuer: /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Global Root CA
+Sep 17 13:56:25 *	* Subject: /C=US/O=DigiCert Inc/CN=DigiCert SHA2 Secure Server CA
+Sep 17 13:56:25 *	* Issuer: /C=US/O=DigiCert Inc/OU=www.digicert.com/CN=DigiCert Global Root CA
+Sep 17 13:56:25 *	* Subject: /C=US/ST=California/L=Mountain View/O=Mozilla Foundation/OU=IT/CN=irc.mozilla.org
+Sep 17 13:56:25 *	* Issuer: /C=US/O=DigiCert Inc/CN=DigiCert SHA2 Secure Server CA
+Sep 17 13:56:25 *	* Certification info:
+Sep 17 13:56:25 *	  Subject:
+Sep 17 13:56:25 *	    C=US
+Sep 17 13:56:25 *	    ST=California
+Sep 17 13:56:25 *	    L=Mountain View
+Sep 17 13:56:25 *	    O=Mozilla Foundation
+Sep 17 13:56:25 *	    OU=IT
+Sep 17 13:56:25 *	    CN=irc.mozilla.org
+Sep 17 13:56:25 *	  Issuer:
+Sep 17 13:56:25 *	    C=US
+Sep 17 13:56:25 *	    O=DigiCert Inc
+Sep 17 13:56:25 *	    CN=DigiCert SHA2 Secure Server CA
+Sep 17 13:56:25 *	  Public key algorithm: rsaEncryption (2048 bits)
+Sep 17 13:56:25 *	  Sign algorithm sha256WithRSAEncryption
+Sep 17 13:56:25 *	  Valid since Aug  9 00:00:00 2017 GM to Aug 13 12:00:00 2020 GM
+Sep 17 13:56:25 *	* Cipher info:
+Sep 17 13:56:25 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-SHA256 (256 bits)
+Sep 17 13:56:25 *	Connected. Now logging in.
+Sep 17 13:56:25 *	*** Looking up your hostname...
+Sep 17 13:56:25 *	*** Found your hostname (S0106848dc7eaaa19.gv.shawcable.net)
+Sep 17 13:56:25 *	Capabilities supported: multi-prefix sasl userhost-in-names
+Sep 17 13:56:25 *	Capabilities requested: multi-prefix userhost-in-names 
+Sep 17 13:56:25 *	Capabilities acknowledged: multi-prefix userhost-in-names
+Sep 17 13:56:26 *	Welcome to Mozilla!
+Sep 17 13:56:26 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 17 13:56:26 *	Your host is belew.mozilla.org, running version InspIRCd-2.0
+Sep 17 13:56:26 *	This server was created 11:39:26 Sep  3 2016
+Sep 17 13:56:26 *	belew.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 17 13:56:26 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 17 13:56:26 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 17 13:56:26 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 17 13:56:26 *	203BADJEJ :your unique ID
+Sep 17 13:56:26 *	belew.mozilla.org message of the day
+Sep 17 13:56:26 *	-                      __         __
+Sep 17 13:56:26 *	-                     / /_  ___  / /__ _      __
+Sep 17 13:56:26 *	-                    / __ \/ _ \/ / _ \ | /| / /
+Sep 17 13:56:26 *	-                   / /_/ /  __/ /  __/ |/ |/ /
+Sep 17 13:56:26 *	-                  /_.___/\___/_/\___/|__/|__/
+Sep 17 13:56:26 *	- 
+Sep 17 13:56:26 *	- 
+Sep 17 13:56:26 *	-                  M O Z I L L A   D O T   O R G
+Sep 17 13:56:26 *	-                    https://www.mozilla.org/
+Sep 17 13:56:26 *	- 
+Sep 17 13:56:26 *	- =================================================================
+Sep 17 13:56:26 *	-  This server is for use by Mozilla developers, testers, and
+Sep 17 13:56:26 *	-  users. If you are not one, please find another server.
+Sep 17 13:56:26 *	- 
+Sep 17 13:56:26 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 17 13:56:26 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 17 13:56:26 *	- 
+Sep 17 13:56:26 *	- =================================================================
+Sep 17 13:56:26 *	-  Project information:
+Sep 17 13:56:26 *	-   Firefox                https://support.mozilla.org/
+Sep 17 13:56:26 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 17 13:56:26 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 17 13:56:26 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 17 13:56:26 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 17 13:56:26 *	-  
+Sep 17 13:56:26 *	-  Help for new contributors:
+Sep 17 13:56:26 *	-   https://developer.mozilla.org/Introduction
+Sep 17 13:56:26 *	-  
+Sep 17 13:56:26 *	- =================================================================
+Sep 17 13:56:26 *	-  Ports:
+Sep 17 13:56:26 *	-   Non-SSL: 6665 - 6669
+Sep 17 13:56:26 *	-       SSL: 6697, 8443
+Sep 17 13:56:26 *	- =================================================================
+Sep 17 13:56:26 *	- 
+Sep 17 13:56:26 *	-  For a list of other helpful channels please visit
+Sep 17 13:56:26 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 17 13:56:26 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 17 13:56:26 *	- 
+Sep 17 13:56:26 *	End of message of the day.
+Sep 17 13:56:26 *	There are 4653 users and 774 invisible on 4 servers
+Sep 17 13:56:26 *	13 :operator(s) online
+Sep 17 13:56:26 *	1999 :channels formed
+Sep 17 13:56:26 *	I have 1934 clients and 2 servers
+Sep 17 13:56:26 *	Current Local Users: 1934  Max: 2377
+Sep 17 13:56:26 *	Current Global Users: 5427  Max: 6121
+Sep 17 13:56:26 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 17 13:56:26 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+**** ENDING LOGGING AT Mon Sep 18 00:32:52 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 18:21:58 2017
+
+Sep 18 18:21:58 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 18 18:21:58 *	Your host is belew.mozilla.org, running version InspIRCd-2.0
+Sep 18 18:21:58 *	This server was created 11:39:26 Sep  3 2016
+Sep 18 18:21:58 *	belew.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 18 18:21:58 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 18 18:21:58 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 18 18:21:58 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 18 18:21:58 *	203BADVOA :your unique ID
+Sep 18 18:21:58 *	belew.mozilla.org message of the day
+Sep 18 18:21:58 *	-                      __         __
+Sep 18 18:21:58 *	-                     / /_  ___  / /__ _      __
+Sep 18 18:21:58 *	-                    / __ \/ _ \/ / _ \ | /| / /
+Sep 18 18:21:58 *	-                   / /_/ /  __/ /  __/ |/ |/ /
+Sep 18 18:21:58 *	-                  /_.___/\___/_/\___/|__/|__/
+Sep 18 18:21:58 *	- 
+Sep 18 18:21:58 *	- 
+Sep 18 18:21:58 *	-                  M O Z I L L A   D O T   O R G
+Sep 18 18:21:58 *	-                    https://www.mozilla.org/
+Sep 18 18:21:58 *	- 
+Sep 18 18:21:58 *	- =================================================================
+Sep 18 18:21:58 *	-  This server is for use by Mozilla developers, testers, and
+Sep 18 18:21:58 *	-  users. If you are not one, please find another server.
+Sep 18 18:21:58 *	- 
+Sep 18 18:21:58 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 18 18:21:58 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 18 18:21:58 *	- 
+Sep 18 18:21:58 *	- =================================================================
+Sep 18 18:21:58 *	-  Project information:
+Sep 18 18:21:58 *	-   Firefox                https://support.mozilla.org/
+Sep 18 18:21:58 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 18 18:21:58 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 18 18:21:58 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 18 18:21:58 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 18 18:21:58 *	-  
+Sep 18 18:21:58 *	-  Help for new contributors:
+Sep 18 18:21:58 *	-   https://developer.mozilla.org/Introduction
+Sep 18 18:21:58 *	-  
+Sep 18 18:21:58 *	- =================================================================
+Sep 18 18:21:58 *	-  Ports:
+Sep 18 18:21:58 *	-   Non-SSL: 6665 - 6669
+Sep 18 18:21:58 *	-       SSL: 6697, 8443
+Sep 18 18:21:58 *	- =================================================================
+Sep 18 18:21:58 *	- 
+Sep 18 18:21:58 *	-  For a list of other helpful channels please visit
+Sep 18 18:21:58 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 18 18:21:58 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 18 18:21:58 *	- 
+Sep 18 18:21:58 *	End of message of the day.
+Sep 18 18:21:58 *	There are 4633 users and 787 invisible on 4 servers
+Sep 18 18:21:58 *	13 :operator(s) online
+Sep 18 18:21:58 *	2003 :channels formed
+Sep 18 18:21:58 *	I have 1921 clients and 2 servers
+Sep 18 18:21:58 *	Current Local Users: 1921  Max: 2377
+Sep 18 18:21:58 *	Current Global Users: 5420  Max: 6121
+Sep 18 18:21:58 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 18 18:21:58 *	sajattack sets mode +x on sajattack
+Sep 18 18:21:58 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 18 18:21:59 *	JOIN :Not enough parameters.
+Sep 18 18:21:59 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+**** BEGIN LOGGING AT Mon Sep 18 20:44:57 2017
+
+Sep 18 20:44:57 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 18 20:44:57 *	Your host is belew.mozilla.org, running version InspIRCd-2.0
+Sep 18 20:44:57 *	This server was created 11:39:26 Sep  3 2016
+Sep 18 20:44:57 *	belew.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 18 20:44:57 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 18 20:44:57 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 18 20:44:57 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 18 20:44:57 *	203BADWMN :your unique ID
+Sep 18 20:44:57 *	belew.mozilla.org message of the day
+Sep 18 20:44:57 *	-                      __         __
+Sep 18 20:44:57 *	-                     / /_  ___  / /__ _      __
+Sep 18 20:44:57 *	-                    / __ \/ _ \/ / _ \ | /| / /
+Sep 18 20:44:57 *	-                   / /_/ /  __/ /  __/ |/ |/ /
+Sep 18 20:44:57 *	-                  /_.___/\___/_/\___/|__/|__/
+Sep 18 20:44:57 *	- 
+Sep 18 20:44:57 *	- 
+Sep 18 20:44:57 *	-                  M O Z I L L A   D O T   O R G
+Sep 18 20:44:57 *	-                    https://www.mozilla.org/
+Sep 18 20:44:57 *	- 
+Sep 18 20:44:57 *	- =================================================================
+Sep 18 20:44:57 *	-  This server is for use by Mozilla developers, testers, and
+Sep 18 20:44:57 *	-  users. If you are not one, please find another server.
+Sep 18 20:44:57 *	- 
+Sep 18 20:44:57 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 18 20:44:57 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 18 20:44:57 *	- 
+Sep 18 20:44:57 *	- =================================================================
+Sep 18 20:44:57 *	-  Project information:
+Sep 18 20:44:57 *	-   Firefox                https://support.mozilla.org/
+Sep 18 20:44:57 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 18 20:44:57 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 18 20:44:57 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 18 20:44:57 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 18 20:44:57 *	-  
+Sep 18 20:44:57 *	-  Help for new contributors:
+Sep 18 20:44:57 *	-   https://developer.mozilla.org/Introduction
+Sep 18 20:44:57 *	-  
+Sep 18 20:44:57 *	- =================================================================
+Sep 18 20:44:57 *	-  Ports:
+Sep 18 20:44:57 *	-   Non-SSL: 6665 - 6669
+Sep 18 20:44:57 *	-       SSL: 6697, 8443
+Sep 18 20:44:57 *	- =================================================================
+Sep 18 20:44:57 *	- 
+Sep 18 20:44:57 *	-  For a list of other helpful channels please visit
+Sep 18 20:44:57 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 18 20:44:57 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 18 20:44:57 *	- 
+Sep 18 20:44:57 *	End of message of the day.
+Sep 18 20:44:57 *	There are 4596 users and 783 invisible on 4 servers
+Sep 18 20:44:57 *	13 :operator(s) online
+Sep 18 20:44:57 *	1999 :channels formed
+Sep 18 20:44:57 *	I have 1921 clients and 2 servers
+Sep 18 20:44:57 *	Current Local Users: 1921  Max: 2377
+Sep 18 20:44:57 *	Current Global Users: 5379  Max: 6121
+Sep 18 20:44:57 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 18 20:44:57 *	sajattack sets mode +x on sajattack
+Sep 18 20:44:57 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 18 20:44:57 *	JOIN :Not enough parameters.
+Sep 18 20:44:57 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+**** BEGIN LOGGING AT Mon Sep 18 21:02:35 2017
+
+Sep 18 21:02:35 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 18 21:02:35 *	Your host is levin.mozilla.org, running version InspIRCd-2.0
+Sep 18 21:02:35 *	This server was created 11:39:26 Sep  3 2016
+Sep 18 21:02:35 *	levin.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 18 21:02:35 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 18 21:02:35 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 18 21:02:35 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 18 21:02:35 *	557A8MLM0 :your unique ID
+Sep 18 21:02:35 *	levin.mozilla.org message of the day
+Sep 18 21:02:35 *	-                      __          _
+Sep 18 21:02:35 *	-                     / /__ _   __(_)___
+Sep 18 21:02:35 *	-                    / / _ \ | / / / __ \
+Sep 18 21:02:35 *	-                   / /  __/ |/ / / / / /
+Sep 18 21:02:35 *	-                  /_/\___/|___/_/_/ /_/
+Sep 18 21:02:35 *	- 
+Sep 18 21:02:35 *	-               M O Z I L L A   D O T   O R G
+Sep 18 21:02:35 *	-                 https://www.mozilla.org/
+Sep 18 21:02:35 *	- 
+Sep 18 21:02:35 *	- =================================================================
+Sep 18 21:02:35 *	-  This server is for use by Mozilla developers, testers, and
+Sep 18 21:02:35 *	-  users. If you are not one, please find another server.
+Sep 18 21:02:35 *	- 
+Sep 18 21:02:35 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 18 21:02:35 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 18 21:02:35 *	- 
+Sep 18 21:02:35 *	- =================================================================
+Sep 18 21:02:35 *	-  Project information:
+Sep 18 21:02:35 *	-   Firefox                https://support.mozilla.org/
+Sep 18 21:02:35 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 18 21:02:35 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 18 21:02:35 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 18 21:02:35 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 18 21:02:35 *	-  
+Sep 18 21:02:35 *	-  Help for new contributors:
+Sep 18 21:02:35 *	-   https://developer.mozilla.org/Introduction
+Sep 18 21:02:35 *	-  
+Sep 18 21:02:35 *	- =================================================================
+Sep 18 21:02:35 *	-  Ports:
+Sep 18 21:02:35 *	-   Non-SSL: 6665 - 6669
+Sep 18 21:02:35 *	-       SSL: 6697, 8443
+Sep 18 21:02:35 *	- =================================================================
+Sep 18 21:02:35 *	- 
+Sep 18 21:02:35 *	-  For a list of other helpful channels please visit
+Sep 18 21:02:35 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 18 21:02:35 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 18 21:02:35 *	- 
+Sep 18 21:02:35 *	End of message of the day.
+Sep 18 21:02:35 *	There are 4597 users and 781 invisible on 4 servers
+Sep 18 21:02:35 *	13 :operator(s) online
+Sep 18 21:02:35 *	1 :unknown connections
+Sep 18 21:02:35 *	1998 :channels formed
+Sep 18 21:02:35 *	I have 1447 clients and 1 servers
+Sep 18 21:02:35 *	Current Local Users: 1447  Max: 2213
+Sep 18 21:02:35 *	Current Global Users: 5378  Max: 6121
+Sep 18 21:02:35 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 18 21:02:35 *	sajattack sets mode +x on sajattack
+Sep 18 21:02:35 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 18 21:02:35 *	JOIN :Not enough parameters.
+Sep 18 21:02:35 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+**** BEGIN LOGGING AT Mon Sep 18 21:50:59 2017
+
+Sep 18 21:50:59 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 18 21:50:59 *	Your host is belew.mozilla.org, running version InspIRCd-2.0
+Sep 18 21:50:59 *	This server was created 11:39:26 Sep  3 2016
+Sep 18 21:50:59 *	belew.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 18 21:50:59 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 18 21:50:59 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 18 21:50:59 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 18 21:50:59 *	203BADW43 :your unique ID
+Sep 18 21:50:59 *	belew.mozilla.org message of the day
+Sep 18 21:50:59 *	-                      __         __
+Sep 18 21:50:59 *	-                     / /_  ___  / /__ _      __
+Sep 18 21:50:59 *	-                    / __ \/ _ \/ / _ \ | /| / /
+Sep 18 21:50:59 *	-                   / /_/ /  __/ /  __/ |/ |/ /
+Sep 18 21:50:59 *	-                  /_.___/\___/_/\___/|__/|__/
+Sep 18 21:50:59 *	- 
+Sep 18 21:50:59 *	- 
+Sep 18 21:50:59 *	-                  M O Z I L L A   D O T   O R G
+Sep 18 21:50:59 *	-                    https://www.mozilla.org/
+Sep 18 21:50:59 *	- 
+Sep 18 21:50:59 *	- =================================================================
+Sep 18 21:50:59 *	-  This server is for use by Mozilla developers, testers, and
+Sep 18 21:50:59 *	-  users. If you are not one, please find another server.
+Sep 18 21:50:59 *	- 
+Sep 18 21:50:59 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 18 21:50:59 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 18 21:50:59 *	- 
+Sep 18 21:50:59 *	- =================================================================
+Sep 18 21:50:59 *	-  Project information:
+Sep 18 21:50:59 *	-   Firefox                https://support.mozilla.org/
+Sep 18 21:50:59 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 18 21:50:59 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 18 21:50:59 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 18 21:50:59 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 18 21:50:59 *	-  
+Sep 18 21:50:59 *	-  Help for new contributors:
+Sep 18 21:50:59 *	-   https://developer.mozilla.org/Introduction
+Sep 18 21:50:59 *	-  
+Sep 18 21:50:59 *	- =================================================================
+Sep 18 21:50:59 *	-  Ports:
+Sep 18 21:50:59 *	-   Non-SSL: 6665 - 6669
+Sep 18 21:50:59 *	-       SSL: 6697, 8443
+Sep 18 21:50:59 *	- =================================================================
+Sep 18 21:50:59 *	- 
+Sep 18 21:50:59 *	-  For a list of other helpful channels please visit
+Sep 18 21:50:59 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 18 21:50:59 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 18 21:50:59 *	- 
+Sep 18 21:50:59 *	End of message of the day.
+Sep 18 21:50:59 *	There are 4630 users and 780 invisible on 4 servers
+Sep 18 21:50:59 *	13 :operator(s) online
+Sep 18 21:50:59 *	2 :unknown connections
+Sep 18 21:50:59 *	2002 :channels formed
+Sep 18 21:50:59 *	I have 1919 clients and 2 servers
+Sep 18 21:50:59 *	Current Local Users: 1919  Max: 2377
+Sep 18 21:50:59 *	Current Global Users: 5410  Max: 6121
+Sep 18 21:50:59 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 18 21:50:59 *	sajattack sets mode +x on sajattack
+Sep 18 21:50:59 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 18 21:50:59 *	JOIN :Not enough parameters.
+Sep 18 21:50:59 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}
+**** ENDING LOGGING AT Mon Sep 18 21:51:56 2017
+
+**** BEGIN LOGGING AT Tue Sep 19 20:22:40 2017
+
+Sep 19 20:22:40 *	Welcome to the Mozilla IRC Network sajattack!sajattack@S0106848dc7eaaa19.gv.shawcable.net
+Sep 19 20:22:40 *	Your host is belew.mozilla.org, running version InspIRCd-2.0
+Sep 19 20:22:40 *	This server was created 11:39:26 Sep  3 2016
+Sep 19 20:22:40 *	belew.mozilla.org InspIRCd-2.0 BHIRSWacdhikorswx ABCDFKLMNOQRSTYZabcefghijklmnopqrstuvz FLYZabefghjkloqv
+Sep 19 20:22:40 *	AWAYLEN=200 CASEMAPPING=rfc1459 CHANMODES=Zbeg,k,FLfjl,ABCDKMNOQRSTcimnprstuz CHANNELLEN=64 CHANTYPES=# CHARSET=ascii ELIST=MU ESILENCE EXCEPTS=e EXTBAN=,ABCNOQRSTUcmprz FNC KICKLEN=255 MAP :are supported by this server
+Sep 19 20:22:40 *	MAXBANS=60 MAXCHANNELS=100 MAXPARA=32 MAXTARGETS=20 MODES=20 NAMESX NETWORK=Mozilla NICKLEN=31 OPERLOG OVERRIDE PREFIX=(Yqaohv)!~&@%+ SECURELIST SILENCE=32 :are supported by this server
+Sep 19 20:22:40 *	SSL=[::]:6697 STATUSMSG=!~&@%+ TOPICLEN=307 UHNAMES USERIP VBANLIST WALLCHOPS WALLVOICES WATCH=32 :are supported by this server
+Sep 19 20:22:40 *	203BAD7HX :your unique ID
+Sep 19 20:22:40 *	belew.mozilla.org message of the day
+Sep 19 20:22:40 *	-                      __         __
+Sep 19 20:22:40 *	-                     / /_  ___  / /__ _      __
+Sep 19 20:22:40 *	-                    / __ \/ _ \/ / _ \ | /| / /
+Sep 19 20:22:40 *	-                   / /_/ /  __/ /  __/ |/ |/ /
+Sep 19 20:22:40 *	-                  /_.___/\___/_/\___/|__/|__/
+Sep 19 20:22:40 *	- 
+Sep 19 20:22:40 *	- 
+Sep 19 20:22:40 *	-                  M O Z I L L A   D O T   O R G
+Sep 19 20:22:40 *	-                    https://www.mozilla.org/
+Sep 19 20:22:40 *	- 
+Sep 19 20:22:40 *	- =================================================================
+Sep 19 20:22:40 *	-  This server is for use by Mozilla developers, testers, and
+Sep 19 20:22:40 *	-  users. If you are not one, please find another server.
+Sep 19 20:22:40 *	- 
+Sep 19 20:22:40 *	-  NOTICE: Your IP address will be portscanned by our open
+Sep 19 20:22:40 *	-  proxy tester.  See https://wiki.mozilla.org/IRC for details.
+Sep 19 20:22:40 *	- 
+Sep 19 20:22:40 *	- =================================================================
+Sep 19 20:22:40 *	-  Project information:
+Sep 19 20:22:40 *	-   Firefox                https://support.mozilla.org/
+Sep 19 20:22:40 *	-   Mobile                 https://support.mozilla.org/mobile
+Sep 19 20:22:40 *	-   Thunderbird            https://support.mozilla.org/products/thunderbird
+Sep 19 20:22:40 *	-   Boot2Gecko (FirefoxOS) https://support.mozilla.org/products/firefox-os
+Sep 19 20:22:40 *	-   Webmaker               https://support.mozilla.org/products/webmaker
+Sep 19 20:22:40 *	-  
+Sep 19 20:22:40 *	-  Help for new contributors:
+Sep 19 20:22:40 *	-   https://developer.mozilla.org/Introduction
+Sep 19 20:22:40 *	-  
+Sep 19 20:22:40 *	- =================================================================
+Sep 19 20:22:40 *	-  Ports:
+Sep 19 20:22:40 *	-   Non-SSL: 6665 - 6669
+Sep 19 20:22:40 *	-       SSL: 6697, 8443
+Sep 19 20:22:40 *	- =================================================================
+Sep 19 20:22:40 *	- 
+Sep 19 20:22:40 *	-  For a list of other helpful channels please visit
+Sep 19 20:22:40 *	-  https://wiki.mozilla.org/IRC or use the /list command.
+Sep 19 20:22:40 *	-  Additional help with IRC at http://www.irchelp.org/
+Sep 19 20:22:40 *	- 
+Sep 19 20:22:40 *	End of message of the day.
+Sep 19 20:22:40 *	There are 4640 users and 782 invisible on 4 servers
+Sep 19 20:22:40 *	13 :operator(s) online
+Sep 19 20:22:40 *	1998 :channels formed
+Sep 19 20:22:40 *	I have 1921 clients and 2 servers
+Sep 19 20:22:40 *	Current Local Users: 1921  Max: 2377
+Sep 19 20:22:40 *	Current Global Users: 5422  Max: 6121
+Sep 19 20:22:40 *	moz-cp85kt.gv.shawcable.net :is now your displayed host
+Sep 19 20:22:40 *	sajattack sets mode +x on sajattack
+Sep 19 20:22:40 *	*** You are connected using SSL cipher "DHE-RSA-AES-256-CBC-SHA256"
+Sep 19 20:22:40 *	JOIN :Not enough parameters.
+Sep 19 20:22:40 *	SYNTAX JOIN <channel>{,<channel>} {<key>{,<key>}}

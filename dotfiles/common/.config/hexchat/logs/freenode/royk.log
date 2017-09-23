@@ -1,0 +1,201 @@
+**** BEGIN LOGGING AT Wed Sep 20 21:38:50 2017
+
+[RoyK has address ~roy@unaffiliated/royk]
+Sep 20 22:09:51 <RoyK>	hm… if you would let me take a look inside, perhaps I can help. I can't do much else by now. You can find my name in the whois and so on - we'll do the job in a shared session. Up to you
+Sep 20 22:10:20 <sajattack>	you want access to the vps?
+Sep 20 22:10:42 <RoyK>	yeah
+Sep 20 22:11:29 <RoyK>	I can't do anything more than that - I've been working with this shite for 25 years, and I don't ruin people's servers ;)
+Sep 20 22:11:42 <sajattack>	ok gimme a sec
+Sep 20 22:11:45 <RoyK>	again, it's an offer
+Sep 20 22:12:48 <sajattack>	what's your public key?
+Sep 20 22:13:42 <RoyK>	ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAvlfCc6RoDq7jzSy1svNMPcusSkCMefCZE6aT12I7KgPOXUdvGfPqexZhMEO0ooW9+hIwa0NXozEB39Wl8QonsMNtkaJ68KnLAzh6acEFfhzBlSMgjh8EFErD9Td3MFOEZlPApwgIc4H1P7pmhAri3rYN2kWkcD1M2yATMsa7g7PSM9Lq4ol65lf7pFtk/KP6jW5g9HCR0lXllX1RCMCv3iozd8eUApatP3SmkY4UIChPrhefbOrdDIevTxjL7LKXo8Ojv3qbu2H34NdI+y6JDZh9SWJZNIE0bSj9FnO0ZlYXigL2z+xgqfpNSMXnuYc0/zPyot0dLYLFRFhSBjUYnQ== roy@nicetop.local
+Sep 20 22:13:57 <RoyK>	change the comment to roy@karlsbakk.net
+Sep 20 22:15:23 <sajattack>	k try ssh RoyK@imp1.paulsajna.com
+Sep 20 22:16:10 <RoyK>	erm - don't use caps in usernames ;)
+Sep 20 22:16:18 <RoyK>	but wtf
+Sep 20 22:16:20 <sajattack>	w/e
+Sep 20 22:16:39 <sajattack>	you're the one that used caps in your username :P
+Sep 20 22:17:00 <RoyK>	on irc
+Sep 20 22:17:08 <RoyK>	not on linux
+Sep 20 22:17:40 <RoyK>	can you give me a password and sudo too? then we can share a session and look it over
+Sep 20 22:17:54 <sajattack>	the password is mailto:roy@karlsbakk.net
+Sep 20 22:17:55 <sajattack>	oops
+Sep 20 22:18:00 <sajattack>	N2SFeTnn8p2>gw6b
+Sep 20 22:18:35 <sajattack>	k you should have sudo
+Sep 20 22:18:40 <RoyK>	password changed
+Sep 20 22:18:43 <sajattack>	don't fuck it up
+Sep 20 22:18:58 <RoyK>	oops
+Sep 20 22:19:11 <RoyK>	I think I messed up changing my password - can you change it back?
+Sep 20 22:19:18 <sajattack>	lol
+Sep 20 22:19:22 *	RoyK is tired, but won't fuck up
+Sep 20 22:20:34 <sajattack>	I think I changed it back
+Sep 20 22:20:39 <sajattack>	that or I changed my own password lol
+Sep 20 22:21:29 <RoyK>	erm
+Sep 20 22:21:57 <RoyK>	just scrap that user and create one like royk or roy without caps - I think ubuntu is getting a panic
+Sep 20 22:22:04 <sajattack>	k
+Sep 20 22:22:12 <RoyK>	useradd -m roy -s /bin/bash
+Sep 20 22:22:14 <RoyK>	something like that
+Sep 20 22:23:07 <RoyK>	uppercase in usernames is a no-go
+Sep 20 22:23:12 <sajattack>	mmkay
+Sep 20 22:23:14 <sajattack>	try now
+Sep 20 22:23:21 <sajattack>	oh wait I have to redo the ssh key
+Sep 20 22:23:23 <RoyK>	user roy?
+Sep 20 22:23:46 <RoyK>	can't get in with roy or royk
+Sep 20 22:23:51 <RoyK>	did you forget the key?
+Sep 20 22:23:54 <sajattack>	yeah
+Sep 20 22:24:38 <sajattack>	try now
+Sep 20 22:25:05 <RoyK>	Dora:~ roy$ ssh imp1.paulsajna.com
+Sep 20 22:25:05 <RoyK>	Permission denied (publickey).
+Sep 20 22:25:05 <RoyK>	Dora:~ roy$ ssh royk@imp1.paulsajna.com
+Sep 20 22:25:06 <RoyK>	Permission denied (publickey).
+Sep 20 22:25:11 <sajattack>	huh
+Sep 20 22:25:26 <RoyK>	chmod -R go-rwx ~roy/.ssh
+Sep 20 22:25:28 <RoyK>	perhaps
+Sep 20 22:25:51 <sajattack>	k
+Sep 20 22:27:17 <sajattack>	did it work?
+Sep 20 22:27:45 <RoyK>	nope
+Sep 20 22:27:52 <RoyK>	did you remove the RoyK user first?
+Sep 20 22:27:58 <sajattack>	yeah
+Sep 20 22:28:15 <RoyK>	check /var/log/auth.log
+Sep 20 22:29:00 <RoyK>	or just remove the user and add it like last time, only without caps
+Sep 20 22:30:02 <sajattack>	oh wait
+Sep 20 22:30:10 <sajattack>	I think I put authorized keys outside .ssh
+Sep 20 22:30:28 <RoyK>	lol
+Sep 20 22:30:34 <sajattack>	try now
+Sep 20 22:30:53 <RoyK>	nah
+Sep 20 22:30:59 <RoyK>	chmod again
+Sep 20 22:31:22 <RoyK>	user roy, right?
+Sep 20 22:31:26 <sajattack>	yeah
+Sep 20 22:31:43 <RoyK>	doesn't work
+Sep 20 22:31:51 <sajattack>	yeah it's chowned to root
+Sep 20 22:31:53 <sajattack>	1 sec
+Sep 20 22:32:12 <RoyK>	that won't work
+Sep 20 22:32:15 <sajattack>	try now
+Sep 20 22:32:22 <sajattack>	chowned to roy
+Sep 20 22:32:38 <RoyK>	that's why I suggested using useradd -m roy
+Sep 20 22:32:46 <sajattack>	I think I did
+Sep 20 22:32:49 <RoyK>	that creates a homedir and copies /etc/skel/. in there
+Sep 20 22:32:58 <RoyK>	still doesn't work
+Sep 20 22:33:05 <sajattack>	wtf
+Sep 20 22:33:15 <RoyK>	well, userdel -r roy, useradd -m roy, add the key
+Sep 20 22:34:10 <RoyK>	to easily create the .shh dir with correct permissions, just su - roy, ssh localhost, press ctrl+c
+Sep 20 22:34:13 <sajattack>	userdel: user roy is currently used by process 3853
+Sep 20 22:34:43 <RoyK>	ps 3853
+Sep 20 22:34:54 <RoyK>	I'm not logged in
+Sep 20 22:35:06 <RoyK>	but perhaps it's the same uid as the last user you created
+Sep 20 22:35:11 <RoyK>	ps axfu
+Sep 20 22:35:17 <RoyK>	killall -u roy
+Sep 20 22:35:18 <RoyK>	perhaps
+Sep 20 22:35:22 <sajattack>	I got it
+Sep 20 22:36:47 <sajattack>	ssh localhost as roy gives error 
+Sep 20 22:37:11 <RoyK>	not just a message as of 'unknown host'?
+Sep 20 22:37:45 <sajattack>	host key verification fialed
+Sep 20 22:38:29 <RoyK>	did you 'su - roy' ?
+Sep 20 22:38:42 <RoyK>	with the dash
+Sep 20 22:38:47 <sajattack>	oh no dash
+Sep 20 22:39:12 <sajattack>	still says host key verification failed
+Sep 20 22:39:14 <RoyK>	you need that to get the environment
+Sep 20 22:39:28 <RoyK>	hrmf
+Sep 20 22:39:29 <sajattack>	try again?
+Sep 20 22:39:34 <sajattack>	I just redid everything
+Sep 20 22:39:45 <RoyK>	can you just add my key to /root/.ssh/authorized_keys ?
+Sep 20 22:40:00 <sajattack>	I don't think I permit root login
+Sep 20 22:40:09 <RoyK>	usually it's permitted with keys
+Sep 20 22:40:14 <RoyK>	not password, though
+Sep 20 22:40:25 <sajattack>	there's an ssh option PermitRootLogin I think I have set to no
+Sep 20 22:40:33 <RoyK>	ok
+Sep 20 22:40:42 <RoyK>	well, try to remove the user roy again
+Sep 20 22:40:49 <RoyK>	make sure the homedir is gone
+Sep 20 22:41:03 <RoyK>	then useradd -s /bin/bash -m roy
+Sep 20 22:41:07 <RoyK>	et cetera
+Sep 20 22:42:19 <sajattack>	sigh
+Sep 20 22:42:43 <RoyK>	sorry ;)
+Sep 20 22:44:54 <sajattack>	k done again
+Sep 20 22:48:03 <sajattack>	any luck?
+Sep 20 22:48:23 <sajattack>	oh wait I think I forgot to give roy root
+Sep 20 22:49:02 <sajattack>	there
+Sep 20 22:49:49 <sajattack>	restarted ssh service for good measure
+Sep 20 22:51:37 <sajattack>	you there?
+Sep 20 22:51:46 <RoyK>	here
+Sep 20 22:51:55 <RoyK>	there
+Sep 20 22:51:57 <RoyK>	I'm in
+Sep 20 22:52:24 <sajattack>	https://thehacktoday.com/wp-content/uploads/2015/09/Ermahgawd-i-m-totally-a-hack-guize-see-_e5748c9ed64c3c932161340f14cd2c70.png
+Sep 20 22:53:16 <RoyK>	started a tmux session
+Sep 20 22:53:22 <RoyK>	do you use tmux much?
+Sep 20 22:53:30 <sajattack>	http://i.imgur.com/JeSI7KY.png?1
+Sep 20 22:53:31 <sajattack>	no
+Sep 20 22:53:48 <RoyK>	ok, remapping ctrl+b to ctrl+a then, like screen
+Sep 20 22:54:05 <RoyK>	tmux a
+Sep 20 22:54:24 <sajattack>	no sessions
+Sep 20 22:54:29 <sajattack>	do I have to do it as roy?
+Sep 20 22:54:31 <RoyK>	as root
+Sep 20 22:54:41 <sajattack>	ok
+Sep 20 22:54:43 <sajattack>	got it
+Sep 20 23:04:19 <RoyK>	hm
+Sep 20 23:05:12 <sajattack>	it should be nextcloud shouldn't it
+Sep 20 23:32:37 <RoyK>	just setup something 'new'
+Sep 20 23:32:59 <RoyK>	the db is probably ok, and the data is ok (that is, if it's encrypted, make sure you have the key etc)
+Sep 20 23:33:21 <RoyK>	don't take down the old thing before you know the new thing works
+Sep 20 23:33:27 <sajattack>	it's all fresh there's nothing there
+Sep 20 23:34:34 <RoyK>	or - as a friend of mine does it - use a separate vm
+Sep 20 23:34:45 <RoyK>	she has something like 15 VMs on her home server
+Sep 20 23:34:53 <sajattack>	idk if I could do that with my vps
+Sep 20 23:34:54 <RoyK>	just to separate everything
+Sep 20 23:35:02 <RoyK>	ah - nah
+Sep 20 23:35:05 <RoyK>	good point
+Sep 20 23:35:06 <sajattack>	containerize it maybe
+Sep 20 23:35:42 <sajattack>	that's probably a good idea
+Sep 20 23:35:42 <RoyK>	is this kvm?
+Sep 20 23:35:49 <sajattack>	openvz I think
+Sep 20 23:35:52 <sajattack>	but docker it
+Sep 20 23:36:00 <RoyK>	should work
+Sep 20 23:36:02 <sajattack>	so it has it's own apache
+Sep 20 23:36:15 <RoyK>	I beleive there are several docker images for nextcloud
+Sep 20 23:37:49 <sajattack>	haha guess what there's a new version of apache out
+Sep 20 23:41:25 <RoyK>	which version?
+Sep 20 23:41:40 <sajattack>	dunno just ran apt-get upgrade and it's updating
+Sep 20 23:41:56 <sajattack>	4.18 vs 4.17 by the looks of it
+Sep 20 23:42:21 <RoyK>	2.4.18, perhaps
+Sep 20 23:42:36 <sajattack>	Unpacking apache2 (2.4.7-1ubuntu4.18) over (2.4.7-1ubuntu4.17) ..
+Sep 20 23:42:43 <sajattack>	w/e that means
+Sep 20 23:42:58 <RoyK>	dockie?
+Sep 20 23:43:04 <sajattack>	no
+Sep 20 23:43:31 <RoyK>	og - just a patch level
+Sep 20 23:44:01 <RoyK>	but if you can, use something more recent than u1404
+Sep 20 23:44:27 <RoyK>	ubuntu is rather on the ba side when it comes to updating its old distros
+Sep 20 23:44:41 <sajattack>	I use arch on my main machine
+Sep 20 23:44:48 <sajattack>	but I don't think my vps host supports arch
+Sep 20 23:44:49 <RoyK>	it's mostly bug fixes backwards from debian
+Sep 20 23:44:55 *	RoyK uses debian
+Sep 20 23:45:38 <RoyK>	and btw, if you use zfs, docker has an excellent interface with it
+Sep 20 23:45:46 <sajattack>	I use ext4
+Sep 20 23:46:25 <RoyK>	up to you
+Sep 20 23:46:37 <RoyK>	I use zfs for my data - it's far more secure
+Sep 21 00:07:56 <sajattack>	so it turns out docker and openvz don't get along
+**** BEGIN LOGGING AT Thu Sep 21 15:19:03 2017
+
+[RoyK has address ~roy@unaffiliated/royk]
+Sep 21 15:19:12 <sajattack>	Just tried on a new dns name and same issue
+Sep 21 15:19:30 <sajattack>	it really sucks my vps doesn't support docker
+Sep 21 15:23:16 <sajattack>	I think docker is my only hope at this point
+Sep 21 15:26:30 <RoyK>	didn't you say it didn't work on your system?
+Sep 21 15:26:38 <sajattack>	yeah
+Sep 21 15:27:19 <sajattack>	so I'm screwed basically
+Sep 21 15:27:27 <sajattack>	because I can't use the one thing that might help
+Sep 21 15:28:05 <RoyK>	a new vm, perhaps_
+Sep 21 15:28:05 <RoyK>	?
+Sep 21 15:28:10 <RoyK>	crowncloud is cheap
+Sep 21 15:28:21 <RoyK>	I use them - $4 a month isn't bad
+Sep 21 15:29:54 <sajattack>	I'll check it out
+Sep 21 15:30:43 <sajattack>	nah it looks like I have a better deal
+Sep 21 15:30:57 <sajattack>	$6/mo for 4gb ram
+Sep 21 15:32:14 <sajattack>	and they're both openvz so I don't think docker would work on there either
+Sep 21 15:34:20 <RoyK>	crowncloud has kvm as well
+Sep 21 15:34:29 <RoyK>	which may make things a bit easier
+Sep 21 15:34:52 <RoyK>	I have a few machines there - can't complain
+Sep 21 15:35:00 <RoyK>	only one on kvm
+Sep 21 15:35:06 <RoyK>	but rock solid
+Sep 21 15:35:36 <RoyK>	I don't work for them
+Sep 21 15:36:00 <RoyK>	I just tend to like them, because it works, and because they're on freenode if something happens
+Sep 21 15:37:12 <RoyK>	but then, there are several others - pick your choice
+Sep 21 15:37:22 <sajattack>	I'm with impact vps

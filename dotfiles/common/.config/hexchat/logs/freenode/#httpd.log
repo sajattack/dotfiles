@@ -1,0 +1,110 @@
+**** BEGIN LOGGING AT Wed Sep 20 20:13:44 2017
+
+Sep 20 20:13:44 *	Now talking on #httpd
+Sep 20 20:13:44 *	Topic for #httpd is: Apache HTTP Server help httpd.apache.org || Register/identify with Nickserv to speak goo.gl/dQ26k9 || Step one: Check the error log || versions 2.4.27 (stable, GA), 2.2.34 (previous stable) || Getting Started goo.gl/hzi1I || Upgrading to 2.4 goo.gl/qYKYIw || Paste apaste.info hastebin.com (not pastebin.com/paste2.org) || Dev questions -> #httpd-dev || Volunteers Channel (no entitlement
+Sep 20 20:13:44 *	Topic for #httpd set by thumbs!1000@unaffiliated/thumbs (Tue Jul 11 09:06:08 2017)
+Sep 20 20:14:29 <sajattack>	I have a nextcloud site that works on http but not https
+Sep 20 20:14:47 <sajattack>	http://owncloud.paulsajna.com https://owncloud.paulsajna.com
+Sep 20 20:14:57 <sajattack>	certs are from letsencrypt
+Sep 20 20:15:12 <sajattack>	404s on the https version
+Sep 20 20:15:15 <sajattack>	http://termbin.com/ipq9
+Sep 20 20:15:20 <sajattack>	^ access.log
+Sep 20 20:16:58 <thumbs>	sajattack: What does the error log say, exactly?
+Sep 20 20:17:15 <sajattack>	nothing in /var/log/apache2/error.log
+Sep 20 20:17:18 *	RoyK (~roy@unaffiliated/royk) has joined
+Sep 20 20:17:29 <thumbs>	sajattack: on 2.4, try increasing the log level.
+Sep 20 20:17:45 <sajattack>	how?
+Sep 20 20:18:02 <thumbs>	sajattack: with a text editor.
+Sep 20 20:18:15 <sajattack>	edit what?
+Sep 20 20:18:30 <thumbs>	sajattack: the appropriate config file, naturally.
+Sep 20 20:19:34 <sajattack>	what level should I set it to?
+Sep 20 20:19:52 <sajattack>	debug?
+Sep 20 20:19:53 <fajita>	http://httpd.apache.org/dev/debugging.html
+Sep 20 20:19:57 <thumbs>	sajattack: increase the current verbosity.
+Sep 20 20:20:12 <sajattack>	I don't have a loglevel directive atm
+Sep 20 20:20:24 <thumbs>	sajattack: you probably do. See man grep
+Sep 20 20:20:54 <sajattack>	I'll just set it to debug and see what happens
+Sep 20 20:20:54 <thumbs>	or you can define it in your vhost.
+Sep 20 20:21:26 <sajattack>	termbin.com/qi0z btw
+Sep 20 20:21:46 <thumbs>	sajattack: terrific.
+Sep 20 20:22:53 <sajattack>	still nothing recent in error.log
+Sep 20 20:23:22 <thumbs>	sajattack: as a side note, you want to set AllowOverride none in every <Directory> block - you don't want .htaccess files to interfere.
+Sep 20 20:23:45 <sajattack>	mmkay
+Sep 20 20:25:22 <sajattack>	that made it worse
+Sep 20 20:25:28 <thumbs>	sajattack: ok!
+Sep 20 20:26:52 <sajattack>	I'm gonna try regenerating the ssl config with letsencrypt
+Sep 20 20:26:58 <thumbs>	sajattack: ok!
+Sep 20 20:28:22 <opsec>	sajattack: that will be about as effective as rebooting.. i.e. not effective at all.
+Sep 20 20:28:51 <sajattack>	I'm updating to the latest letsencrypt as well, I had a pretty old version
+Sep 20 20:29:04 <opsec>	irrelevant
+Sep 20 20:29:05 <fajita>	This factoid has no relevance to anything. Please select another factoid.
+Sep 20 20:29:12 <sajattack>	lol
+Sep 20 20:32:48 <sajattack>	you're right
+Sep 20 20:34:40 <opsec>	your site loads just fine by the way, you need to configure nextcloud to work as ssl, which requires activating and configuring an ssl module in the backend and editing the config file if i recall
+Sep 20 20:35:11 <opsec>	also, you'll want to redirect all :80 -> :443 and use hsts
+Sep 20 20:35:45 <sajattack>	yeah I don't have it redirecting for now just because http is working and https isn't
+Sep 20 20:36:52 <opsec>	look in your backend and the config file for your app and search their site for any extra instructions when moving it.. which is essentially what you're doing. also, it's not a problem with #httpd most likely
+Sep 20 20:37:42 <sajattack>	yeah that's what I though but they told me to try here
+Sep 20 20:38:47 <opsec>	https://help.nextcloud.com/t/moving-nextcloud-installation-from-one-domain-to-another/4303
+Sep 20 20:40:45 <opsec>	otherwise, unless you can provide relevant error log messages from httpd, that's the extent of what we can offer here
+Sep 20 20:41:42 <sajattack>	alright
+Sep 20 20:43:07 <sajattack>	tried changing the config file to no avail
+Sep 20 20:43:15 <sajattack>	and the nextcloud guys insist it's your fault :P
+Sep 20 20:44:01 <opsec>	you mean *your* fault.
+Sep 20 20:44:18 *	kyan has quit (Read error: Connection reset by peer)
+Sep 20 20:45:04 <sajattack>	this is new: [Wed Sep 20 20:34:54.180987 2017] [:error] [pid 9850] [client 95.143.172.201    :57454] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQ    LSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get     lock; try restarting transaction' in /var/www/owncloud.paulsajna.com/nextcl    oud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:91\nSta    ck trace:\n#0 
+Sep 20 20:45:04 <sajattack>	/var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctrine/db    al/lib/Doctrine/DBAL/Driver/PDOStatement.php(91): PDOStatement->execute(NULL    )\n#1 /var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctrine/dbal/lib/D    octrine/DBAL/Connection.php(1006): Doctrine\\DBAL\\Driver\\PDOStatement->exe    cute()\n#2 /var/www/owncloud.paulsajna.com/nextcloud/lib/private/DB/Connecti    on.php(213): Doctrine\\DBAL\\Connection->executeU
+Sep 20 20:45:04 <sajattack>	pdate('UPDATE `oc_file...',     Array, Array)\n#3 /var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctri    ne/dbal/lib/Doctrine/DBAL/Query/QueryBuilder.php(208): OC\\DB\\Connection->e    xecuteUpdate('UPDATE `*PREFIX...', Array, Array)\n#4 /var/www/owncloud.pauls    ajna.com/nextcloud/lib/private/DB/QueryBuilder/QueryBuilder.php(213): Doctr     in /var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctrine/dbal/lib/Doct    
+Sep 20 20:45:04 <sajattack>	rine/DBAL/Driver/AbstractMySQLDriver.php on line 116, referer: http://ownclo    ud.paulsajna.com/
+Sep 20 20:45:04 <sajattack>	~                         
+Sep 20 20:46:22 <opsec>	spam.
+Sep 20 20:46:26 <opsec>	see /topic
+Sep 20 20:48:01 *	jadesoturi has quit (Ping timeout: 240 seconds)
+Sep 20 20:50:17 *	mundus2018 (~mundus201@unaffiliated/mundus2018) has joined
+Sep 20 20:51:27 <thumbs>	sajattack: also, that's a php error.
+Sep 20 20:53:18 <sajattack>	yeah
+Sep 20 20:53:27 <thumbs>	sajattack: so fix the php error
+Sep 20 20:53:29 <sajattack>	it's the only error I'm getting
+Sep 20 20:53:56 <thumbs>	sajattack: perfect.
+Sep 20 20:54:28 <sajattack>	I don't think it's related to this problem
+Sep 20 20:54:45 <thumbs>	sajattack: all right then.
+Sep 20 20:54:54 *	dah85 (~david@103.217.166.48) has joined
+Sep 20 21:04:05 *	jadesoturi (~jadesotur@unaffiliated/kfj) has joined
+Sep 20 21:08:21 *	ferdna has quit (Quit: Leaving)
+Sep 20 21:09:13 *	jgoohu has quit (Quit: Mutter: www.mutterirc.com)
+Sep 20 21:11:32 *	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net) has joined
+Sep 20 21:16:30 *	noobineer has quit (Ping timeout: 246 seconds)
+Sep 20 21:20:11 *	ferdna (~ferdna@cpe-69-23-129-162.elp.res.rr.com) has joined
+Sep 20 21:30:54 *	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net) has joined
+Sep 20 21:41:47 *	jadesoturi has quit (Quit: ZNC - http://znc.in)
+Sep 20 21:44:19 *	sazawal has quit (Quit: Ex-Chat)
+Sep 20 21:45:20 *	jadesoturi (~jadesotur@unaffiliated/kfj) has joined
+Sep 20 21:52:10 *	Statler (~Georg@p579FE005.dip0.t-ipconnect.de) has joined
+Sep 20 21:52:42 *	[j0rd]_ (uid59281@gateway/web/irccloud.com/x-rlzelxcvrpmiflhs) has joined
+Sep 20 21:57:52 <sajattack>	#httpd vs #nextcloud fighto!
+Sep 20 21:58:09 *	ferdna has quit (Quit: Leaving)
+Sep 20 21:59:54 *	s2013 has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+Sep 20 22:03:46 *	ppang (~ppang@unaffiliated/ppang) has joined
+Sep 20 22:10:39 *	MichaelOF has quit (Quit: Konversation terminated!)
+Sep 20 22:13:28 *	liguo has quit (Remote host closed the connection)
+Sep 20 22:14:07 *	Bock (~bocaneri@about/linux/staff/sauvin) has joined
+Sep 20 22:16:30 *	a-ja (~aja@24-207-230-17.dhcp.stls.mo.charter.com) has joined
+Sep 20 22:17:59 *	pinux (~ppang@unaffiliated/ppang) has joined
+Sep 20 22:18:58 <a-ja>	anyone who can verify whether or not this would be OptionsBleed issue? <LimitExcept GET HEAD>
+Sep 20 22:21:30 *	ppang has quit (Ping timeout: 252 seconds)
+Sep 20 22:25:40 *	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj) has joined
+Sep 20 22:40:48 *	gamelaster (~gamelaste@ip137.bbxnet.sk) has joined
+Sep 20 22:41:14 *	gnomethrower (~Wings@unaffiliated/gnomethrower) has left ("Leaving")
+Sep 20 23:02:46 *	a-ja has quit (Quit: Ba de ya de ya de ya)
+Sep 20 23:05:55 *	preichl (~preichl@2a00:1028:83ce:661a:3d8b:9f77:d6f4:e51f) has joined
+Sep 20 23:06:10 *	dah85 has quit (Read error: Connection reset by peer)
+Sep 20 23:06:44 *	dah85 (~david@103.217.166.48) has joined
+Sep 20 23:16:19 *	beerdrop has quit (Ping timeout: 240 seconds)
+Sep 20 23:29:07 *	beerdrop (~beerdrop@c-107-2-115-62.hsd1.mn.comcast.net) has joined
+Sep 20 23:30:51 *	l14n (~Lian@46.166.187.63) has joined
+Sep 20 23:37:25 *	dah85 (~david@103.217.166.48) has left ("Leaving")
+Sep 20 23:45:35 *	martinus__ (~martin@111.239.24.109.rev.sfr.net) has joined
+Sep 20 23:50:28 *	^elf^ (~elf@unaffiliated/elf) has joined
+Sep 20 23:55:08 *	opalepatrick (~opalepatr@80.7.93.209.dyn.plus.net) has joined
+Sep 21 00:05:08 *	^elf^ has quit (Ping timeout: 240 seconds)
+Sep 21 00:10:52 *	pinux is now known as ppang

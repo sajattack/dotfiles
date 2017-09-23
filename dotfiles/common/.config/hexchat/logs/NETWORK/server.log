@@ -1,0 +1,639 @@
+**** BEGIN LOGGING AT Tue Mar 14 13:29:54 2017
+
+Mar 14 13:29:54 Perl interface loaded
+Mar 14 13:29:54 FiSHLiM plugin loaded
+Mar 14 13:29:54 Sysinfo plugin loaded
+Mar 14 13:29:54 Lua version 1.3/5.3 loaded.
+Mar 14 13:29:54 Python interface loaded
+Mar 14 13:29:54 Checksum plugin loaded
+**** BEGIN LOGGING AT Mon Apr 24 17:22:40 2017
+
+Apr 24 17:22:40 Perl interface loaded
+Apr 24 17:22:40 FiSHLiM plugin loaded
+Apr 24 17:22:40 Sysinfo plugin loaded
+Apr 24 17:22:40 Lua version 1.3/5.3 loaded.
+Apr 24 17:22:40 Python interface loaded
+Apr 24 17:22:40 Checksum plugin loaded
+Apr 24 17:22:40 *	Looking up chat.freenode.net
+Apr 24 17:22:40 *	Connecting to chat.freenode.net (139.162.227.51:6697)
+Apr 24 17:22:42 *	* Certification info:
+Apr 24 17:22:42 *	  Subject:
+Apr 24 17:22:42 *	    CN=niven.freenode.net
+Apr 24 17:22:42 *	  Issuer:
+Apr 24 17:22:42 *	    C=US
+Apr 24 17:22:42 *	    O=Let's Encrypt
+Apr 24 17:22:42 *	    CN=Let's Encrypt Authority X3
+Apr 24 17:22:42 *	  Public key algorithm: rsaEncryption (4096 bits)
+Apr 24 17:22:42 *	  Sign algorithm sha256WithRSAEncryption
+Apr 24 17:22:42 *	  Valid since Apr 24 05:06:00 2017 GM to Jul 23 05:06:00 2017 GM
+Apr 24 17:22:42 *	* Cipher info:
+Apr 24 17:22:42 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Apr 24 17:22:42 *	Connected. Now logging in.
+Apr 24 17:22:42 *	*** Looking up your hostname...
+Apr 24 17:22:42 *	*** Checking Ident
+Apr 24 17:22:42 *	*** Found your hostname
+Apr 24 17:22:44 *	*** No Ident response
+Apr 24 17:22:44 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Apr 24 17:22:44 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Apr 24 17:22:44 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Apr 24 17:22:44 *	Authenticating via SASL as sajattack (PLAIN)
+Apr 24 17:22:45 *	You are now logged in as sajattack.
+Apr 24 17:22:45 *	SASL authentication successful
+**** ENDING LOGGING AT Mon Apr 24 17:22:45 2017
+
+**** BEGIN LOGGING AT Sun Jun 25 19:59:27 2017
+
+Jun 25 19:59:27 Perl interface loaded
+Jun 25 19:59:27 FiSHLiM plugin loaded
+Jun 25 19:59:27 Sysinfo plugin loaded
+Jun 25 19:59:27 Lua version 1.3/5.3 loaded.
+Jun 25 19:59:27 Python interface loaded
+Jun 25 19:59:27 Checksum plugin loaded
+Jun 25 19:59:27 *	Looking up chat.freenode.net
+Jun 25 19:59:27 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Jun 25 19:59:28 *	* Certification info:
+Jun 25 19:59:28 *	  Subject:
+Jun 25 19:59:28 *	    CN=barjavel.freenode.net
+Jun 25 19:59:28 *	  Issuer:
+Jun 25 19:59:28 *	    C=US
+Jun 25 19:59:28 *	    O=Let's Encrypt
+Jun 25 19:59:28 *	    CN=Let's Encrypt Authority X3
+Jun 25 19:59:28 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 25 19:59:28 *	  Sign algorithm sha256WithRSAEncryption
+Jun 25 19:59:28 *	  Valid since May 15 05:02:00 2017 GM to Aug 13 05:02:00 2017 GM
+Jun 25 19:59:28 *	* Cipher info:
+Jun 25 19:59:28 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 25 19:59:28 *	Connected. Now logging in.
+Jun 25 19:59:28 *	*** Looking up your hostname...
+Jun 25 19:59:28 *	*** Checking Ident
+Jun 25 19:59:28 *	*** Found your hostname
+Jun 25 19:59:37 *	*** No Ident response
+Jun 25 19:59:37 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 25 19:59:37 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Jun 25 19:59:37 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Jun 25 19:59:38 *	Authenticating via SASL as sajattack (PLAIN)
+Jun 25 19:59:38 *	You are now logged in as sajattack.
+Jun 25 19:59:38 *	SASL authentication successful
+**** ENDING LOGGING AT Sun Jun 25 19:59:39 2017
+
+**** BEGIN LOGGING AT Sun Jun 25 21:15:52 2017
+
+Jun 25 21:15:52 Perl interface loaded
+Jun 25 21:15:52 FiSHLiM plugin loaded
+Jun 25 21:15:52 Sysinfo plugin loaded
+Jun 25 21:15:52 Lua version 1.3/5.3 loaded.
+Jun 25 21:15:52 Python interface loaded
+Jun 25 21:15:52 Checksum plugin loaded
+Jun 25 21:15:52 *	Looking up chat.freenode.net
+Jun 25 21:15:52 *	Connecting to chat.freenode.net (38.229.70.22:6697)
+Jun 25 21:15:53 *	* Certification info:
+Jun 25 21:15:53 *	  Subject:
+Jun 25 21:15:53 *	    CN=card.freenode.net
+Jun 25 21:15:53 *	  Issuer:
+Jun 25 21:15:53 *	    C=US
+Jun 25 21:15:53 *	    O=Let's Encrypt
+Jun 25 21:15:53 *	    CN=Let's Encrypt Authority X3
+Jun 25 21:15:53 *	  Public key algorithm: rsaEncryption (4096 bits)
+Jun 25 21:15:53 *	  Sign algorithm sha256WithRSAEncryption
+Jun 25 21:15:53 *	  Valid since Jun 19 05:02:00 2017 GM to Sep 17 05:02:00 2017 GM
+Jun 25 21:15:53 *	* Cipher info:
+Jun 25 21:15:53 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Jun 25 21:15:53 *	Connected. Now logging in.
+Jun 25 21:15:53 *	*** Looking up your hostname...
+Jun 25 21:15:53 *	*** Checking Ident
+Jun 25 21:15:53 *	*** Found your hostname
+Jun 25 21:15:59 *	*** No Ident response
+Jun 25 21:15:59 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Jun 25 21:15:59 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Jun 25 21:15:59 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Jun 25 21:15:59 *	Authenticating via SASL as sajattack (PLAIN)
+Jun 25 21:15:59 *	You are now logged in as sajattack.
+Jun 25 21:15:59 *	SASL authentication successful
+**** ENDING LOGGING AT Sun Jun 25 21:16:00 2017
+
+**** BEGIN LOGGING AT Sun Sep 10 18:45:32 2017
+
+Sep 10 18:45:32 Perl interface loaded
+Sep 10 18:45:32 FiSHLiM plugin loaded
+Sep 10 18:45:32 Sysinfo plugin loaded
+Sep 10 18:45:32 Lua version 1.3/5.3 loaded.
+Sep 10 18:45:32 Python interface loaded
+Sep 10 18:45:32 Checksum plugin loaded
+Sep 10 18:45:32 *	Looking up chat.freenode.net
+Sep 10 18:45:32 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Sep 10 18:45:34 *	* Certification info:
+Sep 10 18:45:34 *	  Subject:
+Sep 10 18:45:34 *	    CN=barjavel.freenode.net
+Sep 10 18:45:34 *	  Issuer:
+Sep 10 18:45:34 *	    C=US
+Sep 10 18:45:34 *	    O=Let's Encrypt
+Sep 10 18:45:34 *	    CN=Let's Encrypt Authority X3
+Sep 10 18:45:34 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 10 18:45:34 *	  Sign algorithm sha256WithRSAEncryption
+Sep 10 18:45:34 *	  Valid since Jul 17 05:02:00 2017 GM to Oct 15 05:02:00 2017 GM
+Sep 10 18:45:34 *	* Cipher info:
+Sep 10 18:45:34 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 10 18:45:34 *	Connected. Now logging in.
+Sep 10 18:45:34 *	*** Looking up your hostname...
+Sep 10 18:45:34 *	*** Checking Ident
+Sep 10 18:45:34 *	*** Found your hostname
+Sep 10 18:45:42 *	*** No Ident response
+Sep 10 18:45:42 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 10 18:45:42 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 10 18:45:43 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 10 18:45:43 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 10 18:45:43 *	You are now logged in as sajattack.
+Sep 10 18:45:43 *	SASL authentication successful
+**** ENDING LOGGING AT Sun Sep 10 18:45:44 2017
+
+**** BEGIN LOGGING AT Sun Sep 10 20:23:40 2017
+
+Sep 10 20:23:40 Perl interface loaded
+Sep 10 20:23:40 FiSHLiM plugin loaded
+Sep 10 20:23:40 Sysinfo plugin loaded
+Sep 10 20:23:40 Lua version 1.3/5.3 loaded.
+Sep 10 20:23:40 Python interface loaded
+Sep 10 20:23:40 Checksum plugin loaded
+Sep 10 20:23:40 *	Looking up chat.freenode.net
+Sep 10 20:23:40 *	Connecting to chat.freenode.net (71.11.84.232:6697)
+Sep 10 20:23:42 *	* Certification info:
+Sep 10 20:23:42 *	  Subject:
+Sep 10 20:23:42 *	    CN=tolkien.freenode.net
+Sep 10 20:23:42 *	  Issuer:
+Sep 10 20:23:42 *	    C=US
+Sep 10 20:23:42 *	    O=Let's Encrypt
+Sep 10 20:23:42 *	    CN=Let's Encrypt Authority X3
+Sep 10 20:23:42 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 10 20:23:42 *	  Sign algorithm sha256WithRSAEncryption
+Sep 10 20:23:42 *	  Valid since Aug  7 05:03:00 2017 GM to Nov  5 05:03:00 2017 GM
+Sep 10 20:23:42 *	* Cipher info:
+Sep 10 20:23:42 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 10 20:23:42 *	Connected. Now logging in.
+Sep 10 20:23:42 *	*** Looking up your hostname...
+Sep 10 20:23:42 *	*** Checking Ident
+Sep 10 20:23:42 *	*** Found your hostname
+Sep 10 20:23:51 *	*** No Ident response
+Sep 10 20:23:51 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 10 20:23:51 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 10 20:23:51 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 10 20:23:52 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 10 20:23:52 *	You are now logged in as sajattack.
+Sep 10 20:23:52 *	SASL authentication successful
+**** ENDING LOGGING AT Sun Sep 10 20:23:53 2017
+
+**** BEGIN LOGGING AT Thu Sep 14 14:45:28 2017
+
+Sep 14 14:45:28 Perl interface loaded
+Sep 14 14:45:28 FiSHLiM plugin loaded
+Sep 14 14:45:28 Sysinfo plugin loaded
+Sep 14 14:45:28 Lua version 1.3/5.3 loaded.
+Sep 14 14:45:28 Python interface loaded
+Sep 14 14:45:29 Checksum plugin loaded
+Sep 14 14:45:29 *	Looking up chat.freenode.net
+Sep 14 14:45:29 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Sep 14 14:45:30 *	* Certification info:
+Sep 14 14:45:30 *	  Subject:
+Sep 14 14:45:30 *	    CN=barjavel.freenode.net
+Sep 14 14:45:30 *	  Issuer:
+Sep 14 14:45:30 *	    C=US
+Sep 14 14:45:30 *	    O=Let's Encrypt
+Sep 14 14:45:30 *	    CN=Let's Encrypt Authority X3
+Sep 14 14:45:30 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 14 14:45:30 *	  Sign algorithm sha256WithRSAEncryption
+Sep 14 14:45:30 *	  Valid since Jul 17 05:02:00 2017 GM to Oct 15 05:02:00 2017 GM
+Sep 14 14:45:30 *	* Cipher info:
+Sep 14 14:45:30 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 14 14:45:30 *	Connected. Now logging in.
+Sep 14 14:45:30 *	*** Looking up your hostname...
+Sep 14 14:45:30 *	*** Checking Ident
+Sep 14 14:45:30 *	*** Found your hostname
+Sep 14 14:45:37 *	*** No Ident response
+Sep 14 14:45:37 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 14 14:45:37 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 14 14:45:37 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 14 14:45:38 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 14 14:45:38 *	You are now logged in as sajattack.
+Sep 14 14:45:38 *	SASL authentication successful
+**** ENDING LOGGING AT Thu Sep 14 14:45:38 2017
+
+**** BEGIN LOGGING AT Sun Sep 17 10:41:37 2017
+
+Sep 17 10:41:37 Perl interface loaded
+Sep 17 10:41:37 FiSHLiM plugin loaded
+Sep 17 10:41:37 Sysinfo plugin loaded
+Sep 17 10:41:37 Lua version 1.3/5.3 loaded.
+Sep 17 10:41:37 Python interface loaded
+Sep 17 10:41:37 Checksum plugin loaded
+Sep 17 10:41:37 *	Looking up chat.freenode.net
+Sep 17 10:41:37 *	Connecting to chat.freenode.net (94.125.182.252:6697)
+Sep 17 10:41:39 *	* Certification info:
+Sep 17 10:41:39 *	  Subject:
+Sep 17 10:41:39 *	    CN=adams.freenode.net
+Sep 17 10:41:39 *	  Issuer:
+Sep 17 10:41:39 *	    C=US
+Sep 17 10:41:39 *	    O=Let's Encrypt
+Sep 17 10:41:39 *	    CN=Let's Encrypt Authority X3
+Sep 17 10:41:39 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 17 10:41:39 *	  Sign algorithm sha256WithRSAEncryption
+Sep 17 10:41:39 *	  Valid since Sep  4 05:02:00 2017 GM to Dec  3 05:02:00 2017 GM
+Sep 17 10:41:39 *	* Cipher info:
+Sep 17 10:41:39 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 17 10:41:39 *	Connected. Now logging in.
+Sep 17 10:41:39 *	*** Looking up your hostname...
+Sep 17 10:41:39 *	*** Checking Ident
+Sep 17 10:41:39 *	*** Found your hostname
+Sep 17 10:41:48 *	*** No Ident response
+Sep 17 10:41:48 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 17 10:41:48 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 17 10:41:49 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 17 10:41:49 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 17 10:41:49 *	You are now logged in as sajattack.
+Sep 17 10:41:49 *	SASL authentication successful
+**** ENDING LOGGING AT Sun Sep 17 10:41:50 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 18:21:49 2017
+
+Sep 18 18:21:49 Perl interface loaded
+Sep 18 18:21:49 FiSHLiM plugin loaded
+Sep 18 18:21:49 Sysinfo plugin loaded
+Sep 18 18:21:49 Lua version 1.3/5.3 loaded.
+Sep 18 18:21:49 Python interface loaded
+Sep 18 18:21:49 Checksum plugin loaded
+Sep 18 18:21:49 *	Looking up chat.freenode.net
+Sep 18 18:21:49 *	Connecting to chat.freenode.net (71.11.84.232:6697)
+Sep 18 18:21:50 *	* Certification info:
+Sep 18 18:21:50 *	  Subject:
+Sep 18 18:21:50 *	    CN=tolkien.freenode.net
+Sep 18 18:21:50 *	  Issuer:
+Sep 18 18:21:50 *	    C=US
+Sep 18 18:21:50 *	    O=Let's Encrypt
+Sep 18 18:21:50 *	    CN=Let's Encrypt Authority X3
+Sep 18 18:21:50 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 18 18:21:50 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 18:21:50 *	  Valid since Aug  7 05:03:00 2017 GM to Nov  5 05:03:00 2017 GM
+Sep 18 18:21:50 *	* Cipher info:
+Sep 18 18:21:50 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 18 18:21:50 *	Connected. Now logging in.
+Sep 18 18:21:50 *	*** Looking up your hostname...
+Sep 18 18:21:50 *	*** Checking Ident
+Sep 18 18:21:50 *	*** Found your hostname
+Sep 18 18:21:57 *	*** No Ident response
+Sep 18 18:21:57 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 18 18:21:57 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 18:21:57 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 18:21:57 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 18 18:21:58 *	You are now logged in as sajattack.
+Sep 18 18:21:58 *	SASL authentication successful
+**** ENDING LOGGING AT Mon Sep 18 18:21:58 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 20:44:54 2017
+
+Sep 18 20:44:54 Perl interface loaded
+Sep 18 20:44:54 FiSHLiM plugin loaded
+Sep 18 20:44:54 Sysinfo plugin loaded
+Sep 18 20:44:54 Lua version 1.3/5.3 loaded.
+Sep 18 20:44:54 Python interface loaded
+Sep 18 20:44:54 Checksum plugin loaded
+Sep 18 20:44:54 *	Looking up chat.freenode.net
+Sep 18 20:44:54 *	Connecting to chat.freenode.net (185.30.166.37:6697)
+Sep 18 20:44:56 *	* Certification info:
+Sep 18 20:44:56 *	  Subject:
+Sep 18 20:44:56 *	    CN=verne.freenode.net
+Sep 18 20:44:56 *	  Issuer:
+Sep 18 20:44:56 *	    C=US
+Sep 18 20:44:56 *	    O=Let's Encrypt
+Sep 18 20:44:56 *	    CN=Let's Encrypt Authority X3
+Sep 18 20:44:56 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 18 20:44:56 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 20:44:56 *	  Valid since Jul 27 08:06:00 2017 GM to Oct 25 08:06:00 2017 GM
+Sep 18 20:44:56 *	* Cipher info:
+Sep 18 20:44:56 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 18 20:44:56 *	Connected. Now logging in.
+Sep 18 20:44:56 *	*** Looking up your hostname...
+Sep 18 20:44:56 *	*** Checking Ident
+Sep 18 20:44:56 *	*** Found your hostname
+Sep 18 20:45:05 *	*** No Ident response
+Sep 18 20:45:05 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 18 20:45:05 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 20:45:05 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 20:45:06 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 18 20:45:06 *	You are now logged in as sajattack.
+Sep 18 20:45:06 *	SASL authentication successful
+**** ENDING LOGGING AT Mon Sep 18 20:45:06 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 21:02:30 2017
+
+Sep 18 21:02:30 Perl interface loaded
+Sep 18 21:02:31 FiSHLiM plugin loaded
+Sep 18 21:02:31 Sysinfo plugin loaded
+Sep 18 21:02:31 Lua version 1.3/5.3 loaded.
+Sep 18 21:02:31 Python interface loaded
+Sep 18 21:02:31 Checksum plugin loaded
+Sep 18 21:02:31 *	Looking up chat.freenode.net
+Sep 18 21:02:31 *	Connecting to chat.freenode.net (185.30.166.37:6697)
+Sep 18 21:02:32 *	* Certification info:
+Sep 18 21:02:32 *	  Subject:
+Sep 18 21:02:32 *	    CN=verne.freenode.net
+Sep 18 21:02:32 *	  Issuer:
+Sep 18 21:02:32 *	    C=US
+Sep 18 21:02:32 *	    O=Let's Encrypt
+Sep 18 21:02:32 *	    CN=Let's Encrypt Authority X3
+Sep 18 21:02:32 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 18 21:02:32 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 21:02:32 *	  Valid since Jul 27 08:06:00 2017 GM to Oct 25 08:06:00 2017 GM
+Sep 18 21:02:32 *	* Cipher info:
+Sep 18 21:02:32 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 18 21:02:32 *	Connected. Now logging in.
+Sep 18 21:02:32 *	*** Looking up your hostname...
+Sep 18 21:02:32 *	*** Checking Ident
+Sep 18 21:02:32 *	*** Found your hostname
+Sep 18 21:02:40 *	*** No Ident response
+Sep 18 21:02:40 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 18 21:02:40 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:02:40 *	You have not registered
+Sep 18 21:02:40 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:02:40 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 18 21:02:41 *	You are now logged in as sajattack.
+Sep 18 21:02:42 *	SASL authentication successful
+**** ENDING LOGGING AT Mon Sep 18 21:02:42 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 21:08:06 2017
+
+Sep 18 21:08:06 Perl interface loaded
+Sep 18 21:08:06 FiSHLiM plugin loaded
+Sep 18 21:08:06 Sysinfo plugin loaded
+Sep 18 21:08:06 Lua version 1.3/5.3 loaded.
+Sep 18 21:08:06 Python interface loaded
+Sep 18 21:08:06 Checksum plugin loaded
+Sep 18 21:08:06 *	Looking up chat.freenode.net
+Sep 18 21:08:06 *	Connecting to chat.freenode.net (185.30.166.38:6697)
+Sep 18 21:08:07 *	* Certification info:
+Sep 18 21:08:07 *	  Subject:
+Sep 18 21:08:07 *	    CN=orwell.freenode.net
+Sep 18 21:08:07 *	  Issuer:
+Sep 18 21:08:07 *	    C=US
+Sep 18 21:08:07 *	    O=Let's Encrypt
+Sep 18 21:08:07 *	    CN=Let's Encrypt Authority X3
+Sep 18 21:08:07 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 18 21:08:07 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 21:08:07 *	  Valid since Jul 24 05:06:00 2017 GM to Oct 22 05:06:00 2017 GM
+Sep 18 21:08:07 *	* Cipher info:
+Sep 18 21:08:07 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 18 21:08:07 *	Connected. Now logging in.
+Sep 18 21:08:07 *	*** Looking up your hostname...
+Sep 18 21:08:07 *	*** Checking Ident
+Sep 18 21:08:07 *	*** Found your hostname
+Sep 18 21:08:16 *	*** No Ident response
+Sep 18 21:08:16 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 18 21:08:16 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:08:16 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:08:16 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 18 21:08:16 *	You are now logged in as sajattack.
+Sep 18 21:08:16 *	SASL authentication successful
+**** ENDING LOGGING AT Mon Sep 18 21:08:17 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 21:40:07 2017
+
+Sep 18 21:40:07 Perl interface loaded
+Sep 18 21:40:07 FiSHLiM plugin loaded
+Sep 18 21:40:07 Sysinfo plugin loaded
+Sep 18 21:40:07 Lua version 1.3/5.3 loaded.
+Sep 18 21:40:08 Python interface loaded
+Sep 18 21:40:08 Checksum plugin loaded
+Sep 18 21:40:08 *	Looking up chat.freenode.net
+Sep 18 21:40:08 *	Connecting to chat.freenode.net (38.229.70.22:6697)
+Sep 18 21:40:09 *	* Certification info:
+Sep 18 21:40:09 *	  Subject:
+Sep 18 21:40:09 *	    CN=card.freenode.net
+Sep 18 21:40:09 *	  Issuer:
+Sep 18 21:40:09 *	    C=US
+Sep 18 21:40:09 *	    O=Let's Encrypt
+Sep 18 21:40:09 *	    CN=Let's Encrypt Authority X3
+Sep 18 21:40:09 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 18 21:40:09 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 21:40:09 *	  Valid since Aug 21 14:01:00 2017 GM to Nov 19 14:01:00 2017 GM
+Sep 18 21:40:09 *	* Cipher info:
+Sep 18 21:40:09 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 18 21:40:09 *	Connected. Now logging in.
+Sep 18 21:40:09 *	*** Looking up your hostname...
+Sep 18 21:40:09 *	*** Checking Ident
+Sep 18 21:40:09 *	*** Found your hostname
+Sep 18 21:40:16 *	*** No Ident response
+Sep 18 21:40:16 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 18 21:40:16 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:40:16 *	sajattack is already in use. Retrying with sajattack_...
+Sep 18 21:40:16 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:40:17 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 18 21:40:18 *	You are now logged in as sajattack.
+Sep 18 21:40:18 *	SASL authentication successful
+**** ENDING LOGGING AT Mon Sep 18 21:40:19 2017
+
+**** BEGIN LOGGING AT Mon Sep 18 21:50:50 2017
+
+Sep 18 21:50:50 Perl interface loaded
+Sep 18 21:50:50 FiSHLiM plugin loaded
+Sep 18 21:50:50 Sysinfo plugin loaded
+Sep 18 21:50:50 Lua version 1.3/5.3 loaded.
+Sep 18 21:50:50 Python interface loaded
+Sep 18 21:50:50 Checksum plugin loaded
+Sep 18 21:50:50 *	Looking up chat.freenode.net
+Sep 18 21:50:50 *	Connecting to chat.freenode.net (195.154.200.232:6697)
+Sep 18 21:50:51 *	* Certification info:
+Sep 18 21:50:51 *	  Subject:
+Sep 18 21:50:51 *	    CN=barjavel.freenode.net
+Sep 18 21:50:51 *	  Issuer:
+Sep 18 21:50:51 *	    C=US
+Sep 18 21:50:51 *	    O=Let's Encrypt
+Sep 18 21:50:51 *	    CN=Let's Encrypt Authority X3
+Sep 18 21:50:51 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 18 21:50:51 *	  Sign algorithm sha256WithRSAEncryption
+Sep 18 21:50:51 *	  Valid since Jul 17 05:02:00 2017 GM to Oct 15 05:02:00 2017 GM
+Sep 18 21:50:51 *	* Cipher info:
+Sep 18 21:50:51 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 18 21:50:51 *	Connected. Now logging in.
+Sep 18 21:50:51 *	*** Looking up your hostname...
+Sep 18 21:50:51 *	*** Checking Ident
+Sep 18 21:50:51 *	*** Found your hostname
+Sep 18 21:50:57 *	*** No Ident response
+Sep 18 21:50:57 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 18 21:50:57 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:50:57 *	sajattack is already in use. Retrying with sajattack_...
+Sep 18 21:50:58 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 18 21:50:58 *	sajattack_ is already in use. Retrying with sajattack__...
+Sep 18 21:50:58 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 18 21:51:00 *	You are now logged in as sajattack.
+Sep 18 21:51:00 *	SASL authentication successful
+**** ENDING LOGGING AT Mon Sep 18 21:51:01 2017
+
+**** BEGIN LOGGING AT Tue Sep 19 20:22:34 2017
+
+Sep 19 20:22:34 Perl interface loaded
+Sep 19 20:22:34 FiSHLiM plugin loaded
+Sep 19 20:22:34 Sysinfo plugin loaded
+Sep 19 20:22:34 Lua version 1.3/5.3 loaded.
+Sep 19 20:22:34 Python interface loaded
+Sep 19 20:22:34 Checksum plugin loaded
+Sep 19 20:22:34 *	Looking up chat.freenode.net
+Sep 19 20:22:34 *	Connecting to chat.freenode.net (71.11.84.232:6697)
+Sep 19 20:22:36 *	* Certification info:
+Sep 19 20:22:36 *	  Subject:
+Sep 19 20:22:36 *	    CN=tolkien.freenode.net
+Sep 19 20:22:36 *	  Issuer:
+Sep 19 20:22:36 *	    C=US
+Sep 19 20:22:36 *	    O=Let's Encrypt
+Sep 19 20:22:36 *	    CN=Let's Encrypt Authority X3
+Sep 19 20:22:36 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 19 20:22:36 *	  Sign algorithm sha256WithRSAEncryption
+Sep 19 20:22:36 *	  Valid since Aug  7 05:03:00 2017 GM to Nov  5 05:03:00 2017 GM
+Sep 19 20:22:36 *	* Cipher info:
+Sep 19 20:22:36 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 19 20:22:36 *	Connected. Now logging in.
+Sep 19 20:22:36 *	*** Looking up your hostname...
+Sep 19 20:22:36 *	*** Checking Ident
+Sep 19 20:22:36 *	*** Found your hostname
+Sep 19 20:22:41 *	*** No Ident response
+Sep 19 20:22:41 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 19 20:22:41 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 19 20:22:41 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 19 20:22:42 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 19 20:22:43 *	You are now logged in as sajattack.
+Sep 19 20:22:43 *	SASL authentication successful
+**** ENDING LOGGING AT Tue Sep 19 20:22:43 2017
+
+**** BEGIN LOGGING AT Wed Sep 20 13:18:12 2017
+
+Sep 20 13:18:12 Perl interface loaded
+Sep 20 13:18:12 FiSHLiM plugin loaded
+Sep 20 13:18:12 Sysinfo plugin loaded
+Sep 20 13:18:12 Lua version 1.3/5.3 loaded.
+Sep 20 13:18:12 Python interface loaded
+Sep 20 13:18:12 Checksum plugin loaded
+Sep 20 13:18:12 *	Looking up chat.freenode.net
+Sep 20 13:18:12 *	Connecting to chat.freenode.net (71.11.84.232:6697)
+Sep 20 13:18:13 *	* Certification info:
+Sep 20 13:18:13 *	  Subject:
+Sep 20 13:18:13 *	    CN=tolkien.freenode.net
+Sep 20 13:18:13 *	  Issuer:
+Sep 20 13:18:13 *	    C=US
+Sep 20 13:18:13 *	    O=Let's Encrypt
+Sep 20 13:18:13 *	    CN=Let's Encrypt Authority X3
+Sep 20 13:18:13 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 20 13:18:13 *	  Sign algorithm sha256WithRSAEncryption
+Sep 20 13:18:13 *	  Valid since Aug  7 05:03:00 2017 GM to Nov  5 05:03:00 2017 GM
+Sep 20 13:18:13 *	* Cipher info:
+Sep 20 13:18:13 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 20 13:18:13 *	Connected. Now logging in.
+Sep 20 13:18:13 *	*** Looking up your hostname...
+Sep 20 13:18:13 *	*** Checking Ident
+Sep 20 13:18:13 *	*** Found your hostname
+Sep 20 13:18:21 *	*** No Ident response
+Sep 20 13:18:21 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 20 13:18:21 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 20 13:18:21 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 20 13:18:22 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 20 13:18:22 *	You are now logged in as sajattack.
+Sep 20 13:18:22 *	SASL authentication successful
+**** ENDING LOGGING AT Wed Sep 20 13:18:23 2017
+
+**** BEGIN LOGGING AT Thu Sep 21 14:42:49 2017
+
+Sep 21 14:42:49 Perl interface loaded
+Sep 21 14:42:49 FiSHLiM plugin loaded
+Sep 21 14:42:49 Sysinfo plugin loaded
+Sep 21 14:42:49 Lua version 1.3/5.3 loaded.
+Sep 21 14:42:49 Python interface loaded
+Sep 21 14:42:49 Checksum plugin loaded
+Sep 21 14:42:49 *	Looking up chat.freenode.net
+Sep 21 14:42:49 *	Connecting to chat.freenode.net (139.162.227.51:6697)
+Sep 21 14:42:50 *	* Certification info:
+Sep 21 14:42:50 *	  Subject:
+Sep 21 14:42:50 *	    CN=niven.freenode.net
+Sep 21 14:42:50 *	  Issuer:
+Sep 21 14:42:50 *	    C=US
+Sep 21 14:42:50 *	    O=Let's Encrypt
+Sep 21 14:42:50 *	    CN=Let's Encrypt Authority X3
+Sep 21 14:42:50 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 21 14:42:50 *	  Sign algorithm sha256WithRSAEncryption
+Sep 21 14:42:50 *	  Valid since Jul 31 09:24:00 2017 GM to Oct 29 09:24:00 2017 GM
+Sep 21 14:42:50 *	* Cipher info:
+Sep 21 14:42:50 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 21 14:42:50 *	Connected. Now logging in.
+Sep 21 14:42:50 *	*** Looking up your hostname...
+Sep 21 14:42:50 *	*** Checking Ident
+Sep 21 14:42:50 *	*** Found your hostname
+Sep 21 14:42:55 *	*** No Ident response
+Sep 21 14:42:55 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 21 14:42:55 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 21 14:42:55 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 21 14:42:56 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 21 14:42:56 *	You are now logged in as sajattack.
+Sep 21 14:42:56 *	SASL authentication successful
+**** ENDING LOGGING AT Thu Sep 21 14:42:56 2017
+
+**** BEGIN LOGGING AT Thu Sep 21 21:48:06 2017
+
+Sep 21 21:48:07 Perl interface loaded
+Sep 21 21:48:07 FiSHLiM plugin loaded
+Sep 21 21:48:07 Sysinfo plugin loaded
+Sep 21 21:48:07 Lua version 1.3/5.3 loaded.
+Sep 21 21:48:07 Python interface loaded
+Sep 21 21:48:08 Checksum plugin loaded
+Sep 21 21:48:08 *	Looking up chat.freenode.net
+Sep 21 21:48:08 *	Connecting to chat.freenode.net (185.30.166.38:6697)
+Sep 21 21:48:09 *	* Certification info:
+Sep 21 21:48:09 *	  Subject:
+Sep 21 21:48:09 *	    CN=orwell.freenode.net
+Sep 21 21:48:09 *	  Issuer:
+Sep 21 21:48:09 *	    C=US
+Sep 21 21:48:09 *	    O=Let's Encrypt
+Sep 21 21:48:09 *	    CN=Let's Encrypt Authority X3
+Sep 21 21:48:09 *	  Public key algorithm: rsaEncryption (4096 bits)
+Sep 21 21:48:09 *	  Sign algorithm sha256WithRSAEncryption
+Sep 21 21:48:09 *	  Valid since Jul 24 05:06:00 2017 GM to Oct 22 05:06:00 2017 GM
+Sep 21 21:48:09 *	* Cipher info:
+Sep 21 21:48:09 *	  Version: TLSv1.2, cipher DHE-RSA-AES256-GCM-SHA384 (256 bits)
+Sep 21 21:48:09 *	Connected. Now logging in.
+Sep 21 21:48:09 *	*** Looking up your hostname...
+Sep 21 21:48:09 *	*** Checking Ident
+Sep 21 21:48:09 *	*** Found your hostname
+Sep 21 21:48:16 *	*** No Ident response
+Sep 21 21:48:17 *	Capabilities supported: account-notify extended-join identify-msg multi-prefix sasl
+Sep 21 21:48:17 *	Capabilities requested: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 21 21:48:17 *	Capabilities acknowledged: account-notify extended-join identify-msg multi-prefix sasl 
+Sep 21 21:48:17 *	Authenticating via SASL as sajattack (PLAIN)
+Sep 21 21:48:17 *	You are now logged in as sajattack.
+Sep 21 21:48:17 *	SASL authentication successful
+**** ENDING LOGGING AT Thu Sep 21 21:48:18 2017
+
+**** BEGIN LOGGING AT Fri Sep 22 10:20:25 2017
+
+Sep 22 10:20:25 Perl interface loaded
+Sep 22 10:20:25 FiSHLiM plugin loaded
+Sep 22 10:20:25 Sysinfo plugin loaded
+Sep 22 10:20:25 Lua version 1.3/5.3 loaded.
+Sep 22 10:20:25 Python interface loaded
+Sep 22 10:20:25 Checksum plugin loaded
+Sep 22 10:20:25 *	Looking up chat.freenode.net
+Sep 22 10:20:25 *	Unknown host. Maybe you misspelled it?
+Sep 22 10:20:35 Cycling to next server in freenode...
+Sep 22 10:20:35 *	Disconnected ()
+**** ENDING LOGGING AT Fri Sep 22 10:20:35 2017
+
+**** BEGIN LOGGING AT Sat Sep 23 12:33:17 2017
+
+Sep 23 12:33:17 Perl interface loaded
+Sep 23 12:33:17 Lua version 1.3/5.3 loaded.
+Sep 23 12:33:18 Python interface loaded
+Sep 23 12:33:18 Checksum plugin loaded
+Sep 23 12:33:18 FiSHLiM plugin loaded
+Sep 23 12:33:18 Sysinfo plugin loaded
+Sep 23 12:33:18 *	Looking up chat.freenode.net
+Sep 23 12:33:33 Not connected. Try /server <host> [<port>]
+Sep 23 12:34:03 *	Unknown host. Maybe you misspelled it?
+Sep 23 12:34:06 Sysinfo plugin unloaded
+Sep 23 12:34:06 FiSHLiM plugin unloaded
+Sep 23 12:34:06 Checksum plugin unloaded
+Sep 23 12:34:06 Python interface unloaded
+Sep 23 12:34:06 Perl interface unloaded
+**** ENDING LOGGING AT Sat Sep 23 12:34:06 2017
+
