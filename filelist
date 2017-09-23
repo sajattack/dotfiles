@@ -1,7 +1,8 @@
 .bashrc
 .bash_profile
 .gitconfig
-.conkycolors:P50-Arch,alarmpi
+.conkycolors:P50-Arch
+.conkycolors:alarmpi
 .irssi
 .zshrc
 .vimrc
@@ -12,5 +13,6 @@
 .config/qutebrowser
 .config/radiotray-ng
 .config/hexchat
-.config/xfce4:P50-Arch,alarmpi
+.config/xfce4:P50-Arch
+.config/xfce4:alarmpi
 .local/share/xfce4
