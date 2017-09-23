@@ -1,0 +1,1 @@
+../../../../alarmpi/.config/xfce4/terminal/accels.scm
