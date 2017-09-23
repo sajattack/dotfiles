@@ -1,19 +1,19 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[8ab0d2fb-f8c5-4a58-b3d9-b333b81eab62]
+[boot]
 row=0
 col=0
 
-[EC46-CC15]
-row=1
+[Filesystem root]
+row=3
 col=0
 
 [/]
-row=2
+row=1
 col=0
 
 [/home/paul]
-row=3
+row=2
 col=0
 
