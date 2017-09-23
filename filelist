@@ -5,6 +5,7 @@
 .irssi
 .zshrc
 .vimrc
+.gvimrc
 .config/i3
 .config/albert 
 .config/albert.conf
