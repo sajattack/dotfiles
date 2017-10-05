@@ -1,0 +1,12 @@
+T 1506961650 19*	Now talking on 22#build
+T 1506961650 22*	Topic for 22#build is: Mozilla Build System discussion | Issues with MoCo build infra, try server, release engineering, etc.? -> #releng
+T 1506961650 22*	Topic for 22#build set by 26gavin (24Tue Apr 30 16:53:53 2013)
+T 1506961661 20<sajattack>30	why aren't there any builds for armv7?
+T 1506962167 23*	rkent (Thunderbird@moz-mur.s2u.35.50.IP23) has joined
+T 1506962409 24*	28ahal is now known as 18ahal|pto
+T 1506962506 23*	WaltS48 (Thunderbird@moz-ibgnk8.east.verizon.net23) has joined
+T 1506962625 19<ted>	sajattack: armv7-linux? that's just not a platform with enough users for us to invest in builds for
+T 1506962630 18<ted18>	we build armv7-android builds
+T 1506962648 20<sajattack>30	ok
+T 1506962682 24*	Dexter has quit (Quit: Leaving)
+T 1506962868 23*	bholley (textual@moz-8d0g9h.ca.comcast.net23) has joined

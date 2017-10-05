@@ -1,0 +1,129 @@
+T 1506961808 19*	Now talking on 22#firefox
+T 1506961808 22*	Topic for 22#firefox is: Firefox community & support channel || Permission isn't needed to ask your question. If well after asking nobody responds, say "help!" or try http://support.mozilla.org || Get Firefox from http://mozilla.org/firefox || This channel is logged at http://logs.glob.uno/?c=firefox
+T 1506961808 22*	Topic for 22#firefox set by 26glob!glob@moz-a0fskj.glob.com.au (24Thu Oct 15 01:22:10 2015)
+T 1506961810 24*	Jesin has quit (Quit: Leaving)
+T 1506961816 20<sajattack>30	why aren't there any builds for armv7?
+T 1506961896 18<arai18>	non-android?
+T 1506961899 24*	adriansv has quit (Connection closed)
+T 1506961908 20<sajattack>30	yes
+T 1506961910 20<sajattack>30	rpi
+T 1506961915 18<arai18>	rpi?
+T 1506961922 20<sajattack>30	raspberry pi
+T 1506961924 18<arai18>	(android on armv7 is tier1
+T 1506961927 18<arai18>	https://developer.mozilla.org/en-US/docs/Supported_build_configurations
+T 1506961950 18<arai18>	and I guess, linux on arm is tier-3
+T 1506961951 18<arai18>	there
+T 1506961953 18<Mossop18>	It's not a platform we build for by default
+T 1506961985 20<sajattack>30	is there a place I can find builds?
+T 1506962006 23*	Jesin (Jesin@moz-r1l6bs.fios.verizon.net23) has joined
+T 1506962009 18<arai18>	according to the page, it's maintained by linux distro
+T 1506962010 18<Mossop18>	Not made by Mozilla. 
+T 1506962018 18<ShalokShalom_18>	57 is a great release, thanks a lot
+T 1506962024 24*	28ShalokShalom_ is now known as 18ShalokShalom
+T 1506962024 18<arai18>	not sure which one does tho
+T 1506962038 18<Mossop18>	Debian probably
+T 1506962055 18<arai18>	ah
+T 1506962062 18<ShalokShalom18>	Arch?
+T 1506962104 20<sajattack>30	I couldn't find a firefox 57 build for arch
+T 1506962113 20<sajattack>30	the only one that built was like 53 or sth
+T 1506962113 18<ShalokShalom18>	https://archlinuxarm.org/packages/armv7h/firefox
+T 1506962117 18<ShalokShalom18>	ah, 57
+T 1506962121 18<ShalokShalom18>	rebuild? 
+T 1506962125 20<sajattack>30	hmm?
+T 1506962128 18<ShalokShalom18>	simply change the source
+T 1506962187 18<ShalokShalom18>	makepkg -g to create the new sha
+T 1506962191 18<ShalokShalom18>	makepkg -si to build
+T 1506962198 18<ShalokShalom18>	https://archlinuxarm.org/packages/armv7h/firefox/files
+T 1506962207 18<ShalokShalom18>	download all these sources
+T 1506962212 18<ShalokShalom18>	then run these commands 
+T 1506962319 18<ShalokShalom18>	replace the sha sums in the PKGBUILD with the newly created ones, before you compile with -si
+T 1506962396 24*	pauloiegasSV has quit (Quit: Instantbird 1.5 -- http://www.instantbird.com)
+T 1506962434 20<sajattack>30	change this? source=(https://ftp.mozilla.org/pub/mozilla.org/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz
+T 1506962447 18<ShalokShalom18>	yes
+T 1506962486 20<sajattack>30	I'm hoping it doesn't lock up as much as chrome does
+T 1506962506 23*	WaltS48 (Thunderbird@moz-ibgnk8.east.verizon.net23) has joined
+T 1506962542 20<sajattack>30	change it to what?
+T 1506962548 20<sajattack>30	57.?
+T 1506962580 23*	sm0rux (sm0rux@moz-dejgop.qhou.jc94.1b20.2a03.IP23) has joined
+T 1506962659 19<Tokoyami>	sajattack: change pkgver where it's initialised to 57.0b4
+T 1506962678 18<Tokoyami18>	that should take care of things
+T 1506962678 18<ShalokShalom18>	no
+T 1506962678 18<ShalokShalom18>	they dont host there
+T 1506962678 18<Tokoyami18>	why not?
+T 1506962682 24*	Dexter has quit (Quit: Leaving)
+T 1506962700 18<ShalokShalom18>	would be too easy ;)
+T 1506962701 18<Tokoyami18>	ah, is that some arch variable?
+T 1506962705 18<azaki18>	also probably should rename the package to firefox-beta or something =o
+T 1506962708 18<ShalokShalom18>	pkgver is yes
+T 1506962709 18<ShalokShalom18>	bash
+T 1506962714 18<Tokoyami18>	I see
+T 1506962718 18<ShalokShalom18>	azaki: agree
+T 1506962738 18<Tokoyami18>	https://ftp.mozilla.org/pub/firefox/releases/57.0b4/source/firefox-57.0b4.source.tar.xz link then I guess :)
+T 1506962750 18<ShalokShalom18>	yeah, wait
+T 1506962769 18<ShalokShalom18>	let us rewrite that, so he can simpy use the variable in the upcoming releases :)
+T 1506962810 18<ShalokShalom18>	https://ftp.mozilla.org/pub/firefox/releases/$pkgver/source/firefox-$pkgver.source.tar.xz
+T 1506962813 18<ShalokShalom18>	should work
+T 1506962820 20<sajattack>30	thanks
+T 1506962828 18<ShalokShalom18>	and change pkgver=
+T 1506962832 20<sajattack>30	mhm
+T 1506962840 18<ShalokShalom18>	57.0b4
+T 1506962891 20<sajattack>30	there's already a firefox beta package, would it be bad form to make a firefox-beta-arm package?
+T 1506962943 18<ShalokShalom18>	there is no firefox-beta in Arch ARM
+T 1506962947 18<ShalokShalom18>	https://archlinuxarm.org/packages
+T 1506962950 20<sajattack>30	ah
+T 1506962959 20<sajattack>30	so submit the package there rather than aur?
+T 1506962963 18<ShalokShalom18>	yep
+T 1506962966 18<ShalokShalom18>	if so
+T 1506962973 18<ShalokShalom18>	its basically an indepentend distro
+T 1506962980 18<ShalokShalom18>	 indepentent
+T 1506962991 18<ShalokShalom18>	independent
+T 1506962993 18<ShalokShalom18>	:P
+T 1506963017 18<ShalokShalom18>	#archlinux-arm on freenode 
+T 1506963035 20<sajattack>30	yeah
+T 1506964259 20*	Disconnected (20)
+T 1506964344 22*	26sajattack sets mode 24+x on 22sajattack
+T 1506964344 19*	Now talking on 22#firefox
+T 1506964344 22*	Topic for 22#firefox is: Firefox community & support channel || Permission isn't needed to ask your question. If well after asking nobody responds, say "help!" or try http://support.mozilla.org || Get Firefox from http://mozilla.org/firefox || This channel is logged at http://logs.glob.uno/?c=firefox
+T 1506964344 22*	Topic for 22#firefox set by 26glob!glob@moz-a0fskj.glob.com.au (24Thu Oct 15 01:22:10 2015)
+T 1506964347 24*	__marco has quit (Ping timeout: 121 seconds)
+T 1506964551 24*	mretka_mint has quit (Ping timeout: 121 seconds)
+T 1506964878 23*	stevee (Miranda@moz-7sd5l1.cable.virginm.net23) has joined
+T 1506964925 24*	sm0rux has quit (Quit: Shutting down, see you later)
+T 1506965013 23*	jamie_ (Thunderbird@moz-mu2akv.dyn.optonline.net23) has joined
+T 1506965204 Python interface unloaded
+T 1506966203 19*	Now talking on 22#firefox
+T 1506966203 22*	Topic for 22#firefox is: Firefox community & support channel || Permission isn't needed to ask your question. If well after asking nobody responds, say "help!" or try http://support.mozilla.org || Get Firefox from http://mozilla.org/firefox || This channel is logged at http://logs.glob.uno/?c=firefox
+T 1506966203 22*	Topic for 22#firefox set by 26glob!glob@moz-a0fskj.glob.com.au (24Thu Oct 15 01:22:10 2015)
+T 1506966206 18<katnip18>	https://news.slashdot.org/story/17/09/02/2147239/techrepublic-mozilla-is-desperately-needed-to-save-the-web?sdsrc=rel
+T 1506966226 20<sajattack>30	ShalokShalom: I'm having issues with the PKGBUILD you linked me to
+T 1506966227 18<LeAcid18>	Is anyone else having trouble with drag and drop api with firefox quantum? Everytime I drop a tag it opens a new page
+T 1506966267 23*	TheCrap (TheCrap@moz-dudma9.unity-media.net23) has joined
+T 1506966283 20<sajattack>30	==> ERROR: Failed to source /home/paul/firefox-beta/PKGBUILD
+T 1506966386 Python interface unloaded
+T 1506966386 FiSHLiM plugin unloaded
+T 1506966406 19*	Now talking on 22#firefox
+T 1506966406 22*	Topic for 22#firefox is: Firefox community & support channel || Permission isn't needed to ask your question. If well after asking nobody responds, say "help!" or try http://support.mozilla.org || Get Firefox from http://mozilla.org/firefox || This channel is logged at http://logs.glob.uno/?c=firefox
+T 1506966406 22*	Topic for 22#firefox set by 26glob!glob@moz-a0fskj.glob.com.au (24Thu Oct 15 01:22:10 2015)
+T 1506966428 20<sajattack>30	with line94
+T 1506966442 23*	kyan (kyan@moz-i0jm6g.res.rr.com23) has joined
+T 1506966458 18<ShalokShalom18>	when happens this issue? makepkg -g?
+T 1506966465 20<sajattack>30	yes
+T 1506966488 20<sajattack>30	I'm not on my pi atm, is that the problem?
+T 1506966536 18<ShalokShalom18>	?
+T 1506966542 18<ShalokShalom18>	you cross compile?
+T 1506966571 18<ShalokShalom18>	i am used to compile when i am on the device
+T 1506966595 18<ShalokShalom18>	 patch -p1 -i ../rhbz-1354671.patch
+T 1506966603 18<ShalokShalom18>	this applies the patch
+T 1506966609 20<sajattack>30	mmkay
+T 1506966618 20<sajattack>30	I'll try again when I'm on my pi
+T 1506966619 18<ShalokShalom18>	i guess this is the time where i point you to the archlinux-arm channel
+T 1506966622 20<sajattack>30	in class rn lol
+T 1506966625 20<sajattack>30	sure
+T 1506966695 20*	Disconnected (20)
+T 1506966706 23*	28sajattack is already in use. Retrying with 18sajattack_...
+T 1506966707 22*	26sajattack_ sets mode 24+x on 22sajattack_
+T 1506966709 19*	Now talking on 22#firefox
+T 1506966709 22*	Topic for 22#firefox is: Firefox community & support channel || Permission isn't needed to ask your question. If well after asking nobody responds, say "help!" or try http://support.mozilla.org || Get Firefox from http://mozilla.org/firefox || This channel is logged at http://logs.glob.uno/?c=firefox
+T 1506966709 22*	Topic for 22#firefox set by 26glob!glob@moz-a0fskj.glob.com.au (24Thu Oct 15 01:22:10 2015)
+T 1506966709 Python interface unloaded
+T 1506966709 FiSHLiM plugin unloaded
