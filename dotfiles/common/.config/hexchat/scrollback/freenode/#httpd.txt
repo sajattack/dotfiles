@@ -1,0 +1,108 @@
+T 1505963624 19*	Now talking on 22#httpd
+T 1505963624 22*	Topic for 22#httpd is: Apache HTTP Server help httpd.apache.org || Register/identify with Nickserv to speak goo.gl/dQ26k9 || Step one: Check the error log || versions 2.4.27 (stable, GA), 2.2.34 (previous stable) || Getting Started goo.gl/hzi1I || Upgrading to 2.4 goo.gl/qYKYIw || Paste apaste.info hastebin.com (not pastebin.com/paste2.org) || Dev questions -> #httpd-dev || Volunteers Channel (no entitlement
+T 1505963624 22*	Topic for 22#httpd set by 26thumbs!1000@unaffiliated/thumbs (24Tue Jul 11 09:06:08 2017)
+T 1505963669 20<sajattack>30	I have a nextcloud site that works on http but not https
+T 1505963687 20<sajattack>30	http://owncloud.paulsajna.com https://owncloud.paulsajna.com
+T 1505963697 20<sajattack>30	certs are from letsencrypt
+T 1505963712 20<sajattack>30	404s on the https version
+T 1505963715 20<sajattack>30	http://termbin.com/ipq9
+T 1505963720 20<sajattack>30	^ access.log
+T 1505963818 19<thumbs>	sajattack: What does the error log say, exactly?
+T 1505963835 20<sajattack>30	nothing in /var/log/apache2/error.log
+T 1505963838 23*	RoyK (~roy@unaffiliated/royk23) has joined
+T 1505963849 19<thumbs>	sajattack: on 2.4, try increasing the log level.
+T 1505963865 20<sajattack>30	how?
+T 1505963882 19<thumbs>	sajattack: with a text editor.
+T 1505963895 20<sajattack>30	edit what?
+T 1505963910 19<thumbs>	sajattack: the appropriate config file, naturally.
+T 1505963974 20<sajattack>30	what level should I set it to?
+T 1505963992 20<sajattack>30	debug?
+T 1505963993 18<fajita18>	http://httpd.apache.org/dev/debugging.html
+T 1505963997 19<thumbs>	sajattack: increase the current verbosity.
+T 1505964012 20<sajattack>30	I don't have a loglevel directive atm
+T 1505964024 19<thumbs>	sajattack: you probably do. See man grep
+T 1505964054 20<sajattack>30	I'll just set it to debug and see what happens
+T 1505964054 18<thumbs18>	or you can define it in your vhost.
+T 1505964086 20<sajattack>30	termbin.com/qi0z btw
+T 1505964106 19<thumbs>	sajattack: terrific.
+T 1505964173 20<sajattack>30	still nothing recent in error.log
+T 1505964202 19<thumbs>	sajattack: as a side note, you want to set AllowOverride none in every <Directory> block - you don't want .htaccess files to interfere.
+T 1505964225 20<sajattack>30	mmkay
+T 1505964322 20<sajattack>30	that made it worse
+T 1505964328 19<thumbs>	sajattack: ok!
+T 1505964412 20<sajattack>30	I'm gonna try regenerating the ssl config with letsencrypt
+T 1505964418 19<thumbs>	sajattack: ok!
+T 1505964502 19<opsec>	sajattack: that will be about as effective as rebooting.. i.e. not effective at all.
+T 1505964531 20<sajattack>30	I'm updating to the latest letsencrypt as well, I had a pretty old version
+T 1505964544 18<opsec18>	irrelevant
+T 1505964545 18<fajita18>	This factoid has no relevance to anything. Please select another factoid.
+T 1505964552 20<sajattack>30	lol
+T 1505964768 20<sajattack>30	you're right
+T 1505964880 18<opsec18>	your site loads just fine by the way, you need to configure nextcloud to work as ssl, which requires activating and configuring an ssl module in the backend and editing the config file if i recall
+T 1505964911 18<opsec18>	also, you'll want to redirect all :80 -> :443 and use hsts
+T 1505964945 20<sajattack>30	yeah I don't have it redirecting for now just because http is working and https isn't
+T 1505965012 18<opsec18>	look in your backend and the config file for your app and search their site for any extra instructions when moving it.. which is essentially what you're doing. also, it's not a problem with #httpd most likely
+T 1505965062 20<sajattack>30	yeah that's what I though but they told me to try here
+T 1505965127 18<opsec18>	https://help.nextcloud.com/t/moving-nextcloud-installation-from-one-domain-to-another/4303
+T 1505965245 18<opsec18>	otherwise, unless you can provide relevant error log messages from httpd, that's the extent of what we can offer here
+T 1505965302 20<sajattack>30	alright
+T 1505965387 20<sajattack>30	tried changing the config file to no avail
+T 1505965395 20<sajattack>30	and the nextcloud guys insist it's your fault :P
+T 1505965441 18<opsec18>	you mean *your* fault.
+T 1505965458 24*	kyan has quit (Read error: Connection reset by peer)
+T 1505965504 20<sajattack>30	this is new: [Wed Sep 20 20:34:54.180987 2017] [:error] [pid 9850] [client 95.143.172.201    :57454] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQ    LSTATE[40001]: Serialization failure: 1213 Deadlock found when trying to get     lock; try restarting transaction' in /var/www/owncloud.paulsajna.com/nextcl    oud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Driver/PDOStatement.php:91\nSta    ck trace:\n#0 
+T 1505965504 20<sajattack>30	/var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctrine/db    al/lib/Doctrine/DBAL/Driver/PDOStatement.php(91): PDOStatement->execute(NULL    )\n#1 /var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctrine/dbal/lib/D    octrine/DBAL/Connection.php(1006): Doctrine\\DBAL\\Driver\\PDOStatement->exe    cute()\n#2 /var/www/owncloud.paulsajna.com/nextcloud/lib/private/DB/Connecti    on.php(213): Doctrine\\DBAL\\Connection->executeU
+T 1505965504 20<sajattack>30	pdate('UPDATE `oc_file...',     Array, Array)\n#3 /var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctri    ne/dbal/lib/Doctrine/DBAL/Query/QueryBuilder.php(208): OC\\DB\\Connection->e    xecuteUpdate('UPDATE `*PREFIX...', Array, Array)\n#4 /var/www/owncloud.pauls    ajna.com/nextcloud/lib/private/DB/QueryBuilder/QueryBuilder.php(213): Doctr     in /var/www/owncloud.paulsajna.com/nextcloud/3rdparty/doctrine/dbal/lib/Doct    
+T 1505965504 20<sajattack>30	rine/DBAL/Driver/AbstractMySQLDriver.php on line 116, referer: http://ownclo    ud.paulsajna.com/
+T 1505965504 20<sajattack>30	~                         
+T 1505965582 18<opsec18>	spam.
+T 1505965586 18<opsec18>	see /topic
+T 1505965681 24*	jadesoturi has quit (Ping timeout: 240 seconds)
+T 1505965817 23*	mundus2018 (~mundus201@unaffiliated/mundus201823) has joined
+T 1505965887 19<thumbs>	sajattack: also, that's a php error.
+T 1505965998 20<sajattack>30	yeah
+T 1505966007 19<thumbs>	sajattack: so fix the php error
+T 1505966009 20<sajattack>30	it's the only error I'm getting
+T 1505966036 19<thumbs>	sajattack: perfect.
+T 1505966068 20<sajattack>30	I don't think it's related to this problem
+T 1505966085 19<thumbs>	sajattack: all right then.
+T 1505966094 23*	dah85 (~david@103.217.166.4823) has joined
+T 1505966645 23*	jadesoturi (~jadesotur@unaffiliated/kfj23) has joined
+T 1505966901 24*	ferdna has quit (Quit: Leaving)
+T 1505966953 24*	jgoohu has quit (Quit: Mutter: www.mutterirc.com)
+T 1505967092 23*	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net23) has joined
+T 1505967390 24*	noobineer has quit (Ping timeout: 246 seconds)
+T 1505967611 23*	ferdna (~ferdna@cpe-69-23-129-162.elp.res.rr.com23) has joined
+T 1505968254 23*	noobineer (~noobineer@c-68-55-184-193.hsd1.mi.comcast.net23) has joined
+T 1505968907 24*	jadesoturi has quit (Quit: ZNC - http://znc.in)
+T 1505969059 24*	sazawal has quit (Quit: Ex-Chat)
+T 1505969120 23*	jadesoturi (~jadesotur@unaffiliated/kfj23) has joined
+T 1505969530 23*	Statler (~Georg@p579FE005.dip0.t-ipconnect.de23) has joined
+T 1505969562 23*	[j0rd]_ (uid59281@gateway/web/irccloud.com/x-rlzelxcvrpmiflhs23) has joined
+T 1505969872 20<sajattack>30	#httpd vs #nextcloud fighto!
+T 1505969889 24*	ferdna has quit (Quit: Leaving)
+T 1505969994 24*	s2013 has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505970226 23*	ppang (~ppang@unaffiliated/ppang23) has joined
+T 1505970639 24*	MichaelOF has quit (Quit: Konversation terminated!)
+T 1505970808 24*	liguo has quit (Remote host closed the connection)
+T 1505970847 23*	Bock (~bocaneri@about/linux/staff/sauvin23) has joined
+T 1505970990 23*	a-ja (~aja@24-207-230-17.dhcp.stls.mo.charter.com23) has joined
+T 1505971079 23*	pinux (~ppang@unaffiliated/ppang23) has joined
+T 1505971138 18<a-ja18>	anyone who can verify whether or not this would be OptionsBleed issue? <LimitExcept GET HEAD>
+T 1505971290 24*	ppang has quit (Ping timeout: 252 seconds)
+T 1505971540 23*	YuGiOhJCJ (~YuGiOhJCJ@gateway/tor-sasl/yugiohjcj23) has joined
+T 1505972448 23*	gamelaster (~gamelaste@ip137.bbxnet.sk23) has joined
+T 1505972474 24*	gnomethrower (~Wings@unaffiliated/gnomethrower24) has left ("Leaving")
+T 1505973766 24*	a-ja has quit (Quit: Ba de ya de ya de ya)
+T 1505973955 23*	preichl (~preichl@2a00:1028:83ce:661a:3d8b:9f77:d6f4:e51f23) has joined
+T 1505973970 24*	dah85 has quit (Read error: Connection reset by peer)
+T 1505974004 23*	dah85 (~david@103.217.166.4823) has joined
+T 1505974579 24*	beerdrop has quit (Ping timeout: 240 seconds)
+T 1505975347 23*	beerdrop (~beerdrop@c-107-2-115-62.hsd1.mn.comcast.net23) has joined
+T 1505975451 23*	l14n (~Lian@46.166.187.6323) has joined
+T 1505975845 24*	dah85 (~david@103.217.166.4824) has left ("Leaving")
+T 1505976335 23*	martinus__ (~martin@111.239.24.109.rev.sfr.net23) has joined
+T 1505976628 23*	^elf^ (~elf@unaffiliated/elf23) has joined
+T 1505976908 23*	opalepatrick (~opalepatr@80.7.93.209.dyn.plus.net23) has joined
+T 1505977508 24*	^elf^ has quit (Ping timeout: 240 seconds)
+T 1505977852 24*	28pinux is now known as 18ppang

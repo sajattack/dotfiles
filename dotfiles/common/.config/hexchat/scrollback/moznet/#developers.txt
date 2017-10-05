@@ -1,0 +1,575 @@
+T 1505425555 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/0aa8826fa414 - Jonathan Kew - Bug 1398133 - Simplify gfxCoreTextShaper code by removing legacy code only needed on 10.7 and earlier. r=jrmuizel
+T 1505425894 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?startID=95024&endID=95025 - 13 changesets (bugs 1367077, 1398409, 1367079)
+T 1505426027 18<dbaron18>	Bas: maybe try focusing/unfocusing one of the windows?
+T 1505426056 24*	jrmuizel has quit (A TLS packet with unexpected length was received.)
+T 1505426216 24*	gustavold has quit (Quit: Leaving.)
+T 1505426224 23*	cosmo0920 (cosmo0920@moz-5iqu4k.bbtec.net23) has joined
+T 1505426239 18<pulsebot18>	Check-in: https://hg.mozilla.org/mozilla-central/pushloghtml?startID=32502&endID=32503 - 70 changesets - merge autoland to mozilla-inbound. r=merge a=merge
+T 1505426267 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/41effc9b8c27 - Andy McKay - Bug 1350277 - Remove duplicates when showing host permissons. r=aswan
+T 1505426293 23*	ErikRose (erikrose@moz-g2gktg.com23) has joined
+T 1505426323 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/9e895d32653b - Aaron Klotz - Bug 1383501: Modify a11y::IsHandlerRegistered to include check of path to handler binary; r=eeejay
+T 1505426357 24*	kaze has quit (Ping timeout: 121 seconds)
+T 1505426371 18<pulsebot18>	Check-in: https://hg.mozilla.org/mozilla-central/pushloghtml?startID=32503&endID=32504 - 30 changesets - merge mozilla-inbound to mozilla-central. r=merge a=merge
+T 1505426394 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/be8ecd6907a4 - Emilio Cobos Álvarez - servo: Merge #18502 - style: Unify how servo and Gecko handle UA sheets (from emilio:ua-sheets-unify); r=simonsapin
+T 1505426467 24*	cosmo0920 has quit (Ping timeout: 121 seconds)
+T 1505426498 18<KWierso18>	jchen: think you broke android builds
+T 1505426512 18<KWierso18>	['UnsortedError: An attempt was made to add an unsorted sequence to a list. The incoming list is unsorted starting at element 8. We expected "GeckoViewTab.jsm" but got "GeckoViewUtils.jsm"\n']
+T 1505426540 24*	ErikRose has quit (Ping timeout: 121 seconds)
+T 1505426547 18<jchen18>	KWierso: ok quick fix
+T 1505426548 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/pushloghtml?startID=51275&endID=51276 - 35 changesets - merge mozilla-central to autoland. r=merge a=merge
+T 1505426554 18<KWierso18>	go for it
+T 1505426582 18<glandium18>	yay, another missile alert
+T 1505426615 18<RyanVM18>	glandium: holy crap
+T 1505426679 24*	28lorchard is now known as 18lorchard|away
+T 1505426784 24*	jwatt has quit (Ping timeout: 121 seconds)
+T 1505426835 18<botond|home18>	bz: i'm not sure why we do that check during overflow propagation, either (first time seeing that code)
+T 1505426860 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/f01cd7cd431c - Jim Chen - Bug 1367077 - Follow-up to fix bustage; r=me on CLOSED TREE
+T 1505426901 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/9c24bd90faa1 - Jonas Finnemann Jensen - Bug 1393655 - Strip microsecond from run-task logs r=gps
+T 1505426922 18<bz18>	botond|home: ok.  
+T 1505426929 18*	bz wonders who would know..
+T 1505426937 23*	Gijs_away (gijs@moz-qk9rss.cable.virginm.net23) has joined
+T 1505427034 23*	paul374 (Thunderbird@moz-aku.mlu.145.12.IP23) has joined
+T 1505427053 18<glandium18>	RyanVM: aimed at the pacific, like last time
+T 1505427070 18<RyanVM18>	that's comforting
+T 1505427131 18<glandium18>	RyanVM: not looking forward to what Trump will do
+T 1505427218 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505427224 24*	aosmond1 has quit (Quit: Leaving.)
+T 1505427227 24*	marcia has quit (Quit: Leaving.)
+T 1505427228 18<RyanVM18>	bluster
+T 1505427289 18<botond|home18>	bz: i think kgilbert is probably the best person to ask
+T 1505427380 24*	pcwalton has quit (Client exited)
+T 1505427392 23*	jwatt (roslea@jwatt.irc.users.mozilla.org23) has joined
+T 1505427432 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/d7ccda988869 - Fernando Jimenez Moreno - Bug 1384221 - stylo: error reporting lies about property names in some cases. r=jdm
+T 1505427633 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?startID=95027&endID=95028 - 75 changesets - merge mozilla-central to mozilla-inbound. r=merge a=merge on a CLOSED TREE
+T 1505427693 18<botond|home18>	bz: or maybe :heycam, who seems to have reviewed relevant parts of kip's patch (judging by https://bugzilla.mozilla.org/show_bug.cgi?id=945584#c96)
+T 1505427736 18<KWierso18>	jchen, Aryx: hrm, linux builds are busted too. any chance your followup also fixed https://treeherder.mozilla.org/logviewer.html#?job_id=131142328&repo=mozilla-inbound ?
+T 1505427780 18<jchen18>	KWierso: my fix is android only :(
+T 1505427842 18<jchen18>	KWierso: oh wait. yeah it's related. not sure why linux is affected
+T 1505427873 18<jchen18>	KWierso: so yeah, my followup should fix that
+T 1505427918 24*	tromey has quit (Quit: ERC (IRC client for Emacs 26.0.50))
+T 1505427975 24*	karlt has quit (Quit: Konversation terminated!)
+T 1505427981 23*	karlt (karl@moz-3n5d39.snap.net.nz23) has joined
+T 1505428010 24*	justindarc has quit (A TLS packet with unexpected length was received.)
+T 1505428039 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505428324 23*	justindarc (justindarc@moz-d73.4i3.103.137.IP23) has joined
+T 1505428556 18<gandalf18>	updated my m-c on windows and it fails to build with "ERROR: LAtest Universal CRT SDK version found 10.0.10240.0 and minmum required is 10.0.10585.0". Is that mozbuild thing? or windows thing?
+T 1505428589 23*	jib (jib@moz-j7m6lt.dyn.optonline.net23) has joined
+T 1505428601 18<Mossop18>	gandalf: A windows thing
+T 1505428619 18<RyanVM18>	gandalf: see "PSA: Making Windows 10 SDK version 10.0.10586 the minimum for building Firefox" on dev-platform
+T 1505428630 18<Mossop18>	gandalf: https://developer.microsoft.com/en-us/windows/downloads/sdk-archive
+T 1505428659 24*	jib has quit (Connection closed)
+T 1505428683 23*	jib (jib@moz-j7m6lt.dyn.optonline.net23) has joined
+T 1505428728 24*	DuClare has quit (Ping timeout: 121 seconds)
+T 1505428825 18<gandalf18>	thank you
+T 1505428931 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/3b514f205252 - Ed Lee - Bug 1399970 - Add Photon polish, PureComponents and bug fixes to Activity Stream. r=dmose
+T 1505428950 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/7fc8dcc93300 - Matt Brubeck - servo: Merge #18466 - Bug 1398957 - Make LRUCache use a linked list to reduce memmoves (from mbrubeck:cache); r=SimonSapin
+T 1505428973 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/e3a246b2ded6 - Servo VCS Sync - No bug - Revendor rust dependencies
+T 1505428996 24*	Pike has quit (Quit: ChatZilla 0.9.93 [Firefox 55.0.3/20170824053838])
+T 1505429062 24*	surkov has quit (Client exited)
+T 1505429121 24*	michal1 has quit (Quit: Leaving.)
+T 1505429241 24*	28KWierso is now known as 18KWierso|brb
+T 1505429415 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/81e5e9200b41 - Kris Maglione - Bug 1399997: Part 1 - Fix eval usage in Redux.jsm. r=Mossop
+T 1505429418 24*	bholley has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505429418 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/216079d767e7 - Kris Maglione - Bug 1399997: Part 3 - Update module environment tests with TODOs for shared module eval bindings. r=tcampbell
+T 1505429449 Python interface unloaded
+T 1505429449 FiSHLiM plugin unloaded
+T 1505670113 19*	Now talking on 22#developers
+T 1505670113 22*	Topic for 22#developers is: buildbot Windows builds on Try are expected bustage | Sheriff on duty: #sheriffs | Want help, or want to help others? See #introduction || http://logs.glob.uno/?c=developers
+T 1505670113 22*	Topic for 22#developers set by 26ehsan!ehsan@corp-nat.fw1.untrust.tor1.mozilla.com (24Thu Aug 24 12:20:07 2017)
+T 1505670137 20<sajattack>30	rhelmer: can you have a look at my patch
+T 1505670143 23*	Aryx (Archaeopter@moz-m6a352.gas5.pu07.2450.2a02.IP23) has joined
+T 1505670163 20<sajattack>30	https://reviewboard.mozilla.org/r/179982/diff/#index_header
+T 1505670238 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505670307 24*	squeakytoy has quit (Ping timeout: 121 seconds)
+T 1505670423 23*	mixedpuppy_ (mixedpuppy@moz-e1dpro.sub-174-224-19.myvzw.com23) has joined
+T 1505670427 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505670461 24*	mixedpuppy has quit (Ping timeout: 121 seconds)
+T 1505670461 24*	28mixedpuppy_ is now known as 18mixedpuppy
+T 1505670484 23*	28[18rhelmer28] 30(24sid233@moz-go14ve.0j4i.jtu0.0101.2620.IP30): 18Robert Helmer
+T 1505670484 23*	28[18rhelmer28] #addons #webdev #developers #services #gfx #mobile #atom #rust-machine-learning #devrel #bugzilla #releng @#build #rust-webdev #webextensions #fx-team #introduction #mdn #security #extdev #firefox #media #static #jsapi #servo #iron @#breakpad #rust-osdev #devtools #uptime #services-dev #data #sf #qa #servicedesk #amo #perf #mozpdx #gofaster #pocket #taskcluster #e10s #rust-crypto #bmo #livehacking #airmozilla #mozreview #telemetry #universal-search #teamaddons 
+T 1505670484 23*	28[18rhelmer28] #pdfjs #activity-stream #phabricator #foxfooding #awayteam #sheriffs #webcompat #testpilot #positron #ateam #normandy #ux #webeng #github #flow #screenshots #balrog #browserhtml #mentat #planet #headless #💩 
+T 1505670484 23*	28[18rhelmer28] 29bruford.mozilla.org :Santa Clara, CA, US (ipv6 only)
+T 1505670484 23*	28[18rhelmer28] is logged in as 18rhelmer
+T 1505670484 23*	28[18rhelmer28] is a registered nick
+T 1505670484 23*	28[18rhelmer28] is using a secure connection
+T 1505670484 23*	28[18rhelmer28] idle 2337:29:53, signon: 23Wed Jun 21 14:42:13
+T 1505670484 23*	28[18rhelmer28] End of WHOIS list.
+T 1505670631 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505670641 24*	28dluca is now known as 18dluca|sheriffduty
+T 1505670655 23*	bholley (textual@moz-8d0g9h.ca.comcast.net23) has joined
+T 1505670716 23*	squeakytoy (squeakytoy@moz-e7gcd6.se.alltele.net23) has joined
+T 1505670765 18<emilio18>	glandium: pulsebot seems down since a while ago, just fyi
+T 1505671038 24*	bholley has quit (Quit: Textual IRC Client: www.textualapp.com)
+T 1505671155 23*	gpoesia_ (gpoesia@moz-7hml6n.qsjf.bt13.07f2.2804.IP23) has joined
+T 1505671157 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505671305 23*	balrog (balrog@moz-jos5l6.fios.verizon.net23) has joined
+T 1505671452 23*	WG9s_ (bill@moz-eadspk.fios.verizon.net23) has joined
+T 1505671566 23*	justindarc (justindarc@moz-d73.4i3.103.137.IP23) has joined
+T 1505671609 23*	IanN (chatzilla@moz-3b3ide.cable.virginm.net23) has joined
+T 1505671737 24*	bwc has quit (Quit: Leaving.)
+T 1505671787 23*	jib (jib@moz-e8b0n2.dyn.optonline.net23) has joined
+T 1505671798 23*	nagisa_approves_MitA (nagisa@moz-8t068g.static.zebra.lt23) has joined
+T 1505672012 24*	jib has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505672139 24*	justindarc has quit (A TLS packet with unexpected length was received.)
+T 1505672390 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505672494 24*	bwc has quit (Quit: Leaving.)
+T 1505672552 23*	jib (jib@moz-mtmoig.sub-70-192-66.myvzw.com23) has joined
+T 1505672594 23*	lkolstad (ljk@moz-7i12rl.wa.comcast.net23) has joined
+T 1505672608 24*	marco has quit (Ping timeout: 121 seconds)
+T 1505672851 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505672908 23*	marco (marco@moz-39hm9q.retail.telecomitalia.it23) has joined
+T 1505673052 24*	mkali has quit (Client exited)
+T 1505673077 23*	yd (uid226456@moz-8v13r0.ealing.irccloud.com23) has joined
+T 1505673088 24*	heftig has quit (Ping timeout: 121 seconds)
+T 1505673547 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505674036 23*	mkmelin (mkmelin@moz-if0ejf.elisa-laajakaista.fi23) has joined
+T 1505674421 24*	jsnajdr has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505674531 23*	heftig (heftig@moz-fm2rig.archlinux.org23) has joined
+T 1505674866 24*	jib has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505674907 23*	gerv (gerv@moz-bf79r4.cable.virginm.net23) has joined
+T 1505675149 23*	macmaN (chezburger@moz-14q.vgd.190.90.IP23) has joined
+T 1505675609 24*	marco has quit (Ping timeout: 121 seconds)
+T 1505675764 24*	florent has quit (Ping timeout: 121 seconds)
+T 1505675777 23*	ericjung (ericjung@moz-h2a.9hc.161.107.IP23) has joined
+T 1505675984 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505676281 24*	Aryx has quit (Quit: Goodbye)
+T 1505676312 23*	KaiRo (robert@moz-505g55.highway.telekom.at23) has joined
+T 1505676411 24*	mkmelin has quit (Connection closed)
+T 1505676944 23*	florent (Thunderbird@moz-do44ct.abo.wanadoo.fr23) has joined
+T 1505676998 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505677066 23*	cosmo0920 (cosmo0920@moz-5iqu4k.bbtec.net23) has joined
+T 1505677094 23*	lucicor_ (uid206413@moz-uk2rdh.tooting.irccloud.com23) has joined
+T 1505677104 24*	28lucicor_ is now known as 18lucicor
+T 1505677321 24*	cosmo0920 has quit (Ping timeout: 121 seconds)
+T 1505677469 24*	mixedpuppy has quit (Ping timeout: 121 seconds)
+T 1505677629 23*	karlt (karl@moz-3n5d39.snap.net.nz23) has joined
+T 1505677645 23*	mixedpuppy (mixedpuppy@moz-e1dpro.sub-174-224-19.myvzw.com23) has joined
+T 1505677792 24*	ricotz has quit (Quit: Leaving)
+T 1505677813 24*	chewey has quit (NickServ (RECOVER command used by chewey_))
+T 1505677813 23*	chewey (chewey@moz-u7055q.versanet.de23) has joined
+T 1505678532 23*	gustavold (gustavold@moz-912ok0.mg09.7e77.0431.2804.IP23) has joined
+T 1505678765 23*	AasthaGupta (Thunderbird@moz-grn.i54.56.27.IP23) has joined
+T 1505678940 24*	AasthaGupta has quit (Client exited)
+T 1505679026 23*	jimb (user@moz-h4ogsc.ptld.qwest.net23) has joined
+T 1505679260 23*	Aryx (Archaeopter@moz-m6a352.gas5.pu07.2450.2a02.IP23) has joined
+T 1505679399 24*	lizzard has quit (Client exited)
+T 1505679514 24*	28ccoroiu|sheriffduty is now known as 18ccoroiu
+T 1505679612 24*	mixedpuppy has quit (Ping timeout: 121 seconds)
+T 1505679676 23*	mixedpuppy (mixedpuppy@moz-u2lp13.mycingular.net23) has joined
+T 1505679707 24*	mixedpuppy has quit (Client exited)
+T 1505679848 20*	Disconnected (20)
+T 1505681786 22*	26sajattack sets mode 24+x on 22sajattack
+T 1505681786 19*	Now talking on 22#developers
+T 1505681786 22*	Topic for 22#developers is: buildbot Windows builds on Try are expected bustage | Sheriff on duty: #sheriffs | Want help, or want to help others? See #introduction || http://logs.glob.uno/?c=developers
+T 1505681786 22*	Topic for 22#developers set by 26ehsan!ehsan@corp-nat.fw1.untrust.tor1.mozilla.com (24Thu Aug 24 12:20:07 2017)
+T 1505682056 24*	Sander has quit (Quit: And back he spurred like a madman, shrieking a curse to the sky.)
+T 1505682148 24*	28ng is now known as 18ng|akf
+T 1505682154 24*	28ng|akf is now known as 18ng|afk
+T 1505682384 24*	nagisa_approves_MitA has quit (Ping timeout: 121 seconds)
+T 1505682614 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505682684 23*	marco (marco@moz-p1t34l.retail.telecomitalia.it23) has joined
+T 1505682977 24*	jimb has quit (Ping timeout: 121 seconds)
+T 1505682994 24*	mhaigh has quit (Quit: ZNC 1.6.1 - http://znc.in)
+T 1505683041 24*	lizzard has quit (Client exited)
+T 1505683063 18<jib18>	Anyone who can do a checkin-needed for me? I'm not set up to push. https://bugzil.la/1381638
+T 1505683231 18<Aryx18>	jib: let me check
+T 1505683236 18<jib18>	thanks
+T 1505683261 23*	mhaigh (mhaigh@moz-cu3.0k5.6.31.IP23) has joined
+T 1505683338 24*	WG9s_ has quit (Quit: ChatZilla 0.9.92-rdmsoft [XULRunner 35.0.1/20150122214805])
+T 1505683530 23*	gsvelto (gsvelto@moz-f4fsr6.client-mvno.tiscali.it23) has joined
+T 1505683715 24*	jsnajdr has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505683977 23*	jsnajdr (jsnajdr@moz-5d3.71l.181.208.IP23) has joined
+T 1505684010 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505684144 18<jib18>	Aryx: any luck?
+T 1505684158 18<Aryx18>	i pushed them to inbound
+T 1505684170 18<Aryx18>	https://treeherder.mozilla.org/#/jobs?repo=mozilla-inbound&revision=c0af528ff3654b8c2ea728863369dea698ad99e1&filter-resultStatus=testfailed&filter-resultStatus=busted&filter-resultStatus=exception&filter-resultStatus=retry&filter-resultStatus=usercancel&filter-resultStatus=runnable
+T 1505684485 18<jib18>	Aryx: ah, I see it now. Thanks!!
+T 1505684502 18<Aryx18>	yes, sorry. pulsebot is down
+T 1505684543 18<jib18>	yeah that confused me for a bit
+T 1505684736 24*	jib has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505684908 23*	jimb (user@moz-h4ogsc.ptld.qwest.net23) has joined
+T 1505684912 24*	florent has quit (Client exited)
+T 1505684920 24*	yd has quit (Quit: Connection closed for inactivity)
+T 1505684931 23*	pulsebot (pulsebot@moz-i2pugr.compute.amazonaws.com23) has joined
+T 1505685035 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/faa897d7948b - Makoto Kato - Bug 1400128 - Link thumb library of libc++ when using MOZ_THUMB=1 and NDK r11c. r=froydnj
+T 1505685125 18<Aryx18>	dluca|sheriffduty: new failure for bc12,  1387827 for dt3 and dt9 and dt10, new bug for x6
+T 1505685125 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/92224fd4468a - Jean-Yves Avenard - Bug 1400614 - P1. Handle case where we have no video track. r=gerald
+T 1505685125 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/0806dedfeae9 - Jean-Yves Avenard - Bug 1400614 - P2. Change string output content. r=gerald
+T 1505685169 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/0d5b3f16219c - Andrea Marchesini - Bug 1396848 - Iterating a Header object returns sorted and combined values, r=qdot
+T 1505685181 18<pulsebot18>	Check-in: https://hg.mozilla.org/mozilla-central/rev/faa897d7948b - Makoto Kato - Bug 1400128 - Link thumb library of libc++ when using MOZ_THUMB=1 and NDK r11c. r=froydnj
+T 1505685184 23*	mixedpuppy (mixedpuppy@moz-99mccj.mycingular.net23) has joined
+T 1505685190 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?startID=95099&endID=95100 - 2 changesets - merge mozilla-central to mozilla-inbound. r=merge a=merge
+T 1505685201 23*	jesup|laptop (chatzilla@moz-p6dv82.fios.verizon.net23) has joined
+T 1505685256 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/c4f1d0d1852b - Ryan VanderMeulen - Bug 1400602 - Update Freetype to version 2.8.1. r=jfkthame
+T 1505685261 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/bb14bbb30c41 - Tim Huang - Bug 1384330 - Part 1: Blocking the mozAddonManager when pref 'privacy.resistFingerprinting.block_mozAddonManager' is true. r=arthuredelstein,mossop
+T 1505685267 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/2189a968511e - Tim Huang - Bug 1384330 - Part 2: Add a test case for testing that navigator.mozAddonManager is correctly blocked when pref 'privacy.resistFingerprinting.block_mozAddonManager' is true. r=arthuredelstein,mossop
+T 1505685273 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/6bd0d9d8bc16 - Johann Hofmann - Bug 1399930 - Add drag space padding to the tabs toolbar on OSX. r=Gijs
+T 1505685303 18<pulsebot18>	Check-in: https://hg.mozilla.org/mozilla-central/rev/80494b13f492 - Sebastian Hengst - Backed out changeset cc0acc00d769 (bug 1394233) for frequently failing own test usercss-uppercase.html on Windows 7 debug. r=backout a=backout
+T 1505685316 18<pulsebot18>	Check-in: https://hg.mozilla.org/mozilla-central/rev/877d536658e6 - Sebastian Hengst - Backed out changeset 7d0893f1b6ce (bug 1389021) for leaking in mda2 on Linux x64 asan (bug 1374856). r=backout a=backout
+T 1505685323 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/pushloghtml?startID=51407&endID=51408 - 3 changesets - merge mozilla-central to autoland. r=merge a=merge
+T 1505685338 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/pushloghtml?startID=95101&endID=95102 - 3 changesets - merge mozilla-central to mozilla-inbound. r=merge a=merge
+T 1505685348 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/727e7ea0e10d - Paul Rouget - servo: Merge #18540 - Use BluetoothAdapter mock when bluetooth is disabled (from paulrouget:no_bt); r=nox
+T 1505685361 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/15e338118aa2 - Jean-Yves Avenard - Bug 1400598 - P1. Stop parsing bytesteam as soon as we have found the necessary data. r=gerald
+T 1505685374 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505685413 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/14d7326af64d - Simon Sapin - servo: Merge #18541 - Upgrade to rustc 1.22.0-nightly (277476c4f 2017-09-16) (from servo:rustup); r=SimonSapin
+T 1505685417 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/a190e5b26bb1 - Mats Palmgren - Bug 1400623 - Add missing ClearOnShutdown.h #include.  r=aosmond
+T 1505685430 24*	pulsebot has quit (RecvQ exceeded)
+T 1505685501 23*	pulsebot (pulsebot@moz-i2pugr.compute.amazonaws.com23) has joined
+T 1505685562 24*	karlt has quit (Ping timeout: 121 seconds)
+T 1505685585 24*	pulsebot has quit (RecvQ exceeded)
+T 1505685649 24*	gpoesia_ has quit (Client exited)
+T 1505685775 23*	pulsebot (pulsebot@moz-i2pugr.compute.amazonaws.com23) has joined
+T 1505685859 24*	gsvelto has quit (Ping timeout: 121 seconds)
+T 1505685859 24*	Aryx has quit (Quit: Goodbye)
+T 1505685974 24*	heftig has quit (Ping timeout: 121 seconds)
+T 1505685992 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/1aaa09eb300c - Maya Messinger - Bug 1387846 change print button command to print instead of print preview on all platforms r=Gijs
+T 1505686096 24*	28mattwoodrow|away is now known as 18mattwoodrow
+T 1505686366 23*	heftig (heftig@moz-fm2rig.archlinux.org23) has joined
+T 1505686512 24*	Mano has quit (Connection closed)
+T 1505686533 24*	28mattwoodrow is now known as 18mattwoodrow|away
+T 1505686655 23*	ericjung_ (ericjung@moz-h2a.9hc.161.107.IP23) has joined
+T 1505686656 24*	ericjung has quit (Connection closed)
+T 1505686732 24*	aosmond has quit (Ping timeout: 121 seconds)
+T 1505687236 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505687390 24*	28mattwoodrow|away is now known as 18mattwoodrow
+T 1505687442 24*	espadrine has quit (Ping timeout: 121 seconds)
+T 1505687569 23*	aosmond (aosmond@moz-4ph2cl.ipv6.teksavvy.com23) has joined
+T 1505687652 24*	TheCrap has quit (Ping timeout: 121 seconds)
+T 1505688337 23*	karlt (karl@moz-khg.ud6.159.134.IP23) has joined
+T 1505688639 23*	njn (chatzilla@moz-alnh9n.optusnet.com.au23) has joined
+T 1505688639 22*	26killer gives channel operator status to 18njn
+T 1505688822 23*	gpoesia_ (gpoesia@moz-7hml6n.qsjf.bt13.07f2.2804.IP23) has joined
+T 1505688962 23*	jib (jib@moz-j7m6lt.dyn.optonline.net23) has joined
+T 1505689034 24*	jsnajdr has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505689058 24*	jib has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505689070 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/f5bc62a44e3d - Alex Chronopoulos - Bug 1400671 - Update cubeb from upstream to ac532ad. r=kinetik
+T 1505689106 23*	jib (jib@moz-j7m6lt.dyn.optonline.net23) has joined
+T 1505689209 24*	WG9s has quit (Quit: ChatZilla 0.9.92-rdmsoft [XULRunner 35.0.1/20150122214805])
+T 1505689323 24*	karlt has quit (Ping timeout: 121 seconds)
+T 1505689388 24*	jib has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505689398 23*	jib (jib@moz-j7m6lt.dyn.optonline.net23) has joined
+T 1505689405 24*	tbodt has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505689499 23*	yd (uid226456@moz-8v13r0.ealing.irccloud.com23) has joined
+T 1505689529 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505689539 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505689572 24*	jib has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505689926 24*	lizzard has quit (Client exited)
+T 1505690238 24*	sewardj has quit (Ping timeout: 121 seconds)
+T 1505690255 23*	sewardj (sewardj@moz-nbp7rj.dip0.t-ipconnect.de23) has joined
+T 1505690356 24*	jimb has quit (Ping timeout: 121 seconds)
+T 1505690596 24*	28mattwoodrow is now known as 18mattwoodrow|away
+T 1505690640 24*	khuey has quit (Quit: leaving)
+T 1505691422 24*	bwc has quit (Quit: Leaving.)
+T 1505691516 23*	Ironlenny (quassel@moz-hpd0t9.eugn.qwest.net23) has joined
+T 1505691593 23*	jrmuizel (jrmuizel@moz-0kkv9e.cpe.pppoe.ca23) has joined
+T 1505691621 23*	jimb (user@moz-h4ogsc.ptld.qwest.net23) has joined
+T 1505691632 24*	Ironlenny_ has quit (Ping timeout: 121 seconds)
+T 1505691841 23*	porglezomp (caleb@moz-53m.b3f.122.108.IP23) has joined
+T 1505692023 23*	karlt (karl@moz-khg.ud6.159.134.IP23) has joined
+T 1505692033 24*	jrmuizel has quit (A TLS packet with unexpected length was received.)
+T 1505692101 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505692163 23*	porglezomp (caleb@moz-53m.b3f.122.108.IP23) has joined
+T 1505692348 23*	gpoesia (gpoesia@moz-7hml6n.qsjf.bt13.07f2.2804.IP23) has joined
+T 1505692395 24*	gpoesia_ has quit (Connection closed)
+T 1505692411 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505692478 23*	porglezomp (caleb@moz-53m.b3f.122.108.IP23) has joined
+T 1505692615 24*	michal has quit (Quit: Leaving.)
+T 1505692713 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505692845 24*	28dmajor is now known as 18dmajor|travel
+T 1505692869 24*	heftig has quit (Connection closed)
+T 1505693021 23*	heftig (heftig@moz-fm2rig.archlinux.org23) has joined
+T 1505693086 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505693245 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/7ca486b28b99 - Nicholas Nethercote - Bug 1400100 - Shrink css::ImageValue. r=njn.
+T 1505693491 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/aa14c5a7d4e1 - Nicholas Nethercote - Bug 1400081 - Don't use -1 to represent an unset JSGCParamKey. r=sfink.
+T 1505693562 24*	bwc has quit (Quit: Leaving.)
+T 1505693587 23*	jrmuizel (jrmuizel@moz-0kkv9e.cpe.pppoe.ca23) has joined
+T 1505693648 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505693656 24*	bwc has quit (Connection closed)
+T 1505693734 23*	Mano (mano@moz-f3tbps.red.bezeqint.net23) has joined
+T 1505693740 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505693750 24*	bwc has quit (Quit: Leaving.)
+T 1505693770 23*	porglezomp (caleb@moz-53m.b3f.122.108.IP23) has joined
+T 1505693812 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505693834 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505693844 24*	bwc has quit (Quit: Leaving.)
+T 1505693929 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505693939 24*	bwc has quit (Quit: Leaving.)
+T 1505693976 24*	Mano has quit (Ping timeout: 121 seconds)
+T 1505694023 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694033 24*	bwc has quit (Quit: Leaving.)
+T 1505694037 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505694116 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694127 24*	bwc has quit (Quit: Leaving.)
+T 1505694174 24*	baku|away has quit (Ping timeout: 121 seconds)
+T 1505694175 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505694210 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694219 24*	28heycam|away is now known as 18heycam
+T 1505694222 24*	bwc has quit (Quit: Leaving.)
+T 1505694236 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694246 24*	bwc has quit (Quit: Leaving.)
+T 1505694328 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694340 24*	bwc has quit (Quit: Leaving.)
+T 1505694422 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694434 24*	bwc has quit (Quit: Leaving.)
+T 1505694520 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694528 24*	bwc has quit (Connection closed)
+T 1505694611 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694622 24*	bwc has quit (Quit: Leaving.)
+T 1505694705 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694716 24*	bwc has quit (Quit: Leaving.)
+T 1505694798 23*	jib (jib@moz-j7m6lt.dyn.optonline.net23) has joined
+T 1505694800 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694811 24*	bwc has quit (Quit: Leaving.)
+T 1505694895 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505694906 24*	bwc has quit (Quit: Leaving.)
+T 1505694937 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505694997 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695000 24*	bwc has quit (Connection closed)
+T 1505695084 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695094 24*	bwc has quit (Quit: Leaving.)
+T 1505695178 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695189 24*	bwc has quit (Quit: Leaving.)
+T 1505695272 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695283 24*	bwc has quit (Quit: Leaving.)
+T 1505695329 24*	28ewong|away is now known as 18ewong
+T 1505695366 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695377 24*	bwc has quit (Quit: Leaving.)
+T 1505695426 23*	porglezomp (caleb@moz-amc.s13.115.108.IP23) has joined
+T 1505695454 24*	jib has quit (Quit: My Mac has gone to sleep. ZZZzzz…)
+T 1505695460 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695463 24*	lizzard has quit (Client exited)
+T 1505695471 24*	bwc has quit (Quit: Leaving.)
+T 1505695485 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695488 24*	bwc has quit (Connection closed)
+T 1505695571 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695582 24*	jimb has quit (Ping timeout: 121 seconds)
+T 1505695582 24*	bwc has quit (Quit: Leaving.)
+T 1505695591 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505695674 24*	bwc has quit (Quit: Leaving.)
+T 1505695766 23*	jsnajdr (jsnajdr@moz-5d3.71l.181.208.IP23) has joined
+T 1505695904 23*	marcosc (marcosc@moz-29a.do1.52.113.IP23) has joined
+T 1505695914 24*	marcosc has quit (A TLS packet with unexpected length was received.)
+T 1505695918 23*	marcosc (marcosc@moz-29a.do1.52.113.IP23) has joined
+T 1505696108 24*	lucicor has quit (Quit: Connection closed for inactivity)
+T 1505696650 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505696657 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505696661 24*	jrmuizel has quit (A TLS packet with unexpected length was received.)
+T 1505696845 23*	Enn (Enn@moz-jtf4vb.7i82.fdmf.fea8.2607.IP23) has joined
+T 1505696903 23*	lvk (leo@moz-s2lm2b.hfc.comcastbusiness.net23) has joined
+T 1505696965 18<jesup|laptop18>	Wow, is my build of mozilla-release (56?) broken - this is after loading my 'release' profile: https://imgur.com/a/ubbgT
+T 1505696999 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505697041 18<jesup|laptop18>	Yup - 56.  and menus and large parts of the screen won't paint undre a redraw is forced by mousing over them.
+T 1505697057 18<jesup|laptop18>	And it says it's Nightly!
+T 1505697065 23*	jhaj (textual@moz-m23.3ht.244.162.IP23) has joined
+T 1505697114 24*	Kwan has quit (Ping timeout: 121 seconds)
+T 1505697130 24*	karlt has quit (Ping timeout: 121 seconds)
+T 1505697179 18<jesup|laptop18>	wow. so broken - and from a pull earlier today
+T 1505697195 24*	jhaj has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505697304 24*	Enn has quit (Ping timeout: 121 seconds)
+T 1505697332 18<jesup|laptop18>	Same as the current tip
+T 1505697342 18*	jesup|laptop tries a new profile
+T 1505697398 18<jesup|laptop18>	wow, painting fails (until mouseover/etc) even in the Create Profile Wizard
+T 1505697423 24*	aosmond has quit (Quit: Leaving.)
+T 1505697441 18<jesup|laptop18>	Can someone try a mozilla-release build?  Preferably local to be equivalent, but a build from automation would do
+T 1505697457 23*	porglezomp (caleb@moz-vie.mpp.154.173.IP23) has joined
+T 1505697505 18<jesup|laptop18>	yeah, no better.  Looks like it may be a GFX problem
+T 1505697705 24*	28mattwoodrow|away is now known as 18mattwoodrow
+T 1505697928 24*	marco has quit (Connection closed)
+T 1505698119 24*	yd has quit (Quit: Connection closed for inactivity)
+T 1505698406 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505698487 24*	KaiRo has quit (A TLS packet with unexpected length was received.)
+T 1505698564 18<jesup|laptop18>	Hmmm  where did the linux treeherder builds go to?  I found a 'B' for Linux x64 opt, but there aren't any builds linked from it I can download
+T 1505698740 24*	jsnajdr has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505698871 24*	gpoesia has quit (A TLS packet with unexpected length was received.)
+T 1505698881 23*	gpoesia (gpoesia@moz-7hml6n.qsjf.bt13.07f2.2804.IP23) has joined
+T 1505699108 23*	user_ (user@moz-i84t05.highway.telekom.at23) has joined
+T 1505699109 18<jesup|laptop18>	I finally found target.tar.bz2 in the Artifacts list, which works
+T 1505699307 24*	user__ has quit (Ping timeout: 121 seconds)
+T 1505700163 23*	cilias (cilias@moz-fueto3.cable.rogers.com23) has joined
+T 1505700448 24*	safwan has quit (Quit: Connection closed for inactivity)
+T 1505700589 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/f8c3e7d5f10d - Nick Thomas - Bug 1400746 - checksums failure when boto3 and botocore present in our pypi mirrors, r=catlee DONTBUILD
+T 1505700747 18<pulsebot18>	Check-in: https://hg.mozilla.org/releases/mozilla-beta/rev/6b5cce5da785 - Nick Thomas - Bug 1400746 - checksums failure when boto3 and botocore present in our pypi mirrors, r=catlee a=release DONTBUILD CLOSED TREE
+T 1505700969 18<pulsebot18>	Check-in: https://hg.mozilla.org/releases/mozilla-esr52/rev/2c88cc5f5dab - Nick Thomas - Bug 1400746 - checksums failure when boto3 and botocore present in our pypi mirrors, r=catlee a=release DONTBUILD
+T 1505701269 24*	givanica has quit (Client exited)
+T 1505701395 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505701752 24*	cervantes has quit (A TLS packet with unexpected length was received.)
+T 1505701902 23*	jimb (user@moz-h4ogsc.ptld.qwest.net23) has joined
+T 1505702155 23*	cervantes (cervantes@moz-2hf62a.HINET-IP.hinet.net23) has joined
+T 1505702193 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/0e9ac37163ea - James Cheng - Bug 1399754 - [Part1] Replace CDM_LOG with GMP_LOG. r=cpearce
+T 1505702195 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/9779ff000804 - James Cheng - Bug 1399754 - [Part2] Fix wrong format string. r=cpearce
+T 1505702283 24*	lizzard has quit (Client exited)
+T 1505702289 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505702526 23*	daoshengmu (uid99282@moz-ps93vi.tooting.irccloud.com23) has joined
+T 1505702731 24*	jimb has quit (Ping timeout: 121 seconds)
+T 1505703009 24*	pulsebot has quit (A TLS packet with unexpected length was received.)
+T 1505703614 24*	chewey has quit (NickServ (RECOVER command used by chewey_))
+T 1505703614 23*	chewey (chewey@moz-iki1a4.versanet.de23) has joined
+T 1505704090 23*	sheldon_knuth (Sheldon@moz-n70.t47.13.163.IP23) has joined
+T 1505704233 23*	justindarc (justindarc@moz-d73.4i3.103.137.IP23) has joined
+T 1505704293 23*	kaze (kaze@moz-8ion1q.fbx.proxad.net23) has joined
+T 1505704432 23*	jimb (user@moz-h4ogsc.ptld.qwest.net23) has joined
+T 1505705229 23*	yd (uid226456@moz-8v13r0.ealing.irccloud.com23) has joined
+T 1505705787 23*	mkali (mkali@moz-8n6.obq.90.41.IP23) has joined
+T 1505706118 24*	sheldon_knuth has quit (Connection closed)
+T 1505706364 23*	sheldon_knuth (Sheldon@moz-n70.t47.13.163.IP23) has joined
+T 1505706553 24*	sheldon_knuth has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505706648 23*	m_kato (m_kato@moz-1ubu0m.so-net.ne.jp23) has joined
+T 1505707009 24*	gpoesia has quit (Ping timeout: 121 seconds)
+T 1505707608 24*	28heycam is now known as 18heycam|away
+T 1505707950 23*	paul374 (Thunderbird@moz-0amoup.7ott.du53.0547.2601.IP23) has joined
+T 1505708131 24*	jimb has quit (Ping timeout: 121 seconds)
+T 1505708220 23*	karlt (karl@moz-gdbrvm.3io5.d7hc.e007.2406.IP23) has joined
+T 1505708467 23*	LCPolan (textual@moz-osifmb.30kp.ep9c.0645.2601.IP23) has joined
+T 1505708964 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505709241 24*	paul374 has quit (A TLS packet with unexpected length was received.)
+T 1505709470 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505709737 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505709805 23*	elbeardmorez_ (quassel@moz-lainbj.cust.relish.net23) has joined
+T 1505709823 24*	m_kato has quit (Quit: )
+T 1505709935 24*	elbeardmorez has quit (Ping timeout: 121 seconds)
+T 1505710011 23*	paul374 (Thunderbird@moz-0amoup.7ott.du53.0547.2601.IP23) has joined
+T 1505710122 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505710628 24*	28arthur_iakab|sheriffduty is now known as 18arthur_iakab
+T 1505710635 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505710677 24*	28dluca|sheriffduty is now known as 18dluca
+T 1505710901 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505710929 24*	28mattwoodrow is now known as 18mattwoodrow|away
+T 1505711238 24*	28heycam|away is now known as 18heycam
+T 1505711600 24*	kaze has quit (Ping timeout: 121 seconds)
+T 1505712097 24*	LCPolan has quit (Ping timeout: 121 seconds)
+T 1505712540 24*	lizzard has quit (Client exited)
+T 1505712798 24*	justindarc has quit (A TLS packet with unexpected length was received.)
+T 1505712893 23*	jimb (user@moz-h4ogsc.ptld.qwest.net23) has joined
+T 1505712899 23*	justindarc (justindarc@moz-d73.4i3.103.137.IP23) has joined
+T 1505712945 23*	sheldon_knuth (Sheldon@moz-n70.t47.13.163.IP23) has joined
+T 1505713167 24*	justindarc has quit (Ping timeout: 121 seconds)
+T 1505713172 24*	28andrei_ciure_ is now known as 18andrei_ciure_|sheriffduty
+T 1505713487 24*	sheldon_knuth has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505713874 23*	sheldon_knuth (Sheldon@moz-n70.t47.13.163.IP23) has joined
+T 1505714082 23*	igoldan (kvirc@moz-gga.dr6.2.5.IP23) has joined
+T 1505714083 24*	sheldon_knuth has quit (Quit: My MacBook has gone to sleep. ZZZzzz…)
+T 1505714098 18<hsivonen18>	I see the string org.mozilla.fennec in many files. Is there an easy way to make a try build of Fennec be side-by-side installable with nightly Fennec?
+T 1505714157 23*	pascalc (chatzilla@moz-4au.kfs.192.78.IP23) has joined
+T 1505714277 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505714491 24*	ericjung_ has quit (A TLS packet with unexpected length was received.)
+T 1505714544 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505714628 24*	28aobreja|afk is now known as 18aobreja|buildduty
+T 1505715041 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505715193 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505715308 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505715603 23*	florent (Thunderbird@moz-do44ct.abo.wanadoo.fr23) has joined
+T 1505715687 24*	lizzard has quit (Client exited)
+T 1505715704 23*	kaze (kaze@moz-8ion1q.fbx.proxad.net23) has joined
+T 1505715784 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505716051 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505716274 24*	cilias has quit (Client exited)
+T 1505716480 23*	stransky (stransky@moz-a5gmab.net.upcbroadband.cz23) has joined
+T 1505716677 23*	sheldon_knuth (Sheldon@moz-n70.t47.13.163.IP23) has joined
+T 1505716719 24*	yd has quit (Quit: Connection closed for inactivity)
+T 1505716894 24*	sheldon_knuth has quit (Connection closed)
+T 1505716949 23*	cmuresan (Instantbird@moz-afm.0l7.127.86.IP23) has joined
+T 1505717095 23*	gsvelto (gsvelto@moz-qttabq.client-mvno.tiscali.it23) has joined
+T 1505717110 23*	LCPolan (textual@moz-0rimbo.30kp.ep9c.0645.2601.IP23) has joined
+T 1505717126 24*	paul374 has quit (Ping timeout: 121 seconds)
+T 1505717130 24*	28aselagea|afk is now known as 18aselagea|buildduty
+T 1505717515 24*	28mattwoodrow|away is now known as 18mattwoodrow
+T 1505717525 23*	paul374 (Thunderbird@moz-73d0l2.pa.comcast.net23) has joined
+T 1505717528 23*	carmenf (Instantbird@moz-afm.0l7.127.86.IP23) has joined
+T 1505717604 23*	jhorak (jhorak@moz-13dp8p.net.upcbroadband.cz23) has joined
+T 1505717621 24*	florent has quit (A TLS packet with unexpected length was received.)
+T 1505717756 24*	Honza has quit (Connection closed)
+T 1505717781 24*	jhorak has quit (Connection closed)
+T 1505717833 23*	Honza (chatzilla@moz-0jh.7ku.62.176.IP23) has joined
+T 1505717833 23*	jhorak (jhorak@moz-13dp8p.net.upcbroadband.cz23) has joined
+T 1505718033 23*	mboldan (Instantbird@moz-afm.0l7.127.86.IP23) has joined
+T 1505718228 23*	emilpasca (Instantbird@moz-afm.0l7.127.86.IP23) has joined
+T 1505718319 23*	rego (Manuel@moz-rhhdf1.dynamic.reverse-mundo-r.com23) has joined
+T 1505718447 23*	CristiComo (cristian.co@moz-5l3.0mm.2.5.IP23) has joined
+T 1505718817 23*	RaresB (Instantbird@moz-5l3.0mm.2.5.IP23) has joined
+T 1505718890 24*	mboldan has quit (Ping timeout: 121 seconds)
+T 1505718903 23*	Dexter (Alessio@moz-skj2qs.retail.telecomitalia.it23) has joined
+T 1505718921 23*	pauloiegasSV (Instantbird@moz-afm.0l7.127.86.IP23) has joined
+T 1505718987 23*	Mano (mano@moz-f3tbps.red.bezeqint.net23) has joined
+T 1505719123 24*	jimb has quit (Ping timeout: 121 seconds)
+T 1505719230 24*	Mano has quit (Ping timeout: 121 seconds)
+T 1505719429 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505719492 24*	gsvelto has quit (Ping timeout: 121 seconds)
+T 1505719595 24*	mixedpuppy has quit (Client exited)
+T 1505719696 24*	porglezomp has quit (Ping timeout: 121 seconds)
+T 1505719732 23*	dragana (Instantbird@moz-homsls.dynamic.surfer.at23) has joined
+T 1505784144 19*	Now talking on 22#developers
+T 1505784144 22*	Topic for 22#developers is: buildbot Windows builds on Try are expected bustage | Sheriff on duty: #sheriffs | Want help, or want to help others? See #introduction || http://logs.glob.uno/?c=developers
+T 1505784144 22*	Topic for 22#developers set by 26ehsan!ehsan@corp-nat.fw1.untrust.tor1.mozilla.com (24Thu Aug 24 12:20:07 2017)
+T 1505784148 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/autoland/rev/b2e85eb4879d - Karl Tomlinson - bug 1401052 label GfxInfo files as Graphics BUG_COMPONENT r=jrmuizel
+T 1505784155 24*	bwc has quit (Quit: Leaving.)
+T 1505784157 18<pulsebot18>	Check-in: https://hg.mozilla.org/releases/mozilla-beta/pushloghtml?startID=7774&endID=7775 - 178 changesets - Merge mozilla-central to beta. a=merge on a CLOSED TREE
+T 1505784160 24*	lizzard has quit (Client exited)
+T 1505784239 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784251 24*	bwc has quit (Quit: Leaving.)
+T 1505784261 24*	marcosc has quit (A TLS packet with unexpected length was received.)
+T 1505784264 23*	marcosc (marcosc@moz-29a.do1.52.113.IP23) has joined
+T 1505784333 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784346 24*	bwc has quit (Quit: Leaving.)
+T 1505784427 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784440 24*	bwc has quit (Quit: Leaving.)
+T 1505784479 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/98f9bde465d2 - Boris Zbarsky - Bug 991271.  Restore our assertions about how wrapping failure should mean an exception was thrown.  r=mccr8
+T 1505784482 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/6ecbba14b2f3 - Boris Zbarsky - Bug 1400139 part 1.  Add infrastructure for marking WebIDL interface members as non-enumerable.  r=qdot
+T 1505784485 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/5bc10c68bbf7 - Boris Zbarsky - Bug 1400139 part 2.  Make window.content non-enumerable.  r=mystor
+T 1505784488 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/df23db5d453e - Boris Zbarsky - Bug 1400139 part 3.  Add a use counter when the window.content getter is called from untrusted code.  r=mystor
+T 1505784491 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/fe05bde7b58f - Boris Zbarsky - Bug 1400501.  Store a list of ancestor principals on docshell and document.  r=mystor
+T 1505784495 18<pulsebot18>	Check-in: https://hg.mozilla.org/integration/mozilla-inbound/rev/13f651129c38 - Boris Zbarsky - Bug 1400599.  Make sure to properly handle removal of the root when the body propagates scrollbar styles to the viewport.  r=dholbert
+T 1505784522 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784522 23*	LCPolan (textual@moz-fje7p0.30kp.ep9c.0645.2601.IP23) has joined
+T 1505784534 24*	bwc has quit (Quit: Leaving.)
+T 1505784537 23*	ericjung (ericjung@moz-smh908.co.comcast.net23) has joined
+T 1505784599 23*	ErikRose (erikrose@moz-ssh.ark.69.71.IP23) has joined
+T 1505784604 23*	jimb (user@moz-h4ogsc.ptld.qwest.net23) has joined
+T 1505784617 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784622 23*	ericjung_ (ericjung@moz-h2a.9hc.161.107.IP23) has joined
+T 1505784630 24*	bwc has quit (Quit: Leaving.)
+T 1505784633 24*	ericjung_ has quit (A TLS packet with unexpected length was received.)
+T 1505784637 23*	ericjung_ (ericjung@moz-h2a.9hc.161.107.IP23) has joined
+T 1505784701 24*	Enn has quit (Ping timeout: 121 seconds)
+T 1505784713 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784724 24*	bwc has quit (Quit: Leaving.)
+T 1505784763 23*	arai_ (arai@moz-sik8vj.u-tokyo.ac.jp23) has joined
+T 1505784779 24*	ericjung has quit (Ping timeout: 121 seconds)
+T 1505784808 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784818 24*	bwc has quit (Quit: Leaving.)
+T 1505784843 24*	ErikRose has quit (Ping timeout: 121 seconds)
+T 1505784900 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505784914 24*	bwc has quit (Quit: Leaving.)
+T 1505784941 23*	lizzard (ehenry@moz-bd77fr.ca.comcast.net23) has joined
+T 1505784961 24*	arai has quit (Ping timeout: 121 seconds)
+T 1505784979 23*	jib (jib@moz-j7m6lt.dyn.optonline.net23) has joined
+T 1505784998 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785009 24*	bwc has quit (Quit: Leaving.)
+T 1505785013 24*	jduell has quit (Client exited)
+T 1505785032 24*	28ng is now known as 18ng|biab
+T 1505785091 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785096 24*	KaiRo has quit (A TLS packet with unexpected length was received.)
+T 1505785104 24*	bwc has quit (Quit: Leaving.)
+T 1505785185 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785198 24*	bwc has quit (Quit: Leaving.)
+T 1505785272 24*	marco has quit (Connection closed)
+T 1505785280 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785293 24*	bwc has quit (Quit: Leaving.)
+T 1505785377 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785388 24*	bwc has quit (Quit: Leaving.)
+T 1505785434 23*	jrmuizel (jrmuizel@moz-0kkv9e.cpe.pppoe.ca23) has joined
+T 1505785448 23*	user__ (user@moz-j1s7fj.highway.telekom.at23) has joined
+T 1505785468 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785481 24*	bwc has quit (Quit: Leaving.)
+T 1505785564 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785572 24*	yd has quit (Quit: Connection closed for inactivity)
+T 1505785577 24*	bwc has quit (Quit: Leaving.)
+T 1505785645 24*	user_ has quit (Ping timeout: 121 seconds)
+T 1505785658 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785672 24*	bwc has quit (Quit: Leaving.)
+T 1505785753 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785767 24*	bwc has quit (Quit: Leaving.)
+T 1505785774 23*	porglezomp (caleb@moz-4e7.kos.211.108.IP23) has joined
+T 1505785850 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785861 24*	bwc has quit (Quit: Leaving.)
+T 1505785943 23*	bwc (Adium@moz-u76ik0.rcsntx.sbcglobal.net23) has joined
+T 1505785956 24*	bwc has quit (Quit: Leaving.)
