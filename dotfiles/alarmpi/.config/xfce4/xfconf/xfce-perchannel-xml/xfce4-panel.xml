@@ -87,12 +87,10 @@
     <property name="plugin-11" type="string" value="xfce4-sensors-plugin"/>
     <property name="plugin-8" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="15061996701.desktop"/>
       </property>
     </property>
     <property name="plugin-9" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="15061997262.desktop"/>
       </property>
     </property>
   </property>
