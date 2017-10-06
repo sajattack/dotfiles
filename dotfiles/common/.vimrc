@@ -25,7 +25,7 @@ call vundle#end()
 
 filetype plugin indent on
 set t_Co=256
-colorscheme ron 
+colorscheme cobalt2
 
 if &t_Co > 2 || has("gui_running")
     syntax on
