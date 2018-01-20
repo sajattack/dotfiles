@@ -20,6 +20,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'fatih/vim-go'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'rust-lang/rust.vim'
+Plugin 'prabirshrestha/async.vim'
+Plugin 'prabirshrestha/vim-lsp'
+Plugin 'prabirshrestha/asyncomplete.vim'
+Plugin 'prabirshrestha/asyncomplete-lsp.vim'
 
 call vundle#end()
 
@@ -138,6 +143,15 @@ let g:pymode_rope_complete_on_dot=1
 let php_sql_query=1
 let php_htmlInStrings=1
 let php_baselib=1
+
+"Rust
+if executable('rls')
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'rls',
+        \ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'whitelist': ['rust'],
+        \ })
+endif
 
 " Uncomment the following to have Vim jump to the last position when 
 " reopening a file

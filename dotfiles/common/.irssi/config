@@ -404,7 +404,7 @@ settings = {
   core = { 
     real_name = "Unknown";
     user_name = "paul";
-    nick = "sajattack_";
+    nick = "sajattack";
   };
   "fe-text" = { actlist_sort = "refnum"; };
 };

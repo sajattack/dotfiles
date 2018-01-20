@@ -10,3 +10,36 @@ T 1506962630 18<ted18>	we build armv7-android builds
 T 1506962648 20<sajattack>30	ok
 T 1506962682 24*	Dexter has quit (Quit: Leaving)
 T 1506962868 23*	bholley (textual@moz-8d0g9h.ca.comcast.net23) has joined
+T 1507909899 19*	Now talking on 22#build
+T 1507909899 22*	Topic for 22#build is: Mozilla Build System discussion | Issues with MoCo build infra, try server, release engineering, etc.? -> #releng
+T 1507909899 22*	Topic for 22#build set by 26gavin (24Tue Apr 30 16:53:53 2013)
+T 1507909901 18<dmajor18>	and generally increasing file size over time
+T 1507910040 18<ted18>	ah
+T 1507910104 18<dmajor18>	I guess I could just turn on last-access-time and let agestore deal with it, making sure to touch my current release and beta installs
+T 1507910130 20*	Disconnected (20)
+T 1507910150 22*	26sajattack sets mode 24+x on 22sajattack
+T 1507910150 19*	Now talking on 22#build
+T 1507910150 22*	Topic for 22#build is: Mozilla Build System discussion | Issues with MoCo build infra, try server, release engineering, etc.? -> #releng
+T 1507910150 22*	Topic for 22#build set by 26gavin (24Tue Apr 30 16:53:53 2013)
+T 1507910191 18<ted18>	i still think you might have a better time just putting release symbols in a separate dir
+T 1507910218 18<ted18>	you could write a script that downloads the current firefox release, runs symchk to fetch its symbols to a directory, then runs agestore or whatever to clean up old stuff
+T 1507910236 18<dmajor18>	I want to have just a single way that I fetch symbols
+T 1507910236 18<ted18>	and let the debugger manage its own cache for everything else
+T 1507910275 18<ted18>	well then i think you're over-constraining the problem :)
+T 1507910316 18<dmajor18>	 /shrug. doesn't seem that constraining to me.
+T 1507910707 24*	jrmuizel has quit (A TLS packet with unexpected length was received.)
+T 1507910774 24*	Dexter has quit (Quit: Leaving)
+T 1507911499 24*	WaltS48 has quit (Quit: Leaving)
+T 1507911605 24*	pierre_ (pierre@moz-9s3.d1q.255.146.IP24) has left
+T 1507911800 23*	Pike (chatzilla@moz-amb08g.dip0.t-ipconnect.de23) has joined
+T 1507911845 18<Pike18>	Fallen|pto: if I end up with an empty COMMDEPTH, what did I do wrong? it's clobbered and configured with a mozconfig that used to work allright, mozilla-central checked out as mozilla as usual
+T 1508175799 19*	Now talking on 22#build
+T 1508175799 22*	Topic for 22#build is: Mozilla Build System discussion | Issues with MoCo build infra, try server, release engineering, etc.? -> #releng
+T 1508175799 22*	Topic for 22#build set by 26gavin (24Tue Apr 30 16:53:53 2013)
+T 1508175935 24*	kyan has quit (Ping timeout: 121 seconds)
+T 1508176283 18<tomprince18>	Is there any reason DEPTH is used in favor of topsrcdir in Makefiles, or is it just historical accident that they both exist and are used?
+T 1508176380 20*	Disconnected (20)
+T 1508176445 FiSHLiM plugin unloaded
+T 1508264913 19*	Now talking on 22#build
+T 1508264913 22*	Topic for 22#build is: Mozilla Build System discussion | Issues with MoCo build infra, try server, release engineering, etc.? -> #releng
+T 1508264913 22*	Topic for 22#build set by 26gavin (24Tue Apr 30 16:53:53 2013)
